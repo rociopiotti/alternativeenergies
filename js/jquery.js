@@ -1027,6 +1027,7 @@ let innerWidth = window.innerWidth;
 
 let innerHeight = window.innerHeight;
 $(document).on("ready", function() {
+  /*alert(innerWidth);*/
   if (window.matchMedia("(max-width: 414px)").matches) {
     
 

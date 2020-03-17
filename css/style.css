@@ -1446,6 +1446,16 @@ h2 {
   }
 }
 
+@media screen and (max-width: 393px) {
+  #ground {
+    position: absolute;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    top: -90%;
+  }
+}
+
 @media screen and (width: 375px) and (-webkit-min-device-pixel-ratio: 0) {
   #ground {
     position: absolute;
@@ -1506,11 +1516,6 @@ h2 {
   }
   .about {
     height: 320vh;
-  }
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .nav {
-    background-color: #07c3f7 !important;
   }
 }
 @media screen and (max-width: 320px) {
