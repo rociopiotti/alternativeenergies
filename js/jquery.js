@@ -16,6 +16,9 @@ let moveLeft = "100%";
 
 let getOut = true;
 
+let intFrameWidth = window.innerWidth;
+let intFrameHeight = window.innerHeight;
+
 //MUEVO HOJAS
 const moveLeaves = () => {
   isAnimating = true;
@@ -119,32 +122,32 @@ const reinitValuesLeaves = () => {
   $("#leave1").css({
     position: "absolute",
     top: "20vh",
-    left: "-50px"
+    left: "-10vw"
   });
   $("#leave2").css({
     position: "absolute",
     top: "37vh",
-    left: "-55px"
+    left: "-20vw"
   });
   $("#leave3").css({
     position: "absolute",
     top: "40vh",
-    left: "-45px"
+    left: "-20vw"
   });
   $("#leave4").css({
     position: "absolute",
     top: "45vh",
-    left: "-60px"
+    left: "-20vw"
   });
   $("#leave5").css({
     position: "absolute",
     top: "55vh",
-    left: "-46px"
+    left: "-25vw"
   });
   $("#leave6").css({
     position: "absolute",
     top: "75vh",
-    left: "-70px"
+    left: "-25vw"
   });
 };
 
@@ -480,8 +483,7 @@ const moveDownBackground = () => {
       specialEasing: {
         top: easing
       },
-      complete: function() {
-      }
+      complete: function() {}
     }
   );
   $("#floatingForm1").animate(
@@ -494,8 +496,7 @@ const moveDownBackground = () => {
       specialEasing: {
         top: easing
       },
-      complete: function() {
-      }
+      complete: function() {}
     }
   );
 
@@ -508,8 +509,7 @@ const moveDownBackground = () => {
       specialEasing: {
         top: easing
       },
-      complete: function() {
-      }
+      complete: function() {}
     }
   );
 
@@ -526,8 +526,7 @@ const moveDownBackground = () => {
           top: easing,
           left: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -544,8 +543,7 @@ const moveDownBackground = () => {
           top: easing,
           left: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -562,8 +560,7 @@ const moveDownBackground = () => {
           top: easing,
           left: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -580,8 +577,7 @@ const moveDownBackground = () => {
           top: easing,
           left: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -599,8 +595,7 @@ const moveDownBackground = () => {
           top: easing,
           left: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -617,8 +612,7 @@ const moveDownBackground = () => {
           top: easing,
           left: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -632,8 +626,7 @@ const moveDownBackground = () => {
       specialEasing: {
         top: easing
       },
-      complete: function() {
-      }
+      complete: function() {}
     }
   );
   if (window.matchMedia("(width: 1024px)", "(max-width: 1024px)").matches) {
@@ -647,8 +640,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   } else {
@@ -662,8 +654,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -678,8 +669,7 @@ const moveDownBackground = () => {
       specialEasing: {
         top: easing
       },
-      complete: function() {
-      }
+      complete: function() {}
     }
   );
 
@@ -694,8 +684,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -711,8 +700,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -727,8 +715,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -743,8 +730,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -760,8 +746,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   } else {
@@ -775,8 +760,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -791,8 +775,7 @@ const moveDownBackground = () => {
       specialEasing: {
         top: easing
       },
-      complete: function() {
-      }
+      complete: function() {}
     }
   );
   if (window.matchMedia("(width: 1024px)", "(max-width: 1024px)").matches) {
@@ -806,8 +789,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   } else {
@@ -821,8 +803,7 @@ const moveDownBackground = () => {
         specialEasing: {
           top: easing
         },
-        complete: function() {
-        }
+        complete: function() {}
       }
     );
   }
@@ -1016,8 +997,7 @@ const burger = () => {
   $(".burger").click(function() {
     $(".nav").slideToggle("fast");
   });
-
-  if (window.matchMedia("(max-width: 414px)").matches) {
+  if (window.matchMedia("(max-width: 1024px)").matches) {
     $(".nav").hide();
   }
 };
@@ -1028,9 +1008,7 @@ let innerWidth = window.innerWidth;
 let innerHeight = window.innerHeight;
 $(document).on("ready", function() {
   /*alert(innerWidth);*/
-  if (window.matchMedia("(max-width: 414px)").matches) {
-    
-
+  if (window.matchMedia("(max-width: 1024px)").matches) {
     loader(function() {}, {
       complete: function() {
         isAnimating = false;
@@ -1039,8 +1017,9 @@ $(document).on("ready", function() {
     burger();
   }
 
-  if (window.matchMedia("(min-width: 1024px)").matches) {
 
+  if (window.matchMedia("(min-width: 1280px)").matches) {
+   
     loader(function() {}, {
       complete: function() {
         isAnimating = false;
