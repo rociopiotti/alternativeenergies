@@ -1328,6 +1328,362 @@ h2 {
   }
 }
 
+@media screen and (width: 768px) and (max-width: 768px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  #page {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    opacity: 0;
+    overflow-x: hidden;
+    overflow: hidden;
+    visibility: visible;
+  }
+  #content {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+  #advice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+  }
+  #loader {
+    visibility: visible;
+    position: absolute;
+    left: 46vw;
+    top: 46vh;
+    width: 5vw;
+    height: 5vw;
+  }
+  
+  /***************CANVAS*****************/
+
+  #sky,
+  #buildings,
+  #mountain,
+  #city,
+  #rock {
+    display: none;
+  }
+  #aspas {
+    display: none;
+  }
+
+  #ground {
+    position: absolute;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    top: -60%;
+    left: 0;
+  }
+
+  .floatingForms {
+    display: none;
+  }
+
+  #floatingForm1 {
+    display: none;
+  }
+
+  #floatingForm2 {
+    display: none;
+  }
+
+  #floatingForm3 {
+    display: none;
+  }
+
+  #leave1 {
+    position: absolute;
+    top: 20vh;
+    left: -100px;
+    width: 5vw;
+    z-index: 5;
+  }
+  #leave2 {
+    position: absolute;
+    top: 37vh;
+    left: -90px;
+    width: 5vw;
+    z-index: 5;
+  }
+  #leave3 {
+    position: absolute;
+    top: 40vh;
+    left: -75px;
+    width: 5vw;
+    z-index: 5;
+  }
+  #leave4 {
+    position: absolute;
+    top: 45vh;
+    left: -60px;
+    width: 5vw;
+    z-index: 5;
+  }
+  #leave5 {
+    position: absolute;
+    top: 55vh;
+    left: -80px;
+    width: 5vw;
+    z-index: 5;
+  }
+  #leave6 {
+    position: absolute;
+    top: 75vh;
+    left: -70px;
+    width: 5vw;
+    z-index: 5;
+  }
+  header {
+    position: relative;
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 99999;
+  }
+  .logo {
+    position: absolute;
+    align-self: start;
+  }
+  .burger {
+    position: relative;
+    display: flex;
+    color: #fff;
+    visibility: visible;
+    align-self: flex-end;
+    z-index: 99999;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+  }
+  .fa-bars {
+    color: #fff;
+    visibility: visible;
+    font-size: 1.5em;
+  }
+  .nav {
+    position: relative;
+    z-index: 999;
+    width: 90vw;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 5vw;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .nav ul li:last-child {
+    padding-right: 0;
+  }
+
+  .nav ul li {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .nav ul li a {
+    padding: 0;
+    font-size: 1em;
+  }
+  .intro {
+    position: relative;
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    margin-left: 10vw;
+    margin-top: 25vh;
+  }
+  h1 {
+    font-size: 2.3em;
+    top:6vh;
+  }
+  .intro p {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    top: 20vh;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+  .btnContact {
+    position: absolute;
+    width: 170px;
+    margin: 0;
+    padding: 11px;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    top: 35vh;
+  }
+  .about {
+    position: relative;
+    width: 100vw;
+    height: 200vh;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aboutDescription {
+    position: relative;
+    width: 75vw;
+    left: 0;
+    top: 0;
+  }
+
+  h2 {
+    position: relative;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 2.3em;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+  }
+
+  .aboutDescription p {
+    position: relative;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+  }
+
+  .pageChanger {
+    display: none;
+    visibility: hidden;
+    top: 0;
+    margin: 0;
+  }
+
+  .appsList {
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 5vh;
+    margin: 0;
+    /*background-color:rgb(0, 33, 41,0.5);*/
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    position: relative;
+    width: 77vw;
+    height: 50vh;
+    text-align: left;
+    margin-left: 0;
+    top: 0;
+    padding: 0;
+    margin-top: 0;
+    z-index: 9999;
+  }
+
+  .appsTitle {
+    margin-top: 10vh;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 0.5px;
+  }
+
+  .appsText {
+    width: 90%;
+    font-size: 1em;
+    margin-top: 5vh;
+    line-height: 1.6em;
+  }
+  .card1 a,
+  .card2 a,
+  .card3 a {
+    margin-top: 30px;
+    font-size: 1em;
+    line-height: 2.5em;
+    text-decoration: none;
+    z-index: 9999999;
+  }
+
+  #iconBackground1,
+  #iconBackground2,
+  #iconBackground3 {
+    position: relative;
+    width: 11vw;
+    top: 0;
+  }
+  #iconRed {
+    position: absolute;
+    width: 5vw;
+    top: 2vh;
+    left: 2vw;
+    animation: rotation 10s infinite linear;
+  }
+
+  #iconBulb {
+    position: absolute;
+    width: 5vw;
+    top: 3vh;
+    left: 2vw;
+    animation: rotation 10s infinite linear;
+  }
+
+  #iconRay {
+    position: absolute;
+    width: 5vw;
+    top: 2vh;
+    left: 3vw;
+    animation: rotation 10s infinite linear;
+  }
+  .platformKeypoints {
+    display: none;
+  }
+}
+
+
 @media screen and (max-width: 414px) {
 
   * {
@@ -1728,9 +2084,115 @@ h2 {
     letter-spacing: 0.5px;
     top: 40vh;
   }
+  
+  .about {
+    position: relative;
+    width: 100vw;
+    height: 300vh;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
 @media screen and (max-width: 360px) {
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  #page {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    opacity: 0;
+    overflow-x: hidden;
+    overflow: hidden;
+    visibility: visible;
+  }
+  #content {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+  header {
+    position: relative;
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 99999;
+  }
+  .logo {
+    position: absolute;
+    align-self: start;
+  }
+  .burger {
+    position: relative;
+    display: flex;
+    color: #fff;
+    visibility: visible;
+    align-self: flex-end;
+    z-index: 99999;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+  }
+  .fa-bars {
+    color: #fff;
+    visibility: visible;
+    font-size: 1.5em;
+  }
+  .nav {
+    position: relative;
+    z-index: 999;
+    width: 90vw;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 5vw;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #07c3f7;
+  }
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .nav ul li:last-child {
+    padding-right: 0;
+  }
+
+  .nav ul li {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .nav ul li a {
+    padding: 0;
+    font-size: 1em;
+  }
   #ground {
     position: absolute;
     width: auto;
