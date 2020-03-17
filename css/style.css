@@ -706,7 +706,6 @@ h2 {
   #page {
     visibility: hidden;
   }
-  
 }
 
 @media screen and (width: 768px) and (height: 1024px) {
@@ -748,9 +747,7 @@ h2 {
   #page {
     visibility: hidden;
   }
-  
 }
-
 
 @media screen and (max-width: 640px) and (max-height: 360px) {
   #loader {
@@ -793,6 +790,47 @@ h2 {
   }
 }
 
+
+@media screen and (max-width: 667px) and (max-height: 375px) {
+  #loader {
+    display: none;
+    visibility: hidden;
+  }
+  #advice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    background-color: #07c3f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #adviceImg {
+    position: absolute;
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    visibility: visible;
+    top: 30vh;
+    left: 45vw;
+  }
+  #adviceText {
+    position: absolute;
+    visibility: visible;
+    width: 28%;
+    height: 25%;
+    color: #393232;
+    font-size: 1.5em;
+    top: 50vh;
+    text-align: center;
+    line-height: 1.3em;
+  }
+
+  #page {
+    visibility: hidden;
+  }
+}
 @media screen and (max-width: 512px) and (max-height: 360px) {
   #loader {
     display: none;
@@ -949,6 +987,7 @@ h2 {
 }
 
 @media screen and (height: 950px) and (max-height: 950px) and (width: 1280px) and (max-width: 1280px) {
+
   #page {
     visibility: visible;
   }
@@ -975,6 +1014,7 @@ h2 {
 }
 
 @media screen and (width: 1024px) and (max-width: 1024px) {
+
   #page {
     visibility: visible;
   }
@@ -1054,6 +1094,7 @@ h2 {
 }
 
 @media screen and (max-width: 414px) {
+
   * {
     margin: 0;
     padding: 0;
@@ -1405,17 +1446,46 @@ h2 {
   }
 }
 
-@media screen and (width: 375px) {
+@media screen and (width: 375px) and (-webkit-min-device-pixel-ratio: 0) {
   #ground {
     position: absolute;
     width: auto;
     margin: 0;
     padding: 0;
-    top: -105%;
+    top: -110%;
+  }
+  .nav ul li {
+    width: 100%;
+    display: flex;
+    padding: 8px 0;
+  }
+  .nav {
+    background-color: #07c3f7;
+  }
+
+  h1 {
+    margin-top: 3vh;
+    font-size: 1.8em;
+  }
+
+  .intro p {
+    top: 25vh;
+    font-size: 0.8em;
+  }
+
+  .btnContact {
+    position: absolute;
+    width: 170px;
+    margin: 0;
+    padding: 11px;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    top: 40vh;
   }
 }
 
-@media screen  and (max-width: 360px) {
+@media screen and (max-width: 360px) {
   #ground {
     position: absolute;
     width: auto;
@@ -1423,9 +1493,9 @@ h2 {
     padding: 0;
     top: -124%;
   }
-.intro{
-  margin-top:19vh;
-}
+  .intro {
+    margin-top: 19vh;
+  }
   h1 {
     margin-top: 3vh;
     font-size: 2em;
@@ -1438,13 +1508,12 @@ h2 {
     height: 320vh;
   }
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
-  .nav{
-    
-    background-color: #07c3f7;
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .nav {
+    background-color: #07c3f7 !important;
   }
 }
-@media screen  and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   #ground {
     position: absolute;
     width: auto;
@@ -1452,8 +1521,7 @@ h2 {
     padding: 0;
     top: -137%;
   }
-  .nav{
-    
+  .nav {
     background-color: #07c3f7;
   }
 

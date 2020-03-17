@@ -1022,8 +1022,11 @@ const burger = () => {
   }
 };
 
+
+let innerWidth = window.innerWidth;
+
+let innerHeight = window.innerHeight;
 $(document).on("ready", function() {
-  
   if (window.matchMedia("(max-width: 414px)").matches) {
     
 
