@@ -9,7 +9,8 @@
     height: 100%;
     // background-color: lightsalmon;
     .form1 {
-      width: 45%;
+      width: 43%;
+      max-width: 43%;
       height: auto;
       position: absolute;
       top: 15vh;
@@ -17,6 +18,8 @@
   }
   .form2 {
     width: 100%;
+    max-width: 45%;
+
     height: 100%;
     // background-color: lightsalmon;
     .form2 {
@@ -29,6 +32,8 @@
   }
   .form3 {
     width: 100%;
+    max-width: 45%;
+
     height: 100%;
     // background-color: lightsalmon;
     .form3 {
@@ -40,12 +45,30 @@
     }
   }
 }
+@media screen and (max-width: 1024px) {
+  .formsBox {
+    .form1 {
+      .form1 {
+        width: 65%;
+        max-width: 65%;
+        top: 15vh;
+      }
+    }
 
+    .form3 {
+      .form3 {
+        top: 5vh;
+        right: 0;
+      }
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .formsBox {
     .form1 {
       .form1 {
-        width: 50%;
+        width: 70%;
+        max-width: 70%;
       }
     }
 
@@ -62,20 +85,24 @@
   .formsBox {
     .form1 {
       .form1 {
-        width: 60%;
+        width: 70%;
+        max-width: 70%;
+
+        top: 10vh;
       }
     }
     .form2 {
       .form2 {
         width: 15%;
-        top: 30vh;
+        top: 60vh;
         left: 70vw;
       }
     }
     .form3 {
       .form3 {
-        top: 10vh;
-        width: 18vh;
+        top: 5vh;
+        width: 30vw;
+        max-width: 30vw;
       }
     }
   }
@@ -85,14 +112,23 @@
   .formsBox {
     .form1 {
       .form1 {
-        width: 40%;
+        width: 70%;
+        max-width: 70%;
+        top: 10vh;
       }
     }
     .form2 {
       .form2 {
         width: 10%;
-        top: 40vh;
-        left: 65vw;
+
+        top: 50vh;
+        left: 80vw;
+      }
+    }
+    .form3 {
+      .form3 {
+        width: 15%;
+        top: 5vh;
       }
     }
   }
