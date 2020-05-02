@@ -24,7 +24,7 @@ function App() {
       <Header />
       {/* <Intro /> */}
       <Forms />
-      <Description/>
+      {/* <Description/> */}
     </div>
   );
 }
