@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.scss";
+import Sky from "./components/Sky/Sky";
+import Buildings from "./components/Buldings/Buildings";
+import Mountain from "./components/Mountain/Mountain";
+import Bushes from "./components/Bushes/Bushes";
+import City from "./components/City/City";
+import Rock from "./components/Rock/Rock";
+import Ground from "./components/Ground/Ground";
+import Header from "./components/Header/Header";
+import Intro from "./components/Intro/Intro";
+import Forms from "./components/Forms/Forms";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Sky />
+      <Buildings />
+      <Mountain />
+      <Bushes />
+      <City />
+      <Rock />
+      <Ground /> */}
+      <Header />
+      {/* <Intro /> */}
+      <Forms />
     </div>
   );
 }

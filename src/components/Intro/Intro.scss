@@ -1,0 +1,98 @@
+.introBox {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  //   background-color: lightblue;
+  position: absolute;
+  z-index: 999999999;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  .intro {
+    width: 75vw;
+    height: 45vh;
+    margin-top: 15vh;
+    // background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    h1 {
+      width: 40vw;
+      font-size: 2.5em;
+      font-weight: 700;
+      margin: 0;
+    }
+    h2 {
+      width: 40vw;
+      font-size: 1em;
+      font-weight: 300;
+      margin: 5vh 0;
+      line-height: 1.5em;
+    }
+    .contactBtn {
+      width: 12vw;
+      height: 5vh;
+      background-color: #1f5091;
+      border: none;
+      border-radius: 40px;
+      color: aliceblue;
+      font-size: 0.8em;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .introBox {
+    width: 100vw;
+    height: 100vh;
+    .intro {
+      background-color: lightcoral;
+      width: 70vw;
+      height: 40vh;
+      margin-top: 60vh;
+
+      h1 {
+        width: 100%;
+      }
+      h2 {
+        width: 100%;
+        margin: 2vh 0;
+      }
+      .contactBtn {
+        width: 20vw;
+        height: 5vh;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 754px) {
+    .introBox {
+      width: 100vw;
+      height: 100vh;
+      .intro {
+        background-color: lightcoral;
+        width: 70vw;
+        height: 40vh;
+        margin-top: 50vh;
+  
+        h1 {
+          width: 100%;
+          font-size: 1.5em;
+        }
+        h2 {
+          width: 100%;
+          margin: 2.5vh 0;          
+          font-size: 0.8em;
+        }
+        .contactBtn {
+          width: 30vw;
+          height: 5vh;
+        }
+      }
+    }
+  }

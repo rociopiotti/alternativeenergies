@@ -1,0 +1,23 @@
+.rockImg {
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  top: 15vh;
+}
+
+@media screen and (width: 1536px) and(max-width: 1536px) {
+  .rockImg {
+    top: 5vh;
+  }
+}
+@media screen  and (max-width: 768px) {
+  .rockImg {
+    top: 5vh;
+  }
+}
+
+@media screen and (max-width: 754px) and (orientation: landscape) {
+  .rockImg {
+    top: -8vh;
+  }
+}
