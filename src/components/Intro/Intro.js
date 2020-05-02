@@ -8,11 +8,11 @@ const Intro = (props) => {
         <h1>
           Start energy<br/> revolution from your community
         </h1>
-        <h2>
+        <h3>
           Sustainable technologies have never been so affordable.
           <br /> Produce and exchage energy maximizing the power of renewable
           sources
-        </h2>
+        </h3>
         <button className="contactBtn">Contact us</button>
       </div>
     </div>

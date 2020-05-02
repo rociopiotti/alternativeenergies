@@ -1,0 +1,32 @@
+.descriptionBox {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  //   background-color: lime;
+  z-index: 99999999;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+  .description {
+    width: 90vw;
+    height: 85vh;
+    // background-color: darkmagenta;
+    border: thin solid darkmagenta;
+    .descriptionTitle {
+      width: 30vw;
+      font-size: 2em;      
+      letter-spacing: 0.1em;
+      color: hsl(54, 69%, 70%);
+      margin-top: 6vh;
+      margin-left: 2.5vw;
+    }
+    .descriptionText {
+      width: 35vw;
+      margin-left: 2.5vw;      
+      letter-spacing: 0.1em;
+      line-height: 1.5em;
+    }
+  }
+}
