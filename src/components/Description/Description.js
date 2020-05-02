@@ -22,11 +22,30 @@ const Description = (props) => {
           This way communities can exchange the produced energy most efficiently
           and accelerate new models of energy management.
         </p>
-      <div class="appsListBox">
-      s
+        <div class="appsListBox">
+          <div className="card1">
+            <div className="cardImg">cardImg</div>
+            <div className="cardHeader">cardHeader</div>
+            <div className="cardBody">cardBody</div>
+
+          </div>
+           <div className="card2">
+            <div className="cardImg">cardImg</div>
+            <div className="cardHeader">cardHeader</div>
+            <div className="cardBody">cardBody</div>
+          </div> 
+          <div className="card3">
+            <div className="cardImg">cardImg</div>
+            <div className="cardHeader">cardHeader</div>
+            <div className="cardBody">cardBody</div>
+          </div>
+          <div className="card4">
+            <div className="cardImg">cardImg</div>
+            <div className="cardHeader">cardHeader</div>
+            <div className="cardBody">cardBody</div>
+          </div> 
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 };
