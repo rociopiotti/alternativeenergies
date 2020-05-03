@@ -10,16 +10,21 @@
   color: #fff;
   //   background-color: lime;
   .description {
-    width: 90%;
+    width: 90vw;
     height: 85vh;
     // border: thin solid darkmagenta;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 0;
+    top: 0;
     // background-color: darkmagenta;
     .descriptionTitle {
       width: 30vw;
       font-size: 2em;
       letter-spacing: 0.1em;
       color: hsl(54, 69%, 70%);
-      margin-top: 5vh;
+      margin-top: 0vh;
     }
     .descriptionText {
       width: 35vw;
@@ -36,6 +41,7 @@
       border: aliceblue thin solid;
       border-radius: 20px;
       position: absolute;
+      top: 15vh;
       right: 5vw;
     }
     .lineDivision {
@@ -65,30 +71,41 @@
       flex-direction: row;
       align-items: flex-start;
       justify-content: space-between;
-      margin-top: 6vh;
+      margin-top: 9vh;
+      margin-bottom: 0;
     }
   }
 }
 @media screen and (max-width: 1366px) {
   .descriptionBox {
     .description {
-      height: 100vh;
+      width: 90vw;
+      height: 80vh;
       .pageChanger {
-        top:15vh
+        top: 19vh;
       }
       .descriptionTitle {
         width: 90vw;
         font-size: 2.3em;
-        margin-top: 15vh;
+        margin-top: 0vh;
+        margin-bottom: 2vh;
         margin-left: 0vw;
+
       }
       .descriptionText {
-        width: 50vw;
+        width: 48vw;
+        margin-top: 0;
+        margin-bottom: 15vh;
         margin-left: 0vw;
-        line-height: 1.2em;
+        font-size: 0.8em;
+        line-height: 1.5em;
       }
       .appsListBox {
+        width: 100%;
         margin-top: 0vh;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 0;
       }
     }
   }

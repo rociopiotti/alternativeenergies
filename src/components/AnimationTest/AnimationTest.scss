@@ -1,0 +1,12 @@
+.AnimationTest {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  background: white;
+
+  .rectangle {
+    width: 200px;
+    height: 200px;
+    background: red;
+  }
+}

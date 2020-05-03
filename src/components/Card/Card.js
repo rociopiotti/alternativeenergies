@@ -24,7 +24,7 @@ const Card = (props) => {
             distribution adapted for each community needs.
           </p>
           <a href="#">
-            Learn more <i class="fas fa-long-arrow-alt-right">icon</i>
+            Learn more <i>icon</i>
           </a>
         </div>
       </div>
