@@ -77,9 +77,10 @@
   .cardBox {
     width: 100%;
     .card {
-      width: 100%;
+      width: 90%;
+      height: auto;
       margin-bottom: 5vh;
-      padding: 0;
+      padding: 10%;
       .cardImg {
         width: 15vh;
         height: 15vh;
@@ -93,7 +94,7 @@
         }
       }
       .cardBody {
-        height: 20vh;
+        height: 25vh;
         font-size: 1em;
         letter-spacing: 0.1em;
       }

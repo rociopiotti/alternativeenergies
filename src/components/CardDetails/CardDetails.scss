@@ -30,7 +30,7 @@
     line-height: 1.5em;
     ul {
       width: 100%;
-      margin-bottom:5.5vh;
+      margin-bottom: 5.5vh;
       list-style: inside;
       padding: 0;
       li {
@@ -78,12 +78,8 @@
   .cardDetails {
     width: 100%;
 
-    .cardImg {
-      width: 15vh;
-      height: 15vh;
-    }
     .cardHeader {
-      margin-top: 15vh;
+      margin-top: 5vh;
       h4 {
         font-size: 1.5em;
         margin: 0;
@@ -94,6 +90,9 @@
       height: 20vh;
       font-size: 1em;
       letter-spacing: 0.1em;
+      ul {
+        margin-bottom: 10vh;
+      }
     }
   }
 }
