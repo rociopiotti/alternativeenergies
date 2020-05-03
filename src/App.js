@@ -26,18 +26,17 @@ class App extends React.Component {
     return (
       <div className="App">
         {/* <AnimationTest /> */}
-
-        {/* <Sky />
+        <Sky />
         <Buildings />
         <Mountain />
         <Bushes />
         <City />
         <Rock />
-        <Ground /> */}
+        <Ground />
         <Header />
-        {/* <Intro /> */}
-        <Forms />
-        <Description />
+        <Intro />
+        {/* <Forms /> */}
+        {/* <Description /> */}
       </div>
     );
   }

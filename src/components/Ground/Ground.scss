@@ -5,13 +5,11 @@
   background-color: transparents;
   z-index: 999999999;
   overflow: hidden;
- 
+
   .groundImg {
-    width: 120%;
+    width: 110%;
     position: absolute;
-    top: 0;
-    height: auto;
-    top:-37vh;
+    top: -20vh;
   }
 }
 
