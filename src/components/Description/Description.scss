@@ -137,6 +137,7 @@
 @media screen and (max-width: 754px) {
   .descriptionBox {
     display: flex;
+    height: auto;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -147,6 +148,7 @@
       height: auto;
       margin-top: 20vh;
       margin-bottom: 15vh;
+      margin-left: 0;
       .descriptionTitle {
         font-size: 2em;
         margin-top: 15vh;
@@ -154,6 +156,8 @@
       }
       .descriptionText {
         width: 80vw;
+        margin: 0;
+        padding: 0;
       }
       .appsListBox {
         width: 100%;
