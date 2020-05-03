@@ -60,16 +60,23 @@
 }
 @media screen and (max-width: 768px) {
   .formsBox {
+    overflow-x: hidden;
     .form1 {
       .form1 {
-        width: 70%;
-        max-width: 70%;
+        width: 105%;
+        max-width: 110%;
+        margin-top: 10vh;
       }
     }
-
+    .form2 {
+      .form2 {
+        display: none;
+        visibility: hidden;
+      }
+    }
     .form3 {
       .form3 {
-        top: 5vh;
+        top: 7vh;
         right: 0;
       }
     }
@@ -77,12 +84,13 @@
 }
 @media screen and (max-width: 754px) {
   .formsBox {
+    
+    overflow-x: hidden;
     .form1 {
-      overflow-x: hidden;
       .form1 {
         width: 140%;
         max-width: 200%;
-        top: 33vh;
+        top: 23vh;
         left: -10vw;
       }
     }
@@ -102,27 +110,28 @@
     }
   }
 }
-@media screen and (max-width: 754px) and (orientation: landscape) {
-  .formsBox {
+
+@media screen and (max-width: 754px) and (orientation:landscape) {
+  .formsBox {    
+    overflow-x: hidden;
     .form1 {
       .form1 {
-        width: 70%;
-        max-width: 70%;
-        top: 10vh;
+        width: 105%;
+        max-width:200%;
+        top: -15vh;
+        left: -5vw;
       }
     }
     .form2 {
       .form2 {
-        width: 10%;
-
-        top: 50vh;
-        left: 80vw;
+        display: none;
+        visibility: hidden;
       }
     }
     .form3 {
       .form3 {
-        width: 15%;
-        top: 5vh;
+        display: none;
+        visibility: hidden;
       }
     }
   }

@@ -73,12 +73,13 @@
     }
   }
 }
-@media screen and (max-width: 754px) {
+@media screen and (max-width: 823px) {
   .cardDetails {
     width: 100%;
 
+    height: auto;
     .cardHeader {
-      margin-top: 5vh;
+      margin-top: 0vh;
       h4 {
         font-size: 1.5em;
         margin: 0;
@@ -86,11 +87,11 @@
       }
     }
     .cardBody {
-      height: 20vh;
+      height:40vh;
       font-size: 1em;
       letter-spacing: 0.1em;
       ul {
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
       }
     }
   }
