@@ -1,5 +1,8 @@
 import React from "react";
 import "./Description.scss";
+import Card from "../Card/Card";
+import CardDetails from "../CardDetails/CardDetails";
+
 
 const Description = (props) => {
   return (
@@ -23,68 +26,11 @@ const Description = (props) => {
           and accelerate new models of energy management.
         </p>
         <div class="appsListBox">
-          <div className="card1">
-            <div className="cardImg">cardImg</div>
-            <div className="cardHeader">
-              <h4>Energy Decentralization</h4>
-            </div>
-            <div className="cardBody">
-              <p>
-                An innovative approach to energy production, storage, and
-                distribution adapted for each community needs.
-                <br></br>
-              </p>
-              <a href="#">
-                Learn more <i class="fas fa-long-arrow-alt-right">icon</i>{" "}
-              </a>
-            </div>
-          </div>
-          <div className="card2">
-            <div className="cardImg">cardImg</div>
-            <div className="cardHeader">
-              <h4>Eco-Friendly Sustainability</h4>
-            </div>
-            <div className="cardBody">
-              <p>
-                Maximized efficiency of fossil fuels and renewable energy
-                sources for the minimal impact on the enviroment.
-                <br></br>
-              </p>
-              <a href="#">
-                Learn more <i class="fas fa-long-arrow-alt-right">icon</i>{" "}
-              </a>
-            </div>
-          </div>
-          <div className="card3">
-            <div className="cardImg">cardImg</div>
-            <div className="cardHeader">
-              <h4>Power Exchange </h4>
-            </div>
-            <div className="cardBody">
-              <p>
-                Balanced schemes connecting energy producers and consumers to
-                reach effective power exchange and make smart contracts.
-              </p>
-              <a href="#">
-                Learn more <i class="fas fa-long-arrow-alt-right">icon</i>{" "}
-              </a>
-            </div>
-          </div>
-          <div className="card4">
-            <div className="cardHeader">
-              <h4>Platform Keypoints</h4>
-            </div>
-            <div className="cardBody">
-              <ul>
-                <li>P2P energy exchange</li>
-                <li>Balance the system</li>
-                <li>Storage & transmissions</li>
-              </ul>
-              <a href="#">
-                Whatch video <i class="fas fa-long-arrow-alt-right">icon</i>{" "}
-              </a>
-            </div>
-          </div>
+          <Card />
+          <Card />
+          <Card />
+          <CardDetails />
+          
         </div>
       </div>
     </div>

@@ -66,72 +66,11 @@
       align-items: flex-start;
       justify-content: space-between;
       margin-top: 12vh;
-      .card1,
-      .card2,
-      .card3,
-      .card4 {
-        width:22%;
-        height: auto;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background-color: darkred;
-        margin-top: 0;
 
-        .cardImg {
-          width: 100%;
-          height: 13vh;
-          background-color: darkslateblue;
-        }
-        .cardHeader {
-          width: 100%;
-          background-color: dimgray;
-          h4 {
-            font-size: 1.2em;
-            margin: 0;
-            letter-spacing: 0.1em;
-          }
-        }
-        .cardBody {
-          width: 100%;
-          height: 13vh;
-          background-color: darkslategray;
-          font-size: 0.8em;
-
-          a {
-            text-decoration: none;
-            color: #fff;
-          }
-        }
-      }
-      .card3 {
-        margin-right: 2.5vw;
-      }
-      .card4 {
-        .cardBody {
-          width: 100%;
-          height: 25.5vh;
-          background-color: darkslategray;
-          ul {
-            margin-bottom: 5vh;
-            li {
-              line-height: 3em;
-            }
-          }
-          a {
-            background-color: darkslateblue;
-            border-radius: 30px;
-            padding: 1vh 2vw;
-            margin: 5vh 0;
-          }
-        }
-      }
     }
   }
 }
-@media screen and (max-width: 1366pxx) {
+@media screen and (max-width: 1366px) {
   .descriptionBox {
     .description {
       .descriptionTitle {
