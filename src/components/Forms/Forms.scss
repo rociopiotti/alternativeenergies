@@ -78,25 +78,26 @@
 @media screen and (max-width: 754px) {
   .formsBox {
     .form1 {
+      overflow-x: hidden;
       .form1 {
-        width: 70%;
-        max-width: 70%;
-
-        top: 10vh;
+        width: 140%;
+        max-width: 200%;
+        top: 33vh;
+        left: -10vw;
       }
     }
     .form2 {
       .form2 {
-        width: 15%;
-        top: 60vh;
-        left: 70vw;
+        display: none;
+        visibility: hidden;
       }
     }
     .form3 {
       .form3 {
-        top: 5vh;
-        width: 30vw;
-        max-width: 30vw;
+        top: 2vh;
+        right: 0vw;
+        width: 55vw;
+        max-width: 55vw;
       }
     }
   }
