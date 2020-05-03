@@ -12,7 +12,7 @@
   .description {
     width: 90%;
     height: 85vh;
-    border: thin solid darkmagenta;
+    // border: thin solid darkmagenta;
     // background-color: darkmagenta;
     .descriptionTitle {
       width: 30vw;
@@ -66,22 +66,29 @@
       align-items: flex-start;
       justify-content: space-between;
       margin-top: 6vh;
-
     }
   }
 }
 @media screen and (max-width: 1366px) {
   .descriptionBox {
     .description {
+      height: 100vh;
+      .pageChanger {
+        top:15vh
+      }
       .descriptionTitle {
         width: 90vw;
         font-size: 2.3em;
-        margin-top: 5vh;
+        margin-top: 15vh;
         margin-left: 0vw;
       }
       .descriptionText {
-        width: 45vw;
+        width: 50vw;
         margin-left: 0vw;
+        line-height: 1.2em;
+      }
+      .appsListBox {
+        margin-top: 0vh;
       }
     }
   }
@@ -91,28 +98,53 @@
     .description {
       width: 90vw;
       height: 85vh;
+      .pageChanger {
+        right: 5vw;
+      }
       .descriptionTitle {
         margin-top: 2.5vh;
-        margin-left: 0vw;
+        margin-left: 5vw;
       }
       .descriptionText {
         width: 64vw;
-        margin-left: 0vw;
+        margin-left: 5vw;
         font-size: 0.9em;
+      }
+      .appsListBox {
+        margin-top: 0vh;
+        flex-wrap: wrap;
       }
     }
   }
 }
 @media screen and (max-width: 754px) {
   .descriptionBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
     .description {
+      width: 80%;
+      height: auto;
+      margin-top: 20vh;
+      margin-bottom: 15vh;
       .descriptionTitle {
         font-size: 2em;
-        margin-top: 5vh;
+        margin-top: 15vh;
         margin-left: 0vw;
       }
       .descriptionText {
         width: 80vw;
+      }
+      .appsListBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 6vh;
       }
     }
   }

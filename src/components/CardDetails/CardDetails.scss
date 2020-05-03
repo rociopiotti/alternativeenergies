@@ -6,12 +6,12 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-//   background-color: darkred;
+  //   background-color: darkred;
   margin-top: 5vh;
 
   .cardHeader {
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     // background-color: dimgray;
     h4 {
       font-size: 1.8em;
@@ -21,11 +21,13 @@
   }
   .cardBody {
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     // background-color: darkslategray;
     font-size: 0.8em;
     line-height: 1.5em;
     ul {
+      width: 100%;
+      padding: 2vw;
       margin-bottom: 5.5vh;
       li {
         letter-spacing: 0.1em;
@@ -43,6 +45,51 @@
       border: #001420 3px solid;
       border-radius: 30px;
       text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .cardDetails {
+    width: 45%;
+    margin-left: 5%;
+    margin-top: 12vh;
+    .cardHeader {
+      height: 10vh;
+      h4 {
+        font-size: 1.5em;
+      }
+    }
+    .cardBody {
+      ul {
+        margin-bottom: 0vh;
+        li {
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 754px) {
+  .cardDetails {
+    width: 100%;
+
+    .cardImg {
+      width: 15vh;
+      height: 15vh;
+    }
+    .cardHeader {
+      margin-top: 15vh;
+      h4 {
+        font-size: 1.5em;
+        margin: 0;
+        letter-spacing: 0.1em;
+      }
+    }
+    .cardBody {
+      height: 20vh;
+      font-size: 1em;
+      letter-spacing: 0.1em;
     }
   }
 }
