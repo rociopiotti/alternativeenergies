@@ -1,11 +1,20 @@
 import React from "react";
 import "./Card.scss";
+import iconBackground1 from "../../img/IconBackground1.svg";
+import iconRed from "../../img/red.png";
 
 const Card = (props) => {
   return (
     <div className="cardBox">
       <div className="card">
-        <div className="cardImg">cardImg</div>
+        <div className="cardImg">
+          <img
+            src={iconBackground1}
+            alt="icon background"
+            className="iconBackground"
+          />
+          <img src={iconRed} alt="icon app" className="iconImgApp" />
+        </div>
         <div className="cardHeader">
           <h4>Energy Decentralization</h4>
         </div>

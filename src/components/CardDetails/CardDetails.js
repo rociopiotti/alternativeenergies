@@ -5,18 +5,16 @@ const CardDetails = (props) => {
   return (
     <div className="cardDetails">
       <div className="cardHeader">
-        <h4>Energy Decentralization</h4>
+        <h4>Platform Keypoints</h4>
       </div>
       <div className="cardBody">
         <ul>
-          <li></li>
-
-          <li></li>
-
-          <li></li>
+          <li>Independent and digitized</li>
+          <li>New economic model</li>
+          <li>Build local ecosystems</li>
         </ul>
         <a href="#">
-          Learn more <i class="fas fa-long-arrow-alt-right">icon</i>
+          Watch video<i class="fas fa-long-arrow-alt-right">icon</i>
         </a>
       </div>
     </div>

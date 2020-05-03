@@ -30,7 +30,10 @@ const Description = (props) => {
           <Card />
           <Card />
           <CardDetails />
-          
+          {/* TO DO: CAMBIA  CARDDETAIL SEGUN HOVER CARD */}
+          {/* <CardDetails />
+          <CardDetails /> */}
+
         </div>
       </div>
     </div>

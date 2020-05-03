@@ -19,7 +19,7 @@
       font-size: 2em;
       letter-spacing: 0.1em;
       color: hsl(54, 69%, 70%);
-      margin-top: 8vh;
+      margin-top: 5vh;
     }
     .descriptionText {
       width: 35vw;
@@ -60,12 +60,12 @@
     }
     .appsListBox {
       width: 100%;
-      background-color: darkorange;
+      // background-color: darkorange;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       justify-content: space-between;
-      margin-top: 12vh;
+      margin-top: 6vh;
 
     }
   }

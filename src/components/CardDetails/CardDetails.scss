@@ -6,27 +6,43 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: darkred;
-  margin-top: 0;
+//   background-color: darkred;
+  margin-top: 5vh;
 
   .cardHeader {
     width: 100%;
-    background-color: dimgray;
+    height: 15vh;
+    // background-color: dimgray;
     h4 {
-      font-size: 1.2em;
+      font-size: 1.8em;
       margin: 0;
       letter-spacing: 0.1em;
     }
   }
   .cardBody {
     width: 100%;
-    height: 24vh;
-    background-color: darkslategray;
+    height: 25vh;
+    // background-color: darkslategray;
     font-size: 0.8em;
+    line-height: 1.5em;
+    ul {
+      margin-bottom: 5.5vh;
+      li {
+        letter-spacing: 0.1em;
+        line-height: 2em;
+      }
+    }
 
     a {
       text-decoration: none;
       color: #fff;
+      width: 200px;
+      height: 40px;
+      padding: 10px 15px;
+      background-color: #001420;
+      border: #001420 3px solid;
+      border-radius: 30px;
+      text-align: center;
     }
   }
 }
