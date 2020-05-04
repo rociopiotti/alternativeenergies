@@ -44,8 +44,9 @@
 }
 @media screen and (max-width: 768px) {
   .header {
+   
     .logoBtn {
-      height: 4vh;
+      height: 5vh;
     }
   }
 }
@@ -55,12 +56,17 @@
     z-index: 9999999999999999;
     .burger {
       display: flex;
-      width: 4vh;
-      height: 4vh;
-      background-color: blue;
+      width: 6vh;
+      height: 6vh;
+      background-color: transparent;
       border: none;
       right: 5vw;
       position: absolute;
+      padding: 0;
+      font-size: 1.3em;
+      color: #ffffff;
+      align-items: center;
+      justify-content: center;
     }
     .navbar {
       visibility: hidden; //////////////////////////////////////////////////////TEMPORAL

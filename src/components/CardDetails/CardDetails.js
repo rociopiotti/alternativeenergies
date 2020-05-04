@@ -15,7 +15,7 @@ const CardDetails = (props) => {
           <li>Build local ecosystems</li>
         </ul>
         <a href="#">
-          Watch video <span></span> <Icon type="arrowRight"/>
+          Watch video  <Icon type="arrowRight"/>
         </a>
       </div>
     </div>
