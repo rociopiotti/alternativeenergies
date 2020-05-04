@@ -61,17 +61,17 @@ class App extends React.Component {
           ANIMATE
         </button>
         {/* <AnimationTest /> */}
-        <Sky/>
-        <Buildings />
-        <Mountain />
-        <Bushes />
-        <City />
-        <Rock />
-        <Ground />
+        {/* <Sky/> */}
+        {/* <Buildings /> */}
+        {/* <Mountain /> */}
+        {/* <Bushes /> */}
+        {/* <City /> */}
+        {/* <Rock /> */}
+        {/* <Ground /> */}
         <Header />
         {/* <Intro /> */}
-        {/* <Forms /> */}
-        {/* <Description /> */}
+        <Forms />
+        <Description />
       </div>
     );
   }
