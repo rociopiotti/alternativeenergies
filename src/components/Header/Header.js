@@ -1,6 +1,8 @@
 import React from "react";
 import "./Header.scss";
 import logo from "../../img/Logo.svg";
+import Icon from "../Icon/Icon";
+
 
 
 class Header extends React.Component {
@@ -20,7 +22,7 @@ class Header extends React.Component {
         
         </a>
         <span className="separationHeader"></span>
-        <button className="burger" alt="burger"></button>
+        <button className="burger" alt="burger"> <Icon type="burger"/></button>
         <ul className="navbar">
           <li>
             <a title="About" href="#ABOUT">

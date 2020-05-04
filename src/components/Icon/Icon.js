@@ -2,7 +2,11 @@ import React from "react";
 import "./Icon.scss";
 
 // FONT-AWESOME:
-import { faArrowRight,  faArrowLeft} from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faArrowLeft,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Icon = (props) => {
@@ -15,9 +19,11 @@ const Icon = (props) => {
     case "arrowLeft":
       faIcon = faArrowLeft;
       break;
+    case "burger":
+      faIcon = faBars;
+      break;
   }
-  return <FontAwesomeIcon className={"Icon"} icon={faIcon}/>;
-
+  return <FontAwesomeIcon className={"Icon"} icon={faIcon} />;
 };
 
 export default Icon;
