@@ -1,8 +1,11 @@
 .AnimationTest {
-  position: relative;
+  position: absolute;
   width: 100vw;
   height: 50vh;
   background: white;
+  top: 0;
+  left: 0;
+  z-index: 99999999999999999;
 
   .rectangle {
     width: 200px;
