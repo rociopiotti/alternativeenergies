@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import logo from "../../img/Logo.svg";
-import Icon from "./Icon";
+
 
 class Header extends React.Component {
   componentWillMount() {
@@ -17,8 +17,7 @@ class Header extends React.Component {
       <div className="header">
         <a className="logoBtn">
           <img src={logo} alt="logo" className="logoImg" />
-          <Icon type="home" />
-          <Icon type="burger" />
+        
         </a>
         <span className="separationHeader"></span>
         <button className="burger" alt="burger"></button>

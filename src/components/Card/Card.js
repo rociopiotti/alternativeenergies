@@ -2,6 +2,8 @@ import React from "react";
 import "./Card.scss";
 import iconBackground1 from "../../img/IconBackground1.svg";
 import iconRed from "../../img/red.png";
+import Icon from "../Icon/Icon";
+
 
 const Card = (props) => {
   return (
@@ -24,7 +26,7 @@ const Card = (props) => {
             distribution adapted for each community needs.
           </p>
           <a href="#">
-            Learn more <i>icon</i>
+            Learn more  <Icon type="arrowRight"/>
           </a>
         </div>
       </div>

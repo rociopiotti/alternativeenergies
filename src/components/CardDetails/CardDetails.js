@@ -1,5 +1,6 @@
 import React from "react";
 import "./CardDetails.scss";
+import Icon from "../Icon/Icon";
 
 const CardDetails = (props) => {
   return (
@@ -14,7 +15,7 @@ const CardDetails = (props) => {
           <li>Build local ecosystems</li>
         </ul>
         <a href="#">
-          Watch video<i>icon</i>
+          Watch video <span></span> <Icon type="arrowRight"/>
         </a>
       </div>
     </div>

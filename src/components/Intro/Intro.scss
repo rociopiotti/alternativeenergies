@@ -26,7 +26,7 @@
       margin: 0;
     }
     h3 {
-      width: 40vw;
+      width: 35vw;
       font-size: 1.1em;
       font-weight: 300;
       margin: 5vh 0;
@@ -35,7 +35,8 @@
     }
     .contactBtn {
       width: 12vw;
-      height: 5vh;
+      height: 10vh;
+      padding: 2vh 0;
       background-color: #1f5091;
       border: none;
       border-radius: 40px;
@@ -70,7 +71,6 @@
     }
   }
 }
-
 @media screen and (max-width: 754px) {
     .introBox {
       width: 100vw;

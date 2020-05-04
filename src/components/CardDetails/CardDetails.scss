@@ -49,6 +49,9 @@
       border: #002129 3px solid;
       border-radius: 30px;
       text-align: center;
+      .Icon {
+        margin-left: 0.5vw;
+      }
     }
   }
 }
@@ -87,7 +90,7 @@
       }
     }
     .cardBody {
-      height:40vh;
+      height: 40vh;
       font-size: 1em;
       letter-spacing: 0.1em;
       ul {

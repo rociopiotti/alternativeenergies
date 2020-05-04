@@ -2,6 +2,8 @@ import React from "react";
 import "./Description.scss";
 import Card from "../Card/Card";
 import CardDetails from "../CardDetails/CardDetails";
+import Icon from "../Icon/Icon";
+
 
 
 const Description = (props) => {
@@ -10,11 +12,11 @@ const Description = (props) => {
       <div className="description">
         <div className="pageChanger">
           <button className="btnLeftPage">
-            <i>icon</i>
+          <Icon type="arrowLeft"/>
           </button>
           <div className="lineDivision"></div>
           <button className="btnRightPage">
-            <i>icon</i>
+            <Icon type="arrowRight"/>
           </button>
         </div>
         <h2 className="descriptionTitle">What is Poweris?</h2>
