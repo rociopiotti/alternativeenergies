@@ -60,7 +60,6 @@ class App extends React.Component {
         <button onClick={this.handleBtnAnimacion.bind(this)} className="btnAnimacion">
           ANIMATE
         </button>
-
         {/* <AnimationTest /> */}
         <Sky/>
         <Buildings />
