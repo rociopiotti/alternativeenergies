@@ -16,7 +16,9 @@ class Intro extends React.Component {
   }
 
   componentDidMount() {
-    this.context.handleRefs({ backgroundRef: this.animationBox });
+    const { openingAnimation, handleRefs } = this.context;
+    openingAnimation({ backgroundRef: this.animationBox });
+    handleRefs({ backgroundRef: this.animationBox });
   }
 
   render() {

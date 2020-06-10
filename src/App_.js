@@ -28,6 +28,8 @@ class App extends React.Component {
     // reference to the animation
     this.myTween = null;
     this.handleRefs = this.handleRefs.bind(this);
+    this.openingAnimation = this.openingAnimation.bind(this);
+
     this.state = {
       refs: {},
       mode: "CLOSE",
@@ -57,6 +59,16 @@ class App extends React.Component {
       y: destY,
     });
   }
+  openingAnimation() {
+    const { mode } = this.state;
+    const destX = mode === "CLOSE" ? 50 : 0;
+    var tl = gsap.timeline({
+      onComplete: () => this.toggle(),
+    });
+    tl.to(this.state.refs.backgroundRef, 1, {
+      x: destX,
+    });
+  }
 
   handleRefs(refs) {
     this.setState({
@@ -70,6 +82,7 @@ class App extends React.Component {
       <PageManagerContext.Provider
         value={{
           handleRefs: this.handleRefs,
+          openingAnimation: this.openingAnimation,
           // poner hdleref
         }}>
         <div className='App'>
