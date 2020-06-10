@@ -10,7 +10,6 @@ class Ground extends React.Component {
     this.myTween = null;
     this.state = {
       mode: "UP",
-      isAnimating: null,
     };
   }
   toggle() {
@@ -19,19 +18,6 @@ class Ground extends React.Component {
     this.setState({
       mode: newMode,
     });
-  }
-
-  animando() {
-    let newIsAnimating 
-    if(this.state.isAnimating === true) {
-     newIsAnimating = false;
-    }else{
-      newIsAnimating = true;
-    }
-    this.setState({
-      isAnimating: newIsAnimating,
-    })
-    console.log("Estado", newIsAnimating);
   }
 
   animateBox() {
@@ -43,22 +29,24 @@ class Ground extends React.Component {
       y: posUp,
       isAnimating: true,
       // x: posLeft,
-      onComplete: () => (this.toggle(), this.animando())
+      onComplete: () => this.toggle(),
     });
     console.log("modo GROUND", mode);
-    
   }
 
   render() {
-    
     return (
       <div
         className="groundBox"
         onClick={this.animateBox.bind(this)}
         ref={(div) => (this.myElement = div)}>
-
-        <img src={ground} alt="ground" className="groundImg" onClick={this.animateBox.bind(this)}
-        ref={(div) => (this.myElement = div)}/>
+        <img
+          src={ground}
+          alt="ground"
+          className="groundImg"
+          onClick={this.animateBox.bind(this)}
+          ref={(div) => (this.myElement = div)}
+        />
       </div>
     );
   }

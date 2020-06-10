@@ -4,37 +4,45 @@
   // background-color: lightcyan;
   position: absolute;
   z-index: 99999999;
+
   .form1 {
+    position: absolute;
     width: 100%;
     height: 100%;
+    left: -50vw;
+    top: 8vh;
+   
     // background-color: lightsalmon;
-    .form1 {
+    .form1Img {
       width: 43%;
-      max-width: 43%;
       height: auto;
-      position: absolute;
-      top: 8vh;
+      
     }
   }
   .form2 {
-    width: 70%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     // background-color: lightsalmon;
-    .form2 {
+    top: 100vh;
+    .form2Img {
+      position: absolute;
       width: 10%;
       height: auto;
-      position: absolute;
       top: 35vh;
       left: 65vw;
     }
   }
   .form3 {
     width: 100%;
-    max-width: 45%;
+    height: 100%;
+    position: absolute;
+    left: 50vw;
     // background-color: lightsalmon;
-    .form3 {
+    .form3Img {
+      position: absolute;
       width: 25%;
       height: auto;
-      position: absolute;
       top: -2.5vh;
       right: 0;
     }
@@ -43,7 +51,8 @@
 @media screen and (max-width: 1024px) {
   .formsBox {
     .form1 {
-      .form1 {
+      left: 0vw;
+      .form1Img {
         width: 55%;
         max-width: 65%;
         top: 10vh;
@@ -51,7 +60,8 @@
     }
 
     .form3 {
-      .form3 {
+      left: 0vw;
+      .form3Img {
         top: 5vh;
         right: 0;
       }
@@ -62,20 +72,24 @@
   .formsBox {
     overflow-x: hidden;
     .form1 {
-      .form1 {
+      left: 0vw;
+      .form1Img {
         width: 105%;
         max-width: 110%;
         margin-top: 10vh;
       }
     }
     .form2 {
-      .form2 {
+      left: 0vw;
+
+      .form2Img {
         display: none;
         visibility: hidden;
       }
     }
     .form3 {
-      .form3 {
+      left: 0vw;
+      .form3Img {
         top: 7vh;
         right: 0;
       }
@@ -84,10 +98,10 @@
 }
 @media screen and (max-width: 754px) {
   .formsBox {
-    
     overflow-x: hidden;
     .form1 {
-      .form1 {
+      left: 0vw;
+      .form1Img {
         width: 140%;
         max-width: 200%;
         top: 23vh;
@@ -95,13 +109,15 @@
       }
     }
     .form2 {
-      .form2 {
+      left: 0vw;
+      .form2Img {
         display: none;
         visibility: hidden;
       }
     }
     .form3 {
-      .form3 {
+      left: 0vw;
+      .form3Img {
         top: 2vh;
         right: 0vw;
         width: 55vw;
@@ -110,25 +126,28 @@
     }
   }
 }
-@media screen and (max-width: 754px) and (orientation:landscape) {
-  .formsBox {    
+@media screen and (max-width: 754px) and (orientation: landscape) {
+  .formsBox {
     overflow-x: hidden;
     .form1 {
-      .form1 {
+      left: 0vw;
+      .form1Img {
         width: 105%;
-        max-width:200%;
+        max-width: 200%;
         top: -15vh;
         left: -5vw;
       }
     }
     .form2 {
-      .form2 {
+      left: 0vw;
+      .form2Img {
         display: none;
         visibility: hidden;
       }
     }
     .form3 {
-      .form3 {
+      left: 0vw;
+      .form3Img {
         display: none;
         visibility: hidden;
       }

@@ -25,12 +25,16 @@
       letter-spacing: 0.1em;
       color: hsl(54, 69%, 70%);
       margin-top: 0vh;
+      position: absolute;
+      top: 105vh;
     }
     .descriptionText {
       width: 35vw;
       font-size: 1em;
       letter-spacing: 0.1em;
       line-height: 1.5em;
+      position: absolute;
+      top: 100vh;
     }
     .pageChanger {
       width: 100px;
@@ -41,7 +45,7 @@
       border: aliceblue thin solid;
       border-radius: 20px;
       position: absolute;
-      top: 15vh;
+      top: 110vh;
       right: 5vw;
     }
     .lineDivision {
@@ -65,7 +69,7 @@
       transform: scale(1.1, 1.1);
     }
     .appsListBox {
-      width: 100%;
+      width: 90%;
       // background-color: darkorange;
       display: flex;
       flex-direction: row;
@@ -73,6 +77,8 @@
       justify-content: space-between;
       margin-top: 9vh;
       margin-bottom: 0;
+      position: absolute;
+      top: 100vh;
     }
   }
 }
@@ -101,6 +107,8 @@
         margin-top: 0vh;
         margin-bottom: 2vh;
         margin-left: 0vw;
+        position: relative;
+        top: 0;
       }
       .descriptionText {
         width: 48vw;
@@ -109,13 +117,18 @@
         margin-left: 0vw;
         font-size: 0.8em;
         line-height: 1.5em;
+
+        position: relative;
+        top: 0;
       }
       .appsListBox {
-        width: 100%;
+        width: 90%;
         margin-top: 0vh;
         align-items: flex-start;
         justify-content: flex-start;
         margin-left: 0;
+        position: relative;
+        top: 0;
       }
     }
   }
@@ -141,6 +154,8 @@
         right: 10vw;
       }
       .descriptionTitle {
+        position: relative;
+        top: 0;
         font-size: 2em;
         margin-top: 15vh;
         margin-left: 0vw;
@@ -150,6 +165,9 @@
         margin: 0;
         padding: 0;
         margin-bottom: 15vh;
+
+        position: relative;
+        top: 0;
       }
       .appsListBox {
         width: 100%;
@@ -159,8 +177,9 @@
         align-items: flex-start;
         justify-content: space-between;
         margin-top: 6vh;
+        position: relative;
+        top: 0;
       }
     }
   }
 }
-

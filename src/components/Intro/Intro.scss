@@ -11,11 +11,12 @@
   justify-content: center;
   .animationBTN {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     z-index: 99999999999999999999;
   }
   .intro {
+    opacity: 100%;
     width: 75vw;
     height: 45vh;
     margin-top: 15vh;
@@ -59,6 +60,7 @@
     width: 100vw;
     height: 100vh;
     .intro {
+      opacity: 100%;
       background-color: lightcoral;
       width: 70vw;
       height: 40vh;
@@ -79,28 +81,29 @@
   }
 }
 @media screen and (max-width: 754px) {
-    .introBox {
-      width: 100vw;
-      height: 100vh;
-      .intro {
-        background-color: lightcoral;
-        width: 70vw;
-        height: 40vh;
-        margin-top: 50vh;
-  
-        h1 {
-          width: 100%;
-          font-size: 1.5em;
-        }
-        h3 {
-          width: 100%;
-          margin: 2.5vh 0;          
-          font-size: 0.8em;
-        }
-        .contactBtn {
-          width: 30vw;
-          height: 5vh;
-        }
+  .introBox {
+    width: 100vw;
+    height: 100vh;
+    .intro {
+      opacity: 100%;
+      background-color: lightcoral;
+      width: 70vw;
+      height: 40vh;
+      margin-top: 50vh;
+
+      h1 {
+        width: 100%;
+        font-size: 1.5em;
+      }
+      h3 {
+        width: 100%;
+        margin: 2.5vh 0;
+        font-size: 0.8em;
+      }
+      .contactBtn {
+        width: 30vw;
+        height: 5vh;
       }
     }
   }
+}
