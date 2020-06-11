@@ -1,24 +1,47 @@
-.groundImg {
+.groundImgBox {
   position: absolute;
+  .groundImg {
+  position: relative;
   width: 120%;
-  top: -35vh;
-  left: 0;
-  z-index: 99999;
-}
-
-
-@media screen and (max-width: 1024px) {
-  .groundImg {
-    top: 0;
+    top: -35vh;
+    left: 0;
+    z-index: 99999;
   }
 }
+
+// @media screen and (max-width: 1024px) {
+//   .groundImgBox {
+//     overflow: hidden;
+//     .groundImg {
+//       position: absolute;
+//       width: 120%;
+//       top: -35vh;
+//       left: 0;
+//       z-index: 99999;
+//     }
+//   }
+// }
 @media screen and (max-width: 768px) {
-  .groundImg {
-    top: 0;
+  .groundImgBox {
+    width: 100%;
+    overflow-x: hidden;    
+    z-index: 9999;
+    .groundImg {
+      position: relative;
+      top: 0vh;
+      left: 0;
+    }
   }
 }
-@media screen and (max-width: 754px) and (orientation: landscape) {
-  .groundImg {
-    top: -32vh;
-  }
-}
+
+// @media screen and (max-width: 754px) and (orientation: landscape) {
+//   .groundImgBox {
+//     overflow: hidden;
+//     .groundImg {
+//       position: absolute;
+//       width: 120%;
+//       top: -35vh;
+//       left: 0;
+//     }
+//   }
+// }

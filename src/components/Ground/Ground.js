@@ -17,7 +17,9 @@ const Ground = () => {
     });
   }, []);
   return (
-    <img src={ground} alt='ground' className='groundImg' ref={wrapperRef} />
+    <div className='groundImgBox'>
+      <img src={ground} alt='ground' className='groundImg' ref={wrapperRef} />
+    </div>
   );
 };
 
