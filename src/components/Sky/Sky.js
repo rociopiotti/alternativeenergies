@@ -1,50 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import "./Sky.scss";
 import sky from "../../img/Sky.svg";
-// ANIMATION:
-import { TweenLite } from "gsap";
-class Sky extends React.Component {
-  constructor(props) {
-    super(props);
-    this.myElement = null;
-    this.myTween = null;
-    this.state = {
-      mode: "UP",
-    };
-  }
 
-  toggle() {
-    let newMode;
-    if (this.state.mode === "UP") {
-      newMode = "DOWN";
-    } else {
-      newMode = "UP";
-    }
-    this.setState({
-      mode: newMode,
-    });
-  }
-  animateBox() {
-    const { mode } = this.state;
-    const posUp = mode === "UP" ? "-100vh" : 0;
-    this.myTween = TweenLite.to(this.myElement, 1, {
-      y: posUp,
-      onComplete: () => this.toggle(),
-    });
+// CONTEXT
+import Context from "../../context/context";
 
-    console.log("modo SKY", this.state.mode);
-  }
-  render() {
-    return (
-      <img
-        src={sky}
-        alt="sky"
-        className="skyImg"
-        onClick={this.animateBox.bind(this)}
-        ref={(div) => (this.myElement = div)}
-      />
-    );
-  }
-}
+const Sky = (props) => {
+
+  const wrapperRef = useRef(null);
+
+  const { references } = useContext(Context);
+  const addRef = references;
+
+  useEffect(() => {
+    addRef("sky", {
+      wrapper: wrapperRef,
+    });
+    
+  }, []);
+
+  return (
+    <img
+      ref={wrapperRef}
+      src={sky}
+      alt='sky'
+      className='skyImg'
+    />
+  );
+};
 
 export default Sky;

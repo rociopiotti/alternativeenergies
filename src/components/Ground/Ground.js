@@ -1,55 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import "./Ground.scss";
 import ground from "../../img/Ground.svg";
-// ANIMATION:
-import { TweenLite } from "gsap";
-class Ground extends React.Component {
-  constructor(props) {
-    super(props);
-    this.myElement = null;
-    this.myTween = null;
-    this.state = {
-      mode: "UP",
-    };
-  }
-  toggle() {
-    const { mode } = this.state;
-    const newMode = mode === "UP" ? "DOWN" : "UP";
-    this.setState({
-      mode: newMode,
+
+// CONTEXT
+import Context from "../../context/context";
+const Ground = () => {
+  const wrapperRef = useRef(null);
+
+  const { references } = useContext(Context);
+
+  const addRef = references;
+
+  useEffect(() => {
+    addRef("ground", {
+      wrapper: wrapperRef,
     });
-  }
-
-  animateBox() {
-    const { mode } = this.state;
-    const posUp = mode === "UP" ? "-100vh" : 0;
-    // const posLeft = mode === "UP" ? "-2vw" : 0;
-
-    this.myTween = TweenLite.to(this.myElement, 1, {
-      y: posUp,
-      isAnimating: true,
-      // x: posLeft,
-      onComplete: () => this.toggle(),
-    });
-    console.log("modo GROUND", mode);
-  }
-
-  render() {
-    return (
-      <div
-        className="groundBox"
-        onClick={this.animateBox.bind(this)}
-        ref={(div) => (this.myElement = div)}>
-        <img
-          src={ground}
-          alt="ground"
-          className="groundImg"
-          onClick={this.animateBox.bind(this)}
-          ref={(div) => (this.myElement = div)}
-        />
-      </div>
-    );
-  }
-}
+  }, []);
+  return (
+    <img src={ground} alt='ground' className='groundImg' ref={wrapperRef} />
+  );
+};
 
 export default Ground;

@@ -32,16 +32,16 @@
 //   console.log("isAnimating", newIsAnimating);
 // }
 
-// startsAnimation() {
-//   const { mode } = this.state;
-//   const destY = mode === "CLOSE" ? "-100vh" : 0;
-//   var tl = gsap.timeline({
-//     onComplete: () => this.toggle(),
-//   });
-//   tl.to(this.state.refs.backgroundRef, 1, {
-//     y: destY,
-//   });
-// }
+startsAnimation() {
+  const { mode } = this.state;
+  const destY = mode === "CLOSE" ? "-100vh" : 0;
+  var tl = gsap.timeline({
+    onComplete: () => this.toggle(),
+  });
+  tl.to(this.state.refs.backgroundRef, 1, {
+    y: destY,
+  });
+}
 
 // openingAnimation() {
 //   const { mode } = this.state;

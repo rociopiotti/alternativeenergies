@@ -1,42 +1,28 @@
-import React from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import "./Mountain.scss";
 import mountain from "../../img/Mountain.svg";
-// ANIMATION:
-import { TweenLite } from "gsap";
-class Mountain extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mode: "UP",
-    };
-  }
-  toggle() {
-    const { mode } = this.state;
-    const newMode = mode === "UP" ? "DOWN" : "UP";
-    this.setState({
-      mode: newMode,
+
+// CONTEXT
+import Context from "../../context/context";
+const Mountain = () => {
+  const wrapperRef = useRef(null);
+  const { references } = useContext(Context);
+
+  const addRef = references;
+
+  useEffect(() => {
+    addRef("mountain", {
+      wrapper: wrapperRef,
     });
-  }
-  animateBox() {
-    const { mode } = this.state;
-    const posUp = mode === "UP" ? "-100vh" : 0;
-    this.myTween = TweenLite.to(this.myElement, 1, {
-      y: posUp,
-      onComplete: () => this.toggle(),
-    });
-    console.log("Modo Mountain", mode);
-  }
-  render() {
-    return (
-      <img
-        src={mountain}
-        alt="Mountain"
-        className="mountainImg"
-        onClick={this.animateBox.bind(this)}
-        ref={(div) => (this.myElement = div)}
-      />
-    );
-  }
-}
+  }, []);
+  return (
+    <img
+      src={mountain}
+      alt='Mountain'
+      className='mountainImg'
+      ref={wrapperRef}
+    />
+  );
+};
 
 export default Mountain;

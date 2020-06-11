@@ -1,32 +1,31 @@
 .formsBox {
   width: 100vw;
   height: 100vh;
-  // background-color: lightcyan;
   position: absolute;
   z-index: 99999999;
+  // top:100vh;
 
   .form1 {
     position: absolute;
     width: 100%;
     height: 100%;
-    left: -50vw;
-    top: 8vh;
-   
-    // background-color: lightsalmon;
+    top: 100vh;
+    left: 0vw;
+
     .form1Img {
+      position: relative;
       width: 43%;
       height: auto;
-      
+      top: 12vh;
     }
   }
   .form2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    // background-color: lightsalmon;
     top: 100vh;
     .form2Img {
-      position: absolute;
+      position: relative;
       width: 10%;
       height: auto;
       top: 35vh;
@@ -37,120 +36,136 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    left: 50vw;
-    // background-color: lightsalmon;
+    left: 0vw;
+    top: 100vh;
     .form3Img {
-      position: absolute;
+      position: relative;
       width: 25%;
       height: auto;
+      left: 76vw;
       top: -2.5vh;
       right: 0;
+      margin-right: 0;
     }
   }
 }
-@media screen and (max-width: 1024px) {
-  .formsBox {
-    .form1 {
-      left: 0vw;
-      .form1Img {
-        width: 55%;
-        max-width: 65%;
-        top: 10vh;
-      }
-    }
+// @media screen and (max-width: 1024px) {
+//   .formsBox {
+//     .form1 {
+//       left: 0vw;
+//       .form1Img {
+//         width: 55%;
+//         max-width: 65%;
+//         top: 10vh;
+//       }
+//     }
 
-    .form3 {
-      left: 0vw;
-      .form3Img {
-        top: 5vh;
-        right: 0;
-      }
-    }
-  }
-}
-@media screen and (max-width: 768px) {
-  .formsBox {
-    overflow-x: hidden;
-    .form1 {
-      left: 0vw;
-      .form1Img {
-        width: 105%;
-        max-width: 110%;
-        margin-top: 10vh;
-      }
-    }
-    .form2 {
-      left: 0vw;
+//     .form3 {
+//       left: 0vw;
+//       .form3Img {
+//         top: 5vh;
+//         right: 0;
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: 768px) {
+//   .formsBox {
+//     overflow-x: hidden;
+//     width: 100vw;
+//     height: 100vh;
+//     position: absolute;
+//     z-index: 99999999;
+//     .form1 {
+//       position: absolute;
+//       left: 0vw;
+//       width: 100%;
+//     height: 100%;
+//     // top: 100vh;
+//       .form1Img {
+//         position: relative;
 
-      .form2Img {
-        display: none;
-        visibility: hidden;
-      }
-    }
-    .form3 {
-      left: 0vw;
-      .form3Img {
-        top: 7vh;
-        right: 0;
-      }
-    }
-  }
-}
-@media screen and (max-width: 754px) {
-  .formsBox {
-    overflow-x: hidden;
-    .form1 {
-      left: 0vw;
-      .form1Img {
-        width: 140%;
-        max-width: 200%;
-        top: 23vh;
-        left: -10vw;
-      }
-    }
-    .form2 {
-      left: 0vw;
-      .form2Img {
-        display: none;
-        visibility: hidden;
-      }
-    }
-    .form3 {
-      left: 0vw;
-      .form3Img {
-        top: 2vh;
-        right: 0vw;
-        width: 55vw;
-        max-width: 55vw;
-      }
-    }
-  }
-}
-@media screen and (max-width: 754px) and (orientation: landscape) {
-  .formsBox {
-    overflow-x: hidden;
-    .form1 {
-      left: 0vw;
-      .form1Img {
-        width: 105%;
-        max-width: 200%;
-        top: -15vh;
-        left: -5vw;
-      }
-    }
-    .form2 {
-      left: 0vw;
-      .form2Img {
-        display: none;
-        visibility: hidden;
-      }
-    }
-    .form3 {
-      left: 0vw;
-      .form3Img {
-        display: none;
-        visibility: hidden;
-      }
-    }
-  }
-}
+//         width: 105%;
+//         max-width: 110%;
+//         margin-top: 10vh;
+//       }
+//     }
+//     .form2 {
+//       left: 0vw;
+
+//       .form2Img {
+//         position: relative;
+
+//         display: none;
+//         visibility: hidden;
+//       }
+//     }
+//     .form3 {
+//       left: 0vw;
+//       .form3Img {
+//         position: relative;
+
+//         top: 7vh;
+//         right: 0;
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: 754px) {
+//   .formsBox {
+//     overflow-x: hidden;
+//     .form1 {
+//       left: 0vw;
+//       .form1Img {
+//         width: 140%;
+//         max-width: 200%;
+//         top: 23vh;
+//         left: -10vw;
+//       }
+//     }
+//     .form2 {
+//       left: 0vw;
+//       .form2Img {
+//         display: none;
+//         visibility: hidden;
+//       }
+//     }
+//     .form3 {
+//       left: 0vw;
+//       .form3Img {
+//         top: 2vh;
+//         right: 0vw;
+//         width: 55vw;
+//         max-width: 55vw;
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: 754px) and (orientation: landscape) {
+//   .formsBox {
+//     overflow-x: hidden;
+//     .form1 {
+//       left: 0vw;
+//       .form1Img {
+//         width: 105%;
+//         max-width: 200%;
+//         top: -15vh;
+//         left: -5vw;
+//       }
+//     }
+//     .form2 {
+//       left: 0vw;
+//       .form2Img {
+//         display: none;
+//         visibility: hidden;
+//       }
+//     }
+//     .form3 {
+//       left: 0vw;
+//       .form3Img {
+//         display: none;
+//         visibility: hidden;
+//       }
+//     }
+//   }
+// }

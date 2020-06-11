@@ -1,47 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef, useContext }  from "react";
 import "./Rock.scss";
 import rock from "../../img/Rock.svg";
 
-// ANIMATION:
-import { TweenLite } from "gsap";
+// CONTEXT
+import Context from "../../context/context";
 
-class Rocks extends React.Component {
-  constructor(props) {
-    super(props);
-    this.myElement = null;
-    this.myTween = null;
-    this.state = {
-      mode: "UP",
-    };
-  }
-  toggle() {
-    const { mode } = this.state;
-    const newMode = mode === "UP" ? "DOWN" : "UP";
-    this.setState({
-      mode: newMode,
-    });
-  }
+const Rocks = () => {
+  const wrapperRef = useRef(null);
+  const { references } = useContext(Context);
 
-  animateBox() {
-    const { mode } = this.state;
-    const posUp = mode === "UP" ? "-100vh" : 0;
-    this.myTween = TweenLite.to(this.myElement, 1, {
-      y: posUp,
-      onComplete: () => this.toggle(),
+  const addRef = references;
+
+  useEffect(() => {
+    addRef("rock", {
+      wrapper: wrapperRef,
     });
-    console.log("modo ROCK", mode);
-  }
-  render() {
+  }, []);
     return (
       <img
         src={rock}
         alt="rock"
         className="rockImg"
-        onClick={this.animateBox.bind(this)}
-        ref={(div) => (this.myElement = div)}
+        ref={wrapperRef}
       />
     );
-  }
+  
 }
 
 export default Rocks;

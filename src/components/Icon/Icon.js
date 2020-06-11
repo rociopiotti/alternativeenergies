@@ -22,6 +22,8 @@ const Icon = (props) => {
     case "burger":
       faIcon = faBars;
       break;
+    default:
+      return;
   }
   return <FontAwesomeIcon className={"Icon"} icon={faIcon} />;
 };
