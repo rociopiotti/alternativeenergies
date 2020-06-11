@@ -1,43 +1,38 @@
-import React from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import "./Intro.scss";
 
 // CONTEXT
-import PageManagerContext from "../../context/context";
+import Context from "../../context/context";
 
-class Intro extends React.Component {
-  static contextType = PageManagerContext;
-  constructor(props) {
-    super(props);
-    // reference to the DOM node
-    this.animationBox = null;
+const Intro = (props) => {
+  // Levantar las referencias
+  const wrapperRef = useRef(null);
 
-    // reference to the animation
-    this.myTween = null;
-  }
+  // Importar las funciones para animación:
+  const { references } = useContext(Context);
+  const addRef = references;
 
-  componentDidMount() {
-    const { openingAnimation, handleRefs } = this.context;
-    openingAnimation({ backgroundRef: this.animationBox });
-    handleRefs({ backgroundRef: this.animationBox });
-  }
+  useEffect(() => {
+    addRef("introBox", {
+      wrapper: wrapperRef,
+    });
+  }, []);
 
-  render() {
-    return (
-      <div className='introBox' ref={(div) => (this.animationBox = div)}>
-        <div className='intro'>
-          <h1>
-            Start energy
-            <br /> revolution from your community
-          </h1>
-          <h3>
-            Sustainable technologies have never been so affordable.
-            <br /> Produce and exchage energy maximizing the power of renewable
-            sources
-          </h3>
-          <button className='contactBtn'>Contact us</button>
-        </div>
+  return (
+    <div className='introBox' ref={wrapperRef}>
+      <div className='intro'>
+        <h1>
+          Start energy
+          <br /> revolution from your community
+        </h1>
+        <h3>
+          Sustainable technologies have never been so affordable.
+          <br /> Produce and exchage energy maximizing the power of renewable
+          sources
+        </h3>
+        <button className='contactBtn'>Contact us</button>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 export default Intro;
