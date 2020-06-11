@@ -18,7 +18,7 @@ import Intro from "./components/Intro/Intro";
 import PageManagerContext from "./context/context";
 
 // ANIMATION:
-
+import { gsap } from "gsap";
 import { Timeline } from "gsap/gsap-core";
 
 const App = () => {
@@ -31,9 +31,10 @@ const App = () => {
   const animation = () => {
     const { introBox } = refs;
     console.log(refs);
-    console.log(introBox.wrapper.current);
+    console.log(introBox.wrapper);
 
     const tl = new Timeline({});
+    tl.to(introBox.wrapper.current, 1, { y: "-100" });
   };
 
   return (

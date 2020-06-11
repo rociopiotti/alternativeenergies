@@ -2,19 +2,21 @@
   width: 100%;
   height: 100vh;
   color: #fff;
-  //   background-color: lightblue;
   position: absolute;
   z-index: 999999999;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+  top: 0;
+
   .animationBTN {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 99999999999999999999;
   }
+
   .intro {
     opacity: 100%;
     width: 75vw;
