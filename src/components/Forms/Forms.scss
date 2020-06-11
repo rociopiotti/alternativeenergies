@@ -3,7 +3,6 @@
   height: 100vh;
   position: absolute;
   z-index: 99999999;
-  // top:100vh;
 
   .form1 {
     position: absolute;
@@ -111,36 +110,37 @@
 //     }
 //   }
 // }
-// @media screen and (max-width: 754px) {
-//   .formsBox {
-//     overflow-x: hidden;
-//     .form1 {
-//       left: 0vw;
-//       .form1Img {
-//         width: 140%;
-//         max-width: 200%;
-//         top: 23vh;
-//         left: -10vw;
-//       }
-//     }
-//     .form2 {
-//       left: 0vw;
-//       .form2Img {
-//         display: none;
-//         visibility: hidden;
-//       }
-//     }
-//     .form3 {
-//       left: 0vw;
-//       .form3Img {
-//         top: 2vh;
-//         right: 0vw;
-//         width: 55vw;
-//         max-width: 55vw;
-//       }
-//     }
-//   }
-// }
+
+@media screen and (max-width: 754px) {
+  .formsBox {
+    overflow-x: hidden;
+    .form1 {
+      left: 0vw;
+      .form1Img {
+        width: 140%;
+        max-width: 200%;
+        top: 20vh;
+        left: -10vw;
+      }
+    }
+    .form2 {
+      left: 0vw;
+      .form2Img {
+        display: none;
+        visibility: hidden;
+      }
+    }
+    .form3 {
+      left: 0vw;
+      .form3Img {
+        top: 2vh;
+        right: 0vw;
+        width: 55vw;
+        max-width: 55vw;
+      }
+    }
+  }
+}
 // @media screen and (max-width: 754px) and (orientation: landscape) {
 //   .formsBox {
 //     overflow-x: hidden;
