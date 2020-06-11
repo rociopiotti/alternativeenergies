@@ -1,9 +1,42 @@
-import React , { useRef, useEffect, useContext }from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import "./CardDetails.scss";
 import Icon from "../Icon/Icon";
 
 // CONTEXT
 import Context from "../../context/context";
+
+const dababase = [
+  {
+    id: "0",
+    title: "Energy Decentralization",
+    list: [
+      "Independent and digitized",
+      "New economic model",
+      "Build local ecosystems",
+    ],
+    link: "url",
+  },
+  {
+    id: "1",
+    title: "Eco-Friendly Sustainability",
+    list: [
+      "Reduce and preserving fossil fuels",
+      "Renewable energy sources",
+      "Acelerationd decartonization",
+    ],
+    link: "url",
+  },
+  {
+    id: "2",
+    title: "Power Exchange",
+    list: [
+      "P2P energy exchange",
+      "Balance the system",
+      "Storage & transmissions",
+    ],
+    link: "url",
+  },
+];
 const CardDetails = (props) => {
   const wrapperRef = useRef(null);
 

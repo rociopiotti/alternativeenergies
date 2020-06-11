@@ -6,17 +6,42 @@ import Icon from "../Icon/Icon";
 
 // CONTEXT
 import Context from "../../context/context";
+
+const dababase = [
+  {
+    id: "0",
+    title: "Energy Decentralization",
+    text:
+      "An innovative approach to energy production, storage, and distribution adapted for each community needs",
+    link: "url",
+    icon: "/img/red.png",
+  },
+  {
+    id: "1",
+    title: "Eco-Friendly Sustainability",
+    text:
+      " Maximized efficiency of fossil fuels and renewable energy sources for the minimal impact on the enviroment.",
+    link: "url",
+    icon: "/img/bulb.png",
+  },
+  {
+    id: "2",
+    title: "Power Exchange",
+    text:
+      "Balanced schemes connecting energy producers and consumers to reach effective power exchange and make smart contracts.",
+    link: "url",
+    icon: "/img/ray.png",
+  },
+];
+
 const Card = (props) => {
   const wrapperRef = useRef(null);
-
   const { references } = useContext(Context);
-
   const addRef = references;
 
   useEffect(() => {
     addRef("card", {
       wrapper: wrapperRef,
-      
     });
   }, []);
   return (
