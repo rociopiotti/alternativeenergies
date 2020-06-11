@@ -34,7 +34,6 @@ const App = () => {
     console.log(introBox.wrapper.current);
 
     const tl = new Timeline({});
-    tl.to(introBox.wrapper.current,  { y: "-100" });
   };
 
   return (
