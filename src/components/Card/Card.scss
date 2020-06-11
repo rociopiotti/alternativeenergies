@@ -4,12 +4,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-// top: 100vh;
-  // TODO hover sin que se pinten los hijos
-  // .cardBox  :hover {
-  //     background-color: #002129;
-  //     transition: background-color 1s ease-in-out;
-  //   }
+
   .card {
     width: 50%;
     height: auto;
@@ -67,14 +62,14 @@
     }
   }
 }
-@media screen and (max-width: 1366px) {
-  .cardBox {
-    .card {
-      width: 70%;
-      padding: 10%;
-    }
-  }
-}
+// @media screen and (max-width: 1366px) {
+//   .cardBox {
+//     .card {
+//       width: 70%;
+//       padding: 10%;
+//     }
+//   }
+// }
 @media screen and (max-width: 823px) {
   .cardBox {
     width: 100%;
@@ -83,6 +78,7 @@
       height: auto;
       margin-bottom: 5vh;
       padding: 10%;
+      margin-left: 0;
       .cardImg {
         width: 15vh;
         height: 15vh;
@@ -90,7 +86,7 @@
       .cardHeader {
         margin-top: 2.5vh;
         h4 {
-          font-size: 1.5em;
+          font-size: 1em;
           margin: 0;
           letter-spacing: 0.1em;
         }
@@ -99,6 +95,7 @@
         height: 25vh;
         font-size: 1em;
         letter-spacing: 0.1em;
+        padding: 0 0 5vh 0;
       }
     }
   }
