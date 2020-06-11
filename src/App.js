@@ -23,27 +23,47 @@ import { Timeline } from "gsap/gsap-core";
 
 const App = () => {
   const [refs, setRefs] = useState({});
+  const [mode, setMode] = useState("DOWN");
 
   const addRef = useCallback((id, value) => {
     setRefs({ ...refs, [id]: value });
   });
 
-  const animation = () => {
+  const openingAnimation = () => {
     const { introBox } = refs;
-    console.log(refs);
-    console.log(introBox.wrapper);
-
-    const tl = new Timeline({});
-    tl.to(introBox.wrapper.current, 1, { y: "-100" });
+    // console.log(refs);
+    console.log(introBox);
+    // const tl = new Timeline({});
+    // tl.to(introBox.wrapper.current, 1, { x: 50 });
   };
 
+  const startsAnimation = () => {
+    const { introBox } = refs;
+    // console.log(refs);
+    // console.log(introBox.wrapper);
+
+    const destY = mode === "DOWN" ? "-100vh" : 0;
+
+    const tl = new Timeline({
+      onComplete: () => toggle(),
+    });
+    tl.to(introBox.wrapper.current, 1, { y: destY });
+  };
+
+  const toggle = () => {
+    let newMode = mode === "DOWN" ? "UP" : "DOWN";
+    setMode(newMode);
+  };
+  
+  openingAnimation()
   return (
     <PageManagerContext.Provider
       value={{
         references: addRef,
+        openingAnimation: openingAnimation,
       }}>
       <div className='App'>
-        <button onClick={animation} className='animationBTN'>
+        <button onClick={startsAnimation} className='animationBTN'>
           ANIMATE
         </button>
         {/* <Sky /> */}

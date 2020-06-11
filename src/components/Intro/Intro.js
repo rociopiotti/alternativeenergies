@@ -9,13 +9,14 @@ const Intro = (props) => {
   const wrapperRef = useRef(null);
 
   // Importar las funciones para animación:
-  const { references } = useContext(Context);
+  const { references, openingAnimation } = useContext(Context);
   const addRef = references;
 
   useEffect(() => {
     addRef("introBox", {
       wrapper: wrapperRef,
     });
+    openingAnimation()
   }, []);
 
   return (
