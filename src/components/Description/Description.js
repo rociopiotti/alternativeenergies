@@ -15,7 +15,6 @@ const Description = () => {
   const cardRef1 = useRef(null);
   const cardRef2 = useRef(null);
   const cardRef3 = useRef(null);
-  const cardDetailsRef = useRef(null);
 
   const { references } = useContext(Context);
 
@@ -59,6 +58,7 @@ const Description = () => {
           <Card  />
           <Card  />
           <Card  />
+          <CardDetails/>
         </div>
       </div>
     </div>

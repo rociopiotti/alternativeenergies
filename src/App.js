@@ -43,14 +43,16 @@ const App = () => {
       forms,
       description,
       card,
+      cardDetails,
     } = refs;
     console.log(refs);
 
     const destY = mode === "DOWN" ? "-100vh" : 0;
     const destYGround = mode === "DOWN" ? "-140vh" : 0;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
-    const destYForms = mode === "DOWN" ? 0 : "100vh";
-    const destYTitle = mode === "DOWN" ? 0 : "100vh";
+    const destYDescription = mode === "DOWN" ? 0 : "100vh";
+    const destYCards = mode === "DOWN" ? "5vh" : "100vh";
+    const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
 
 
     const delay = mode === "DOWN" ? 0.1 : 0.2;
@@ -67,21 +69,37 @@ const App = () => {
     tl.to(mountain.wrapper.current, 1, { y: destY }, delay + 0.1);
     tl.to(buildings.wrapper.current, 1, { y: destY }, delay + 0.1);
     tl.to(sky.wrapper.current, 1, { y: destY }, delay * 0.5);
-    tl.to(forms.wrapper.current, 1, { top: destYForms }, delay * 0.5);
-    tl.to(forms.form1.current, 1, { top: destYForms }, delay * 0.5);
-    tl.to(forms.form2.current, 1, { top: destYForms }, delay * 0.5);
-    tl.to(forms.form3.current, 1, { top: destYForms }, delay * 0.5);
-    tl.to(description.wrapper.current, 1, { top: destYForms }, delay * 0.5);
-    tl.to(description.title.current, 1, { top: destYTitle }, delay * 0.5);
-    tl.to(description.description.current, 1, { top: destYForms }, delay * 0.5);
-    tl.to(description.btnPage.current, 1, { top: destYForms }, delay * 0.5);
-    tl.to(description.cardWrapper.current, 1, { top: destYForms }, delay * 2);
-    tl.to(card.wrapper.current, 1, { top: destYForms }, delay * 2);
-
-
-
-
-
+    tl.to(forms.wrapper.current, 1, { top: destYDescription }, delay * 0.5);
+    tl.to(forms.form1.current, 1, { top: destYDescription }, delay * 0.5);
+    tl.to(forms.form2.current, 1, { top: destYDescription }, delay * 0.5);
+    tl.to(forms.form3.current, 1, { top: destYDescription }, delay * 0.5);
+    tl.to(
+      description.wrapper.current,
+      1,
+      { top: destYDescription },
+      delay * 0.5
+    );
+    tl.to(description.title.current, 1, { top: destYDescription }, delay * 0.5);
+    tl.to(
+      description.description.current,
+      1,
+      { top: destYDescription },
+      delay * 0.5
+    );
+    tl.to(
+      description.btnPage.current,
+      1,
+      { top: destYDescription },
+      delay * 0.5
+    );
+    tl.to(
+      description.cardWrapper.current,
+      1,
+      { top: destYCards },
+      delay * 2
+    );
+    tl.to(card.wrapper.current, 1, { top: destYCards }, delay * 2);
+    tl.to(cardDetails.wrapper.current, 1, { top: destYCardDetails }, delay * 2);
   };
 
   const toggle = () => {
@@ -121,7 +139,6 @@ const App = () => {
         <Forms />
         <Header />
         <Description />
-        
       </div>
     </PageManagerContext.Provider>
   );
