@@ -65,3 +65,57 @@ startsAnimation() {
 //   openingAnimation({ backgroundRef: this.animationBox });
 //   handleRefs({ backgroundRef: this.animationBox });
 // }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+  // animateBox() {
+  //   const { mode } = this.state;
+  //   const posUp1 = mode === "UP" ? "+=50vw" : "0vh";
+  //   const posUp2 = mode === "UP" ? "-=95vh" : 0;
+  //   const posUp3 = mode === "UP" ? "-=50vw" : 0;
+  //   const delay = 1;
+
+  //   this.form1Tween = TweenLite.to(this.form1, delay, {
+  //     x: posUp1,
+  //     y: "8vh",
+      
+  //   });
+  //   this.form2Tween = TweenLite.to(this.form2, delay + 0.2, {
+  //     y: posUp2,
+     
+  //   });
+  //   this.form3Tween = TweenLite.to(this.form3, delay + 0.2, {
+  //     x: posUp3,
+  //     y: 0,
+  //     onComplete: () => this.toggle(),
+  //   });
+
+  //   console.log("Click form 1", mode);
+  // }
+
+
+  this.title = null;
+    this.descriptionText = null;
+    this.btnPage = null;
+    this.card1 = null;
+
+    this.state = {
+      mode: "UP",
+      isAnimating: false,
+   
+    const { mode } = this.state;
+    
+    const posTitle = mode === "UP" ? "-85vh" : 0;
+    const posDescription = mode === "UP" ? "-70vh" : 0;
+    const posBtnPage = mode === "UP" ? "-95vh" : 0;
+    const posCard1 = mode === "UP" ? "-50vh" : 0;
+
+    const delayTitle = mode === "UP" ? 0 : 0.3;
+    const delayDescription = mode === "UP" ? 0.1 : 0.1;
+    const delayBtnPage = mode === "UP" ? 0.2 : 0.2;
+    const delayCard1 = mode === "UP" ? 0.3 : 0;
+    
+    const tl = new Timeline();
+    

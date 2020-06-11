@@ -15,28 +15,29 @@
     // border: thin solid darkmagenta;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-top: 0;
     top: 0;
     // background-color: darkmagenta;
     .descriptionTitle {
+      position: relative;
       width: 30vw;
       font-size: 2em;
       letter-spacing: 0.1em;
       color: hsl(54, 69%, 70%);
-      margin-top: 0vh;
-      position: absolute;
-      top: 105vh;
+      margin-top: -5vh;
+      top: 100vh;
     }
     .descriptionText {
-      width: 35vw;
-      font-size: 1em;
+      width: 30vw;
+      font-size: 0.8em;
       letter-spacing: 0.1em;
       line-height: 1.5em;
-      position: absolute;
+      position: relative;
       top: 100vh;
     }
     .pageChanger {
+      position: relative;
       width: 100px;
       display: flex;
       flex-direction: row;
@@ -44,9 +45,8 @@
       align-items: center;
       border: aliceblue thin solid;
       border-radius: 20px;
-      position: absolute;
       top: 110vh;
-      right: 5vw;
+      right: -75vw;
     }
     .lineDivision {
       width: 0px;
@@ -77,109 +77,109 @@
       justify-content: space-between;
       margin-top: 9vh;
       margin-bottom: 0;
-      position: absolute;
+      position: relative;
       top: 100vh;
     }
   }
 }
-@media screen and (max-width: 1366px) {
-  .descriptionBox {
-    width: 100%;
-    height: 90vh;
-    position: absolute;
-    z-index: 99999999;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    color: #fff;
-    .description {
-      width: 90vw;
-      height: 70vh;
-      // background-color: red;
+// @media screen and (max-width: 1366px) {
+//   .descriptionBox {
+//     width: 100%;
+//     height: 90vh;
+//     position: absolute;
+//     z-index: 99999999;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: flex-end;
+//     justify-content: center;
+//     color: #fff;
+//     .description {
+//       width: 90vw;
+//       height: 70vh;
+//       // background-color: red;
 
-      .pageChanger {
-        top: 19vh;
-      }
-      .descriptionTitle {
-        width: 90vw;
-        font-size: 2.3em;
-        margin-top: 0vh;
-        margin-bottom: 2vh;
-        margin-left: 0vw;
-        position: relative;
-        top: 0;
-      }
-      .descriptionText {
-        width: 48vw;
-        margin-top: 0;
-        margin-bottom: 0vh;
-        margin-left: 0vw;
-        font-size: 0.8em;
-        line-height: 1.5em;
+//       .pageChanger {
+//         top: 19vh;
+//       }
+//       .descriptionTitle {
+//         width: 90vw;
+//         font-size: 2.3em;
+//         margin-top: 0vh;
+//         margin-bottom: 2vh;
+//         margin-left: 0vw;
+//         position: relative;
+//         top: 0;
+//       }
+//       .descriptionText {
+//         width: 48vw;
+//         margin-top: 0;
+//         margin-bottom: 0vh;
+//         margin-left: 0vw;
+//         font-size: 0.8em;
+//         line-height: 1.5em;
 
-        position: relative;
-        top: 0;
-      }
-      .appsListBox {
-        width: 90%;
-        margin-top: 0vh;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin-left: 0;
-        position: relative;
-        top: 0;
-      }
-    }
-  }
-}
-@media screen and (max-width: 823px) {
-  .descriptionBox {
-    display: flex;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+//         position: relative;
+//         top: 0;
+//       }
+//       .appsListBox {
+//         width: 90%;
+//         margin-top: 0vh;
+//         align-items: flex-start;
+//         justify-content: flex-start;
+//         margin-left: 0;
+//         position: relative;
+//         top: 0;
+//       }
+//     }
+//   }
+// }
+// @media screen and (max-width: 823px) {
+//   .descriptionBox {
+//     display: flex;
+//     height: auto;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: flex-start;
+//     flex-wrap: wrap;
 
-    .description {
-      width: 80%;
-      height: auto;
-      margin-top: 20vh;
-      margin-bottom: 30vh;
-      margin-left: 0;
-      flex-wrap: wrap;
-      .pageChanger {
-        top: 20vh;
-        right: 10vw;
-      }
-      .descriptionTitle {
-        position: relative;
-        top: 0;
-        font-size: 2em;
-        margin-top: 15vh;
-        margin-left: 0vw;
-      }
-      .descriptionText {
-        width: 80vw;
-        margin: 0;
-        padding: 0;
-        margin-bottom: 15vh;
+//     .description {
+//       width: 80%;
+//       height: auto;
+//       margin-top: 20vh;
+//       margin-bottom: 30vh;
+//       margin-left: 0;
+//       flex-wrap: wrap;
+//       .pageChanger {
+//         top: 20vh;
+//         right: 10vw;
+//       }
+//       .descriptionTitle {
+//         position: relative;
+//         top: 0;
+//         font-size: 2em;
+//         margin-top: 15vh;
+//         margin-left: 0vw;
+//       }
+//       .descriptionText {
+//         width: 80vw;
+//         margin: 0;
+//         padding: 0;
+//         margin-bottom: 15vh;
 
-        position: relative;
-        top: 0;
-      }
-      .appsListBox {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-top: 6vh;
-        position: relative;
-        top: 0;
-      }
-    }
-  }
-}
+//         position: relative;
+//         top: 0;
+//       }
+//       .appsListBox {
+//         width: 100%;
+//         height: auto;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: flex-start;
+//         justify-content: space-between;
+//         margin-top: 6vh;
+//         position: relative;
+//         top: 0;
+//       }
+//     }
+//   }
+// }
