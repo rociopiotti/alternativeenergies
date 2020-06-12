@@ -65,25 +65,34 @@ const App = () => {
     let heightForms;
     let heightBtnPage;
     const widthScreen = window.innerWidth;
-    const heightScreen = window.innerHeight
+    const heightScreen = window.innerHeight;
 
     if (isTablet) {
-      height = mode === "DOWN" ? " -150vh" : "-vh";
-      heightForms = mode === "DOWN" ? 0 : "100vh";
-      heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+      if (widthScreen > heightScreen) {
+        // LANDSCAPE //
+
+        heightForms = mode === "DOWN" ? 0 : "100vh";
+        height = mode === "DOWN" ? " -150vh" : "0vh";
+        heightBtnPage = mode === "DOWN" ? "5vh" : "100vh";
+      } else {
+        // PORTRAIT //
+
+        heightForms = mode === "DOWN" ? 0 : "100vh";
+        height = mode === "DOWN" ? " -150vh" : "0vh";
+        heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+      }
     }
 
     if (isMobileOnly) {
+      // LANDSCAPE //
       if (widthScreen > heightScreen) {
         height = mode === "DOWN" ? "-140vh" : "-35vh";
-        heightForms = mode === "DOWN" ? "5vh" : "100vh";
-        heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
-        console.log("widthScreen > heightScreen", widthScreen, heightScreen);
       } else {
+        // PORTRAIT //
         height = mode === "DOWN" ? "-140vh" : "0";
-        heightForms = mode === "DOWN" ? "5vh" : "100vh";
-        heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
       }
+      heightForms = mode === "DOWN" ? "5vh" : "100vh";
+      heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
     }
     if (isBrowser) {
       height = mode === "DOWN" ? " -150vh" : "-35vh";
@@ -137,12 +146,12 @@ const App = () => {
     );
     tl.to(description.btnPage.current, 1, { top: destYBtn }, delay * 0.5);
     tl.to(description.title.current, 1, { top: destYDescription }, delay * 0.5);
-    // tl.to(
-    //   description.description.current,
-    //   1,
-    //   { top: destYDescription },
-    //   delay * 0.5
-    // );
+    tl.to(
+      description.description.current,
+      1,
+      { top: destYDescription },
+      delay * 0.5
+    );
     // tl.to(description.cardWrapper.current, 1, { top: destYCards }, delay * 2);
     // tl.to(card.wrapper.current, 1, { top: destYCards }, delay * 2);
     // tl.to(cardDetails.wrapper.current, 1, { top: destYCardDetails }, delay * 2);

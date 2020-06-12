@@ -47,13 +47,13 @@ const Description = () => {
         <h2 ref={titleRef} className='descriptionTitle'>
           What is Poweris?
         </h2>
-        {/* <p ref={descriptionRef} className='descriptionText'>
+        <p ref={descriptionRef} className='descriptionText'>
           Poweris is a revolutionary platform of ecological energy production
           and managment. It is based on a decentalized system of power exchange
           which is self-monitored an adapted for autonomous communitu models.
           This way communities can exchange the produced energy most efficiently
           and accelerate new models of energy management.
-        </p> */}
+        </p>
         {/* <div className='appsListBox' ref={cardWrapperRef}>
           <Card  />
           <Card  />
