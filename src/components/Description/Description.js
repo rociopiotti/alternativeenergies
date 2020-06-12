@@ -54,12 +54,12 @@ const Description = () => {
           This way communities can exchange the produced energy most efficiently
           and accelerate new models of energy management.
         </p>
-        {/* <div className='appsListBox' ref={cardWrapperRef}>
+        <div className='appsListBox' ref={cardWrapperRef}>
           <Card  />
           <Card  />
           <Card  />
           <CardDetails/>
-        </div> */}
+        </div>
       </div>
     </div>
   );

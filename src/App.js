@@ -112,7 +112,7 @@ const App = () => {
     const destYBtn = mode === "DOWN" ? heightBtnPage : heightBtnPage;
 
     const destYCards = mode === "DOWN" ? "5vh" : "100vh";
-    const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
+    const destYCardDetails = mode === "DOWN" ? "7vh" : "100vh";
 
     const delay = mode === "DOWN" ? 0.1 : 0.2;
     const delay1 = mode === "DOWN" ? 0.9 : 2;
@@ -152,9 +152,9 @@ const App = () => {
       { top: destYDescription },
       delay * 0.5
     );
-    // tl.to(description.cardWrapper.current, 1, { top: destYCards }, delay * 2);
-    // tl.to(card.wrapper.current, 1, { top: destYCards }, delay * 2);
-    // tl.to(cardDetails.wrapper.current, 1, { top: destYCardDetails }, delay * 2);
+    tl.to(description.cardWrapper.current, 1, { top: destYCards }, delay * 2);
+    tl.to(card.wrapper.current, 1, { top: destYCards }, delay * 2);
+    tl.to(cardDetails.wrapper.current, 1, { top: destYCardDetails }, delay * 2);
   };
 
   const toggle = () => {

@@ -7,7 +7,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-grow: 1;
-  //   background-color: darkred;
   margin-top: 0;
   margin: 0;
   padding: 0;
@@ -55,47 +54,63 @@
     }
   }
 }
-// @media screen and (max-width: 1366px) {
-//   .cardDetails {
-//     width: 45%;
-//     // margin-left: 5%;
-//     margin-top: 12vh;
-//     .cardHeader {
-//       height: 10vh;
-//       h4 {
-//         font-size: 1.5em;
-//       }
-//     }
-//     .cardBody {
-//       ul {
-//         margin-bottom: 2.5vh;
-//         li {
-//           line-height: 1.5em;
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (max-width: 823px) {
-//   .cardDetails {
-//     width: 100%;
 
-//     height: auto;
-//     .cardHeader {
-//       margin-top: 0vh;
-//       h4 {
-//         font-size: 1.5em;
-//         margin: 0;
-//         letter-spacing: 0.1em;
-//       }
-//     }
-//     .cardBody {
-//       height: 40vh;
-//       font-size: 1em;
-//       letter-spacing: 0.1em;
-//       ul {
-//         margin-bottom: 10vh;
-//       }
-//     }
-//   }
-// }
+
+@media screen and (max-width: 768px) {  
+  .cardDetails {
+    width: 45%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 1;
+    margin-top: 10vh;
+    margin: 0;
+    padding: 0;
+  
+    .cardHeader {
+      width: 100%;
+      height:auto;
+      // background-color: dimgray;
+      h4 {
+        font-size: 1em;
+        margin: 0;
+        letter-spacing: 0.1em;
+      }
+    }
+    .cardBody {
+      width: 100%;
+      height: auto;
+      // background-color: darkslategray;
+      font-size: 0.8em;
+      line-height: 1em;
+      ul {
+        width: 100%;
+        margin-bottom: 5.5vh;
+        list-style: inside;
+        padding: 0;
+        li {
+          letter-spacing: 0em;
+          line-height: 1.5em;
+        }
+      }
+  
+      a {
+        text-decoration: none;
+        color: #fff;
+        width: 200px;
+        height: 40px;
+        padding: 10px 15px;
+        background-color: #002129;
+        border: #002129 3px solid;
+        border-radius: 30px;
+        text-align: center;
+        .Icon {
+          margin-left: 0.5vw;
+        }
+      }
+    }
+  }
+}

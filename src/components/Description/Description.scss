@@ -102,7 +102,7 @@
 @media screen and (max-width: 768px) {
   .descriptionBox {
     width: 100vw;
-    height: auto;
+    height: 100vh;
     position: absolute;
     z-index: 6;
     display: flex;
@@ -112,7 +112,7 @@
     color: #fff;
     overflow: hidden;
     .description {
-      width: 80vw;
+      width: 90vw;
       .pageChanger {
         position: absolute;
         width: 70px;
@@ -146,9 +146,9 @@
       }
       .appsListBox {
         position: relative;
-        width: 70vw;
+        width: 100%;
         margin-top: 5vh;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
         margin-left: 0;
@@ -164,6 +164,17 @@
       .descriptionText {
         width: 80vw;
         font-size: 0.7em;
+        line-height: 1.1em;
+      }
+      .appsListBox {
+        position: relative;
+        width: 100%;
+        margin-top: 0vh;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 0;
+        top: 100vh;
       }
     }
   }

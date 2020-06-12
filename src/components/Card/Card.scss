@@ -62,41 +62,137 @@
     }
   }
 }
-// @media screen and (max-width: 1366px) {
-//   .cardBox {
-//     .card {
-//       width: 70%;
-//       padding: 10%;
-//     }
-//   }
-// }
-// @media screen and (max-width: 823px) {
-//   .cardBox {
-//     width: 100%;
-//     .card {
-//       width: 90%;
-//       height: auto;
-//       margin-bottom: 5vh;
-//       padding: 10%;
-//       margin-left: 0;
-//       .cardImg {
-//         width: 15vh;
-//         height: 15vh;
-//       }
-//       .cardHeader {
-//         margin-top: 2.5vh;
-//         h4 {
-//           font-size: 1em;
-//           margin: 0;
-//           letter-spacing: 0.1em;
-//         }
-//       }
-//       .cardBody {
-//         height: 25vh;
-//         font-size: 1em;
-//         letter-spacing: 0.1em;
-//         padding: 0 0 5vh 0;
-//       }
-//     }
-//   }
-// }
+
+@media screen and (max-width: 768px) {
+  .cardBox {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .card {
+      width: 75%;
+      height: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: #002129;
+      border-radius: 20px 20px 0 0;
+      padding: 5% 10% 10% 10%;
+      margin-top: 0;
+      margin: 0;
+
+      .cardImg {
+        width: 53%;
+        height: 13vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .iconBackground {
+          height: 5%;
+          position: absolute;
+        }
+        .iconImgApp {
+          height: 5%;
+          margin-top: -3px;
+          margin-left: -8px;
+          position: absolute;
+        }
+      }
+      .cardHeader {
+        width: 100%;
+        margin-top: 1vh;
+        //   background-color: dimgray;
+        h4 {
+          font-size: 1em;
+          margin: 0;
+          letter-spacing: 0;
+        }
+      }
+      .cardBody {
+        width: 100%;
+        height: 15vh;
+        //   background-color: darkslategray;
+        font-size: 0.7em;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          .Icon {
+            margin-left: 0.5vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .card {
+      width: 100%;
+      height: 13vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border-radius: 0;
+      padding: 0% 0% 5% 5%;
+      background-color: transparent;
+      margin: 0;
+
+      .cardImg {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .iconBackground {
+          height: 5%;
+          position: absolute;
+        }
+        .iconImgApp {
+          height: 5%;
+          margin-top: -3px;
+          margin-left: -8px;
+          position: absolute;
+        }
+      }
+      .cardHeader {
+        width: 100%;
+        margin-top: 1vh;
+        h4 {
+          font-size: 0.8em;
+          margin: 0;
+          letter-spacing: 0;
+        }
+      }
+      .cardBody {
+        width: 100%;
+        height: auto;
+        font-size: 0.7em;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          .Icon {
+            margin-left: 0.5vw;
+          }
+        }
+      }
+    }
+  }
+}
