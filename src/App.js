@@ -60,15 +60,18 @@ const App = () => {
 
     let height;
     let heightForms;
+    let heightBtnPage;
+
 
     if (isMobile) {
       height = mode === "DOWN" ? "-140vh" : "0";
       heightForms = mode === "DOWN" ? "5vh" : "100vh";
+      heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
 
-      // console.log("isMobile", isLandscape, heightMobile);
     } else {
       height = mode === "DOWN" ? " -150vh" : "-35vh";
       heightForms = mode === "DOWN" ? 0 : "100vh";
+      heightBtnPage = mode === "DOWN" ? 0 : "100vh";
 
       // console.log("Desktop", isMobile, heightMobile);
     }
@@ -78,8 +81,10 @@ const App = () => {
     const destY = mode === "DOWN" ? "-100vh" : 0;
     const destYGround = mode === "DOWN" ? height : height;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
-    const destYDescription = mode === "DOWN" ? 0 : "100vh";
     const destYForms = mode === "DOWN" ? heightForms : heightForms;
+    const destYDescription = mode === "DOWN" ? 0 : "100vh";
+    const destYBtn = mode === "DOWN" ? heightBtnPage : heightBtnPage;
+
 
     const destYCards = mode === "DOWN" ? "5vh" : "100vh";
     const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
@@ -108,21 +113,21 @@ const App = () => {
     tl.to(forms.form1.current, 1, { top: destYForms }, delay * 0.5);
     tl.to(forms.form2.current, 1, { top: destYForms }, delay * 0.5);
     tl.to(forms.form3.current, 1, { top: destYForms }, delay * 0.5);
-    // tl.to(
-    //   description.wrapper.current,
-    //   1,
-    //   { top: destYDescription },
-    //   delay * 0.5
-    // );
+    tl.to(
+      description.wrapper.current,
+      1,
+      { top: destYDescription },
+      delay * 0.5
+    );
+    tl.to(
+      description.btnPage.current,
+      1,
+      { top: destYBtn },
+      delay * 0.5
+    );
     // tl.to(description.title.current, 1, { top: destYDescription }, delay * 0.5);
     // tl.to(
     //   description.description.current,
-    //   1,
-    //   { top: destYDescription },
-    //   delay * 0.5
-    // );
-    // tl.to(
-    //   description.btnPage.current,
     //   1,
     //   { top: destYDescription },
     //   delay * 0.5
@@ -169,7 +174,7 @@ const App = () => {
         <Ground />
         <Intro />
         <Forms />
-        {/* <Description /> */}
+        <Description />
         <Header />
       </div>
     </PageManagerContext.Provider>

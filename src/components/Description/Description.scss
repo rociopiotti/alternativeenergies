@@ -8,6 +8,7 @@
   align-items: flex-end;
   justify-content: center;
   color: #fff;
+  top:0;
   .description {
     width: 90vw;
     height: 85vh;
@@ -93,9 +94,16 @@
     .description {
       width: 80vw;
       .pageChanger {
+        position: absolute;
+        width: 75px;
         top: 100vh;
-        left: 0vw;
+        right: 0vw;
+        margin-right: 5vw;
         margin-bottom: 5vh;
+        .btnLeftPage,
+        .btnRightPage {
+          height: 25px;
+        }
       }
       .descriptionTitle {
         position: relative;
