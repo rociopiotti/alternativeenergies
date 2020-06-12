@@ -18,7 +18,9 @@ import PageManagerContext from "./context/context";
 // ANIMATION:
 import { gsap } from "gsap";
 import { Timeline } from "gsap/gsap-core";
-import Card from "./components/Card/Card";
+
+// MEDIAQUERY IS MOBILE
+import { isMobile, isLandscape, isPortrait } from "react-device-detect";
 
 const App = () => {
   const [refs, setRefs] = useState({});
@@ -47,14 +49,31 @@ const App = () => {
     } = refs;
     console.log(refs);
 
+    // ------------------------------------------------------- //
+    //                   MOBILE ANIMATIONS                     //
+    // ------------------------------------------------------- //
+
+    let heightMobile;
+
+    if (isMobile) {
+      heightMobile = mode === "DOWN" ? "-140vh" : 0;
+      // console.log("isMobile", isLandscape, heightMobile);
+    } else {
+      heightMobile = mode === "DOWN" ? " -150vh" : "-25vh";
+      // console.log("Desktop", isMobile, heightMobile);
+    }
+
+    // -------------------------------------------------------
+
     const destY = mode === "DOWN" ? "-100vh" : 0;
-    const destYGround = mode === "DOWN" ? "-140vh" : 0;
+    const destYGround = mode === "DOWN" ? heightMobile : heightMobile;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
     const destYDescription = mode === "DOWN" ? 0 : "100vh";
     const destYCards = mode === "DOWN" ? "5vh" : "100vh";
     const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
 
     const delay = mode === "DOWN" ? 0.1 : 0.2;
+    const delay1 = mode === "DOWN" ? 0.9 : 2;
 
     const tl = new Timeline({
       onComplete: () => toggle(),
@@ -64,7 +83,12 @@ const App = () => {
     tl.to(bushes.wrapper.current, 1, { y: destY }, delay);
     tl.to(city.wrapper.current, 1, { y: destY }, delay);
     tl.to(rock.wrapper.current, 1, { y: destY }, delay);
-    tl.to(ground.wrapper.current, 1, { y: destYGround, x: destXGround }, delay);
+    tl.to(
+      ground.wrapper.current,
+      delay1,
+      { top: destYGround, x: destXGround },
+      delay
+    );
     tl.to(mountain.wrapper.current, 1, { y: destY }, delay + 0.1);
     tl.to(buildings.wrapper.current, 1, { y: destY }, delay + 0.1);
     tl.to(sky.wrapper.current, 1, { y: destY }, delay * 0.5);
