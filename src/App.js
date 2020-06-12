@@ -130,11 +130,11 @@ const App = () => {
         <Bushes />
         <City />
         <Rock />
-        {/* <Ground /> */}
-        {/* <Intro /> */}
+        <Ground />
+        <Intro />
         {/* <Forms /> */}
         {/* <Description /> */}
-        {/* <Header /> */}
+        <Header />
       </div>
     </PageManagerContext.Provider>
   );
