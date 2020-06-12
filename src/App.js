@@ -64,17 +64,26 @@ const App = () => {
     let height;
     let heightForms;
     let heightBtnPage;
+    const widthScreen = window.innerWidth;
+    const heightScreen = window.innerHeight
 
     if (isTablet) {
-      height = mode === "DOWN" ? " -150vh" : "0vh";
+      height = mode === "DOWN" ? " -150vh" : "-vh";
       heightForms = mode === "DOWN" ? 0 : "100vh";
       heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
     }
 
     if (isMobileOnly) {
-      height = mode === "DOWN" ? "-140vh" : "0";
-      heightForms = mode === "DOWN" ? "5vh" : "100vh";
-      heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+      if (widthScreen > heightScreen) {
+        height = mode === "DOWN" ? "-140vh" : "-35vh";
+        heightForms = mode === "DOWN" ? "5vh" : "100vh";
+        heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+        console.log("widthScreen > heightScreen", widthScreen, heightScreen);
+      } else {
+        height = mode === "DOWN" ? "-140vh" : "0";
+        heightForms = mode === "DOWN" ? "5vh" : "100vh";
+        heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+      }
     }
     if (isBrowser) {
       height = mode === "DOWN" ? " -150vh" : "-35vh";
