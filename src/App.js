@@ -20,7 +20,12 @@ import { gsap } from "gsap";
 import { Timeline } from "gsap/gsap-core";
 
 // MEDIAQUERY IS MOBILE
-import { isMobile, isLandscape, isPortrait } from "react-device-detect";
+import {
+  isMobile,
+  withOrientationChange,
+  isLandscape,
+  isPortrait,
+} from "react-device-detect";
 
 const App = () => {
   const [refs, setRefs] = useState({});
@@ -53,22 +58,29 @@ const App = () => {
     //                   MOBILE ANIMATIONS                     //
     // ------------------------------------------------------- //
 
-    let heightMobile;
+    let height;
+    let heightForms;
 
     if (isMobile) {
-      heightMobile = mode === "DOWN" ? "-140vh" : 0;
+      height = mode === "DOWN" ? "-140vh" : "0";
+      heightForms = mode === "DOWN" ? "5vh" : "100vh";
+
       // console.log("isMobile", isLandscape, heightMobile);
     } else {
-      heightMobile = mode === "DOWN" ? " -150vh" : "-25vh";
+      height = mode === "DOWN" ? " -150vh" : "-35vh";
+      heightForms = mode === "DOWN" ? 0 : "100vh";
+
       // console.log("Desktop", isMobile, heightMobile);
     }
 
     // -------------------------------------------------------
 
     const destY = mode === "DOWN" ? "-100vh" : 0;
-    const destYGround = mode === "DOWN" ? heightMobile : heightMobile;
+    const destYGround = mode === "DOWN" ? height : height;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
     const destYDescription = mode === "DOWN" ? 0 : "100vh";
+    const destYForms = mode === "DOWN" ? heightForms : heightForms;
+
     const destYCards = mode === "DOWN" ? "5vh" : "100vh";
     const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
 
@@ -92,10 +104,10 @@ const App = () => {
     tl.to(mountain.wrapper.current, 1, { y: destY }, delay + 0.1);
     tl.to(buildings.wrapper.current, 1, { y: destY }, delay + 0.1);
     tl.to(sky.wrapper.current, 1, { y: destY }, delay * 0.5);
-    // tl.to(forms.wrapper.current, 1, { top: destYDescription }, delay * 0.5);
-    // tl.to(forms.form1.current, 1, { top: destYDescription }, delay * 0.5);
-    // tl.to(forms.form2.current, 1, { top: destYDescription }, delay * 0.5);
-    // tl.to(forms.form3.current, 1, { top: destYDescription }, delay * 0.5);
+    tl.to(forms.wrapper.current, 1, { top: destYForms }, delay * 0.5);
+    tl.to(forms.form1.current, 1, { top: destYForms }, delay * 0.5);
+    tl.to(forms.form2.current, 1, { top: destYForms }, delay * 0.5);
+    tl.to(forms.form3.current, 1, { top: destYForms }, delay * 0.5);
     // tl.to(
     //   description.wrapper.current,
     //   1,
@@ -135,7 +147,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    // document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
   }, []);
 
   return (
@@ -156,7 +168,7 @@ const App = () => {
         <Rock />
         <Ground />
         <Intro />
-        {/* <Forms /> */}
+        <Forms />
         {/* <Description /> */}
         <Header />
       </div>
