@@ -44,9 +44,9 @@ const Description = () => {
             <Icon type='arrowRight' />
           </button>
         </div>
-        {/* <h2 ref={titleRef} className='descriptionTitle'>
+        <h2 ref={titleRef} className='descriptionTitle'>
           What is Poweris?
-        </h2> */}
+        </h2>
         {/* <p ref={descriptionRef} className='descriptionText'>
           Poweris is a revolutionary platform of ecological energy production
           and managment. It is based on a decentalized system of power exchange

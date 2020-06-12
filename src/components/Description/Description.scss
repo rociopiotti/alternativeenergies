@@ -8,7 +8,7 @@
   align-items: flex-end;
   justify-content: center;
   color: #fff;
-  top:0;
+
   .description {
     width: 90vw;
     height: 85vh;
@@ -16,14 +16,14 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 0;
-    top: 0;
+   
     .descriptionTitle {
       position: relative;
       width: 30vw;
       font-size: 2em;
       letter-spacing: 0.1em;
       color: hsl(54, 69%, 70%);
-      margin-top: -5vh;
+      margin-top: 0;
       top: 100vh;
     }
     .descriptionText {
@@ -80,7 +80,7 @@
   }
 }
 
-@media screen and (max-width: 754px) {
+@media screen and (max-width: 768px) {
   .descriptionBox {
     width: 100vw;
     height: auto;
@@ -91,6 +91,7 @@
     align-items: flex-start;
     justify-content: center;
     color: #fff;
+    overflow: hidden;
     .description {
       width: 80vw;
       .pageChanger {
@@ -107,9 +108,9 @@
       }
       .descriptionTitle {
         position: relative;
-        width: 80vw;
-        font-size: 1.8em;
-        margin-top: 0vh;
+        width: 50vw;
+        font-size: 1.5em;
+        margin-top: 15vh;
         margin-bottom: 2vh;
         margin-left: 0vw;
         top: 100vh;
@@ -138,14 +139,20 @@
   }
 }
 
-@media screen and (max-width: 754px) and (orientation: landscape) {
+@media screen and (max-width: 823px) and (orientation: landscape) {
   .descriptionBox {
     .description {
       .pageChanger {
+        position: absolute;
+        width: 75px;
         top: 100vh;
-        left: 60vw;
-        margin-top: 20vh;
+        right: 0vw;
+        margin-right: 5vw;
         margin-bottom: 5vh;
+        .btnLeftPage,
+        .btnRightPage {
+          height: 25px;
+        }
       }
       .descriptionText {
         margin-top: 1vh;

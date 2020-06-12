@@ -25,6 +25,9 @@ import {
   withOrientationChange,
   isLandscape,
   isPortrait,
+  isMobileOnly,
+  isTablet,
+  isBrowser,
 } from "react-device-detect";
 
 const App = () => {
@@ -62,13 +65,18 @@ const App = () => {
     let heightForms;
     let heightBtnPage;
 
+    if (isTablet) {
+      height = mode === "DOWN" ? " -150vh" : "0vh";
+      heightForms = mode === "DOWN" ? 0 : "100vh";
+      heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+    }
 
-    if (isMobile) {
+    if (isMobileOnly) {
       height = mode === "DOWN" ? "-140vh" : "0";
       heightForms = mode === "DOWN" ? "5vh" : "100vh";
       heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
-
-    } else {
+    }
+    if (isBrowser) {
       height = mode === "DOWN" ? " -150vh" : "-35vh";
       heightForms = mode === "DOWN" ? 0 : "100vh";
       heightBtnPage = mode === "DOWN" ? 0 : "100vh";
@@ -84,7 +92,6 @@ const App = () => {
     const destYForms = mode === "DOWN" ? heightForms : heightForms;
     const destYDescription = mode === "DOWN" ? 0 : "100vh";
     const destYBtn = mode === "DOWN" ? heightBtnPage : heightBtnPage;
-
 
     const destYCards = mode === "DOWN" ? "5vh" : "100vh";
     const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
@@ -119,13 +126,8 @@ const App = () => {
       { top: destYDescription },
       delay * 0.5
     );
-    tl.to(
-      description.btnPage.current,
-      1,
-      { top: destYBtn },
-      delay * 0.5
-    );
-    // tl.to(description.title.current, 1, { top: destYDescription }, delay * 0.5);
+    tl.to(description.btnPage.current, 1, { top: destYBtn }, delay * 0.5);
+    tl.to(description.title.current, 1, { top: destYDescription }, delay * 0.5);
     // tl.to(
     //   description.description.current,
     //   1,
