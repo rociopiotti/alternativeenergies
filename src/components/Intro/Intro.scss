@@ -36,7 +36,7 @@
       line-height: 1.5em;
     }
     .contactBtn {
-      width: 12vw;
+      width: 10vw;
       height: 10vh;
       display: flex;
       flex-direction: row;
@@ -53,6 +53,7 @@
     }
   }
 }
+
 @media screen and (max-width: 768px) {
   .introBox {
     width: 100vw;
@@ -61,7 +62,7 @@
       opacity: 100%;
       width: 70vw;
       height: 40vh;
-      margin-top: 60vh;
+      margin-top: 55vh;
 
       h1 {
         width: 100%;
@@ -69,6 +70,12 @@
       h3 {
         width: 100%;
         margin: 2vh 0;
+      }
+
+      .contactBtn {
+        width: 20vw;
+        height: 5vh;
+        padding: 1.5vh 0 2vh 0;
       }
     }
   }
@@ -103,6 +110,35 @@
         width: 30vw;
         height: 5vh;
         padding: 2vh 0 4.5vh 0;
+        font-size: 0.7em;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1366px) and (orientation: landscape){
+  .introBox {
+    width: 100vw;
+    height: 100vh;
+    justify-content: flex-start;
+    .intro {
+      opacity: 100%;
+      width: 65vw;
+      height: 40vh;
+      margin-top: 15vh;
+      margin-left: 7vw;
+
+      h1 {
+        width: 100%;
+      }
+      h3 {
+        width: 100%;
+        margin: 2vh 0;
+      }
+
+      .contactBtn {
+        width: 15vw;
+        height: 6vh;
+        padding: 1.5vh 0 2vh 0;
       }
     }
   }
@@ -114,11 +150,10 @@
     .intro {
       opacity: 100%;
       width: 60vw;
-      height: 40vh;
-      margin-top: 15vh;
-      margin-left: -30vw;
+      margin-left: 5vw;
       .contactBtn {
-        padding: 2vh 0 7vh 0;
+        width: 17vw;
+        padding: 3vh 0 7vh 0;
       }
     }
   }
