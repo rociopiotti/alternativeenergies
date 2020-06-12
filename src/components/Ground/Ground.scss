@@ -1,31 +1,22 @@
 .groundImgBox {
   position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
   .groundImg {
-  position: relative;
-  width: 120%;
+    position: relative;
+    width: 120%;
     top: -35vh;
     left: 0;
-    z-index: 99999;
+    z-index: 999999;
   }
 }
 
-// @media screen and (max-width: 1024px) {
-//   .groundImgBox {
-//     overflow: hidden;
-//     .groundImg {
-//       position: absolute;
-//       width: 120%;
-//       top: -35vh;
-//       left: 0;
-//       z-index: 99999;
-//     }
-//   }
-// }
 @media screen and (max-width: 768px) {
   .groundImgBox {
+    overflow: hidden;
+    height: 100vh;
     width: 100%;
-    overflow-x: hidden;    
-    z-index: 9999;
     .groundImg {
       position: relative;
       top: 0vh;
@@ -33,15 +24,28 @@
     }
   }
 }
-
-// @media screen and (max-width: 754px) and (orientation: landscape) {
-//   .groundImgBox {
-//     overflow: hidden;
-//     .groundImg {
-//       position: absolute;
-//       width: 120%;
-//       top: -35vh;
-//       left: 0;
-//     }
-//   }
-// }
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  .groundImgBox {
+    z-index: 9999;
+    // overflow-x: hidden;
+    .groundImg {
+      position: absolute;
+      width: 120%;
+      top: -100vh;
+      left: 0;
+      z-index: 999999;
+    }
+  }
+}
+@media screen and (max-width: 1366px) and (orientation: landscape) {
+  .groundImgBox {
+    z-index: 9999;
+    overflow-x: hidden;
+    .groundImg {
+      position: absolute;
+      width: 120%;
+      top: 0vh;
+      left: 0;
+    }
+  }
+}

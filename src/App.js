@@ -54,52 +54,46 @@ const App = () => {
     const destYCards = mode === "DOWN" ? "5vh" : "100vh";
     const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
 
-
     const delay = mode === "DOWN" ? 0.1 : 0.2;
 
     const tl = new Timeline({
       onComplete: () => toggle(),
     });
 
-    tl.to(introBox.wrapper.current, 1, { y: destY }, delay);
-    tl.to(bushes.wrapper.current, 1, { y: destY }, delay);
-    tl.to(city.wrapper.current, 1, { y: destY }, delay);
-    tl.to(rock.wrapper.current, 1, { y: destY }, delay);
-    tl.to(ground.wrapper.current, 1, { y: destYGround, x: destXGround }, delay);
-    tl.to(mountain.wrapper.current, 1, { y: destY }, delay + 0.1);
-    tl.to(buildings.wrapper.current, 1, { y: destY }, delay + 0.1);
-    tl.to(sky.wrapper.current, 1, { y: destY }, delay * 0.5);
-    tl.to(forms.wrapper.current, 1, { top: destYDescription }, delay * 0.5);
-    tl.to(forms.form1.current, 1, { top: destYDescription }, delay * 0.5);
-    tl.to(forms.form2.current, 1, { top: destYDescription }, delay * 0.5);
-    tl.to(forms.form3.current, 1, { top: destYDescription }, delay * 0.5);
-    tl.to(
-      description.wrapper.current,
-      1,
-      { top: destYDescription },
-      delay * 0.5
-    );
-    tl.to(description.title.current, 1, { top: destYDescription }, delay * 0.5);
-    tl.to(
-      description.description.current,
-      1,
-      { top: destYDescription },
-      delay * 0.5
-    );
-    tl.to(
-      description.btnPage.current,
-      1,
-      { top: destYDescription },
-      delay * 0.5
-    );
-    tl.to(
-      description.cardWrapper.current,
-      1,
-      { top: destYCards },
-      delay * 2
-    );
-    tl.to(card.wrapper.current, 1, { top: destYCards }, delay * 2);
-    tl.to(cardDetails.wrapper.current, 1, { top: destYCardDetails }, delay * 2);
+    // tl.to(introBox.wrapper.current, 1, { y: destY }, delay);
+    // tl.to(bushes.wrapper.current, 1, { y: destY }, delay);
+    // tl.to(city.wrapper.current, 1, { y: destY }, delay);
+    // tl.to(rock.wrapper.current, 1, { y: destY }, delay);
+    // tl.to(ground.wrapper.current, 1, { y: destYGround, x: destXGround }, delay);
+    // tl.to(mountain.wrapper.current, 1, { y: destY }, delay + 0.1);
+    // tl.to(buildings.wrapper.current, 1, { y: destY }, delay + 0.1);
+    // tl.to(sky.wrapper.current, 1, { y: destY }, delay * 0.5);
+    // tl.to(forms.wrapper.current, 1, { top: destYDescription }, delay * 0.5);
+    // tl.to(forms.form1.current, 1, { top: destYDescription }, delay * 0.5);
+    // tl.to(forms.form2.current, 1, { top: destYDescription }, delay * 0.5);
+    // tl.to(forms.form3.current, 1, { top: destYDescription }, delay * 0.5);
+    // tl.to(
+    //   description.wrapper.current,
+    //   1,
+    //   { top: destYDescription },
+    //   delay * 0.5
+    // );
+    // tl.to(description.title.current, 1, { top: destYDescription }, delay * 0.5);
+    // tl.to(
+    //   description.description.current,
+    //   1,
+    //   { top: destYDescription },
+    //   delay * 0.5
+    // );
+    // tl.to(
+    //   description.btnPage.current,
+    //   1,
+    //   { top: destYDescription },
+    //   delay * 0.5
+    // );
+    // tl.to(description.cardWrapper.current, 1, { top: destYCards }, delay * 2);
+    // tl.to(card.wrapper.current, 1, { top: destYCards }, delay * 2);
+    // tl.to(cardDetails.wrapper.current, 1, { top: destYCardDetails }, delay * 2);
   };
 
   const toggle = () => {
@@ -116,7 +110,9 @@ const App = () => {
     // tl.to(introBox.wrapper.current, 1, { x: 50 });
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+  }, []);
 
   return (
     <PageManagerContext.Provider
@@ -134,11 +130,11 @@ const App = () => {
         <Bushes />
         <City />
         <Rock />
-        <Ground />
-        <Intro />
-        <Forms />
-        <Description />
-        <Header />
+        {/* <Ground /> */}
+        {/* <Intro /> */}
+        {/* <Forms /> */}
+        {/* <Description /> */}
+        {/* <Header /> */}
       </div>
     </PageManagerContext.Provider>
   );
