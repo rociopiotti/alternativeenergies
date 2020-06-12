@@ -4,9 +4,13 @@
   overflow: hidden;
  .animationBTN {
    position: absolute;
-   top: 0;
+   width: 50vw;
+   height: 8vh;
+   -webkit-appearance: none;
+   background-color: honeydew;
+   top: 10vh;
    margin: 0;
-   z-index: 99999999999999999999;
+   z-index: 99999999999999999999999999999999999999999999;
  }
 
 }

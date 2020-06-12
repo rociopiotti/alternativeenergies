@@ -10,7 +10,7 @@
   justify-content: flex-start;
   margin: 0;
   padding: 0;
-  z-index: 99999;
+  z-index: 9;
   .burger {
     display: none;
   }
@@ -56,7 +56,6 @@
 
 // @media screen and (max-width: 754px) {
 //   .header {
-//     z-index: 9999999999999999;
 //     .burger {
 //       display: flex;
 //       width: 6vh;

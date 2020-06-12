@@ -60,14 +60,14 @@ const App = () => {
       onComplete: () => toggle(),
     });
 
-    // tl.to(introBox.wrapper.current, 1, { y: destY }, delay);
-    // tl.to(bushes.wrapper.current, 1, { y: destY }, delay);
-    // tl.to(city.wrapper.current, 1, { y: destY }, delay);
-    // tl.to(rock.wrapper.current, 1, { y: destY }, delay);
-    // tl.to(ground.wrapper.current, 1, { y: destYGround, x: destXGround }, delay);
-    // tl.to(mountain.wrapper.current, 1, { y: destY }, delay + 0.1);
-    // tl.to(buildings.wrapper.current, 1, { y: destY }, delay + 0.1);
-    // tl.to(sky.wrapper.current, 1, { y: destY }, delay * 0.5);
+    tl.to(introBox.wrapper.current, 1, { y: destY }, delay);
+    tl.to(bushes.wrapper.current, 1, { y: destY }, delay);
+    tl.to(city.wrapper.current, 1, { y: destY }, delay);
+    tl.to(rock.wrapper.current, 1, { y: destY }, delay);
+    tl.to(ground.wrapper.current, 1, { y: destYGround, x: destXGround }, delay);
+    tl.to(mountain.wrapper.current, 1, { y: destY }, delay + 0.1);
+    tl.to(buildings.wrapper.current, 1, { y: destY }, delay + 0.1);
+    tl.to(sky.wrapper.current, 1, { y: destY }, delay * 0.5);
     // tl.to(forms.wrapper.current, 1, { top: destYDescription }, delay * 0.5);
     // tl.to(forms.form1.current, 1, { top: destYDescription }, delay * 0.5);
     // tl.to(forms.form2.current, 1, { top: destYDescription }, delay * 0.5);
@@ -111,7 +111,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
   }, []);
 
   return (
