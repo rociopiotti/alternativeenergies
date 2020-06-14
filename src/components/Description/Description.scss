@@ -169,12 +169,17 @@
       .appsListBox {
         position: relative;
         width: 100%;
-        margin-top: 0vh;
-        flex-direction: column;
+        margin-top: 5vh;
+        flex-direction: row;
         align-items: flex-start;
+        flex-wrap: wrap;
         justify-content: flex-start;
         margin-left: 0;
         top: 100vh;
+
+        &:last-child{
+          flex-grow: 1;
+        }
       }
     }
   }

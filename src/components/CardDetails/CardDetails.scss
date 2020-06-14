@@ -7,7 +7,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-grow: 1;
-  margin-top: 0;
+  margin-top: -10vh;
   margin: 0;
   padding: 0;
 
@@ -55,8 +55,7 @@
   }
 }
 
-
-@media screen and (max-width: 768px) {  
+@media screen and (max-width: 768px) {
   .cardDetails {
     width: 45%;
     height: auto;
@@ -69,10 +68,10 @@
     margin-top: 10vh;
     margin: 0;
     padding: 0;
-  
+
     .cardHeader {
       width: 100%;
-      height:auto;
+      height: auto;
       // background-color: dimgray;
       h4 {
         font-size: 1em;
@@ -96,7 +95,7 @@
           line-height: 1.5em;
         }
       }
-  
+
       a {
         text-decoration: none;
         color: #fff;
@@ -112,5 +111,11 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardDetails {
+    display: none;
   }
 }
