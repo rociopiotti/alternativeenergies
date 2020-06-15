@@ -26,7 +26,7 @@
   }
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1366px) and (orientation: landscape) {
   .groundImgBox {
     .groundImg {
       position: absolute;
@@ -37,6 +37,18 @@
   }
 }
 
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .groundImgBox {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    .groundImg {
+      position: relative;
+      top: -5vh;
+      left: 0;
+    }
+  }
+}
 /* Se necesita este mediaquery para evitar que en mobile landscape entre como si fuese ipad landscape.
  Manteniendo así el layout de desktop */
 
