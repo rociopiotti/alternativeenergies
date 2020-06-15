@@ -21,6 +21,8 @@ const Description = () => {
   const addRef = references;
 
   useEffect(() => {
+    
+    document.body.style.overflow = "hidden";
     addRef("description", {
       wrapper: wrapperRef,
       title: titleRef,

@@ -31,7 +31,8 @@ const App = () => {
     setRefs({ ...refs });
   });
 
-  const startsAnimation = () => {
+  const startsAnimation = (event) => {
+    console.log( event)
     const {
       introBox,
       sky,
@@ -111,7 +112,6 @@ const App = () => {
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
     const destYDescription = mode === "DOWN" ? 0 : "100vh";
 
-
     const duration = 2;
     const durationGround = mode === "DOWN" ? 0.9 : 2.2;
     const delay = mode === "DOWN" ? 0.1 : 0.2;
@@ -181,6 +181,10 @@ const App = () => {
     setMode(newMode);
   };
 
+  const handleScroll = () => {
+    console.log("SCROLL");
+  };
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
   }, []);
@@ -191,20 +195,23 @@ const App = () => {
         references: addRef,
       }}>
       <div className='App'>
-        <button onClick={startsAnimation} className='animationBTN'>
+        {/* <button onClick={startsAnimation} className='animationBTN'>
           ANIMATE
-        </button>
-        <Sky />
-        <Buildings />
-        <Mountain />
-        <Bushes />
-        <City />
-        <Rock />
-        <Ground />
-        <Intro />
-        <Forms />
-        <Description />
+        </button> */}
         <Header />
+        <div onWheel={startsAnimation} onTouchStart={startsAnimation}>
+          <Sky />
+          <Buildings />
+          <Mountain />
+          <Bushes />
+          <City />
+          <Rock />
+          <Ground />
+          <Intro />
+          <Forms />
+          <Description />
+        </div>
+       
       </div>
     </PageManagerContext.Provider>
   );
