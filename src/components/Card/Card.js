@@ -39,14 +39,9 @@ const Card = (props) => {
   const { references } = useContext(Context);
   const addRef = references;
 
-  const toogleHover = (value) => {
-    setIsHovered(isHovered ? true : false);
-  };
-
   const addBackgroundColor = (event) => {
     const element = event.currentTarget;
     element.classList.remove("blue");
-
     element.classList.add("green");
   };
 

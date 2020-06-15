@@ -20,20 +20,11 @@ import { gsap } from "gsap";
 import { Timeline } from "gsap/gsap-core";
 
 // MEDIAQUERY IS MOBILE
-import {
-  isMobile,
-  withOrientationChange,
-  isLandscape,
-  isPortrait,
-  isMobileOnly,
-  isTablet,
-  isBrowser,
-} from "react-device-detect";
+import { isMobileOnly, isTablet, isBrowser } from "react-device-detect";
 
 const App = () => {
   const [refs, setRefs] = useState({});
   const [mode, setMode] = useState("DOWN");
-
   const addRef = useCallback((id, value) => {
     refs[id] = value;
 
@@ -64,6 +55,8 @@ const App = () => {
     let heightGround;
     let heightForms;
     let heightBtnPage;
+    let heightcardWrapper;
+
     const widthScreen = window.innerWidth;
     const heightScreen = window.innerHeight;
 
@@ -71,11 +64,11 @@ const App = () => {
       if (widthScreen > heightScreen) {
         // LANDSCAPE //
         heightGround = mode === "DOWN" ? " -150vh" : "0vh";
-        heightForms = mode === "DOWN" ? 0 : "100vh";
+        heightForms = mode === "DOWN" ? "3vh" : "100vh";
         heightBtnPage = mode === "DOWN" ? "5vh" : "100vh";
+        // heightcardWrapper = mode === "DOWN" ? "0" : "100vh"
       } else {
         // PORTRAIT //
-
         heightGround = mode === "DOWN" ? " -150vh" : "0vh";
         heightForms = mode === "DOWN" ? 0 : "100vh";
         heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
@@ -90,7 +83,7 @@ const App = () => {
         // PORTRAIT //
         heightGround = mode === "DOWN" ? "-140vh" : "0";
       }
-      heightForms = mode === "DOWN" ? "5vh" : "100vh";
+      heightForms = mode === "DOWN" ? "10vh" : "100vh";
       heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
     }
     if (isBrowser) {
@@ -166,8 +159,6 @@ const App = () => {
     let newMode = mode === "DOWN" ? "UP" : "DOWN";
     setMode(newMode);
   };
-
-  
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
