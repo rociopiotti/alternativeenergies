@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useState } from "react";
 import "./Card.scss";
 import iconBackground1 from "../../img/IconBackground1.svg";
 import iconRed from "../../img/red.png";
@@ -39,14 +39,37 @@ const Card = (props) => {
   const { references } = useContext(Context);
   const addRef = references;
 
+  const [isHovered, setIsHovered] = useState();
+
+  const toogleHover = (value) => {
+    setIsHovered(isHovered ? true : false);
+  };
+
+  const addBackgroundColor = (event) => {
+    const element = event.currentTarget;
+    element.classList.remove("blue");
+
+    element.classList.add("green");
+  };
+
+  const removeBackgroundColor = (event) => {
+    const element = event.currentTarget;
+    element.classList.remove("green");
+    element.classList.add("blue");
+  };
+
   useEffect(() => {
     addRef("card", {
       wrapper: wrapperRef,
     });
   }, []);
+
   return (
     <div className='cardBox' ref={wrapperRef}>
-      <div className='card'>
+      <div
+        className='card'
+        onMouseEnter={addBackgroundColor}
+        onMouseLeave={removeBackgroundColor}>
         <div className='cardImg'>
           <img
             src={iconBackground1}
