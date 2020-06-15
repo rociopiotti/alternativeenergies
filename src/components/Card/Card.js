@@ -39,8 +39,6 @@ const Card = (props) => {
   const { references } = useContext(Context);
   const addRef = references;
 
-  const [isHovered, setIsHovered] = useState();
-
   const toogleHover = (value) => {
     setIsHovered(isHovered ? true : false);
   };
