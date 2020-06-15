@@ -70,7 +70,6 @@ const App = () => {
     if (isTablet) {
       if (widthScreen > heightScreen) {
         // LANDSCAPE //
-
         heightGround = mode === "DOWN" ? " -150vh" : "0vh";
         heightForms = mode === "DOWN" ? 0 : "100vh";
         heightBtnPage = mode === "DOWN" ? "5vh" : "100vh";
@@ -95,7 +94,7 @@ const App = () => {
       heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
     }
     if (isBrowser) {
-      if ((widthScreen === 1366)) {
+      if (widthScreen === 1366) {
         heightGround = mode === "DOWN" ? " -150vh" : "-31vh";
         heightForms = mode === "DOWN" ? 0 : "100vh";
         heightBtnPage = mode === "DOWN" ? 0 : "100vh";
@@ -121,7 +120,7 @@ const App = () => {
     const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
 
     const delay = mode === "DOWN" ? 0.1 : 0.2;
-    const delay1 = mode === "DOWN" ? 0.9 : 2;
+    const delay1 = mode === "DOWN" ? 0.9 : 1.8;
 
     const tl = new Timeline({
       onComplete: () => toggle(),
@@ -168,14 +167,7 @@ const App = () => {
     setMode(newMode);
   };
 
-  const openingAnimation = (refs) => {
-    const introBox = refs;
-    console.log(refs);
-    console.log(introBox.wrapper);
-
-    // const tl = new Timeline({});
-    // tl.to(introBox.wrapper.current, 1, { x: 50 });
-  };
+  
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -185,7 +177,6 @@ const App = () => {
     <PageManagerContext.Provider
       value={{
         references: addRef,
-        openingAnimation: openingAnimation,
       }}>
       <div className='App'>
         <button onClick={startsAnimation} className='animationBTN'>
