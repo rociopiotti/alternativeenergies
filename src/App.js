@@ -111,7 +111,7 @@ const App = () => {
     const destYDescription = mode === "DOWN" ? 0 : "100vh";
     const destYBtn = mode === "DOWN" ? heightBtnPage : heightBtnPage;
 
-    const destYCards = mode === "DOWN" ? "5vh" : "100vh";
+    const destYCards = mode === "DOWN" ? "0vh" : "100vh";
     const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
 
     const delay = mode === "DOWN" ? 0.1 : 0.2;
