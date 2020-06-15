@@ -12,6 +12,8 @@ const Ground = () => {
   const addRef = references;
 
   useEffect(() => {
+    
+    document.body.style.overflow = "hidden";
     addRef("ground", {
       wrapper: wrapperRef,
     });
