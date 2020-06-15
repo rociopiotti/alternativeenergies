@@ -61,7 +61,7 @@ const App = () => {
     //                   MOBILE ANIMATIONS                     //
     // ------------------------------------------------------- //
 
-    let height;
+    let heightGround;
     let heightForms;
     let heightBtnPage;
     const widthScreen = window.innerWidth;
@@ -71,14 +71,14 @@ const App = () => {
       if (widthScreen > heightScreen) {
         // LANDSCAPE //
 
+        heightGround = mode === "DOWN" ? " -150vh" : "0vh";
         heightForms = mode === "DOWN" ? 0 : "100vh";
-        height = mode === "DOWN" ? " -150vh" : "0vh";
         heightBtnPage = mode === "DOWN" ? "5vh" : "100vh";
       } else {
         // PORTRAIT //
 
+        heightGround = mode === "DOWN" ? " -150vh" : "0vh";
         heightForms = mode === "DOWN" ? 0 : "100vh";
-        height = mode === "DOWN" ? " -150vh" : "0vh";
         heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
       }
     }
@@ -86,18 +86,24 @@ const App = () => {
     if (isMobileOnly) {
       // LANDSCAPE //
       if (widthScreen > heightScreen) {
-        height = mode === "DOWN" ? "-140vh" : "-35vh";
+        heightGround = mode === "DOWN" ? "-140vh" : "-35vh";
       } else {
         // PORTRAIT //
-        height = mode === "DOWN" ? "-140vh" : "0";
+        heightGround = mode === "DOWN" ? "-140vh" : "0";
       }
       heightForms = mode === "DOWN" ? "5vh" : "100vh";
       heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
     }
     if (isBrowser) {
-      height = mode === "DOWN" ? " -150vh" : "-35vh";
-      heightForms = mode === "DOWN" ? 0 : "100vh";
-      heightBtnPage = mode === "DOWN" ? 0 : "100vh";
+      if ((widthScreen === 1366)) {
+        heightGround = mode === "DOWN" ? " -150vh" : "-31vh";
+        heightForms = mode === "DOWN" ? 0 : "100vh";
+        heightBtnPage = mode === "DOWN" ? 0 : "100vh";
+      } else {
+        heightGround = mode === "DOWN" ? " -150vh" : "-35vh";
+        heightForms = mode === "DOWN" ? 0 : "100vh";
+        heightBtnPage = mode === "DOWN" ? 0 : "100vh";
+      }
 
       // console.log("Desktop", isMobile, heightMobile);
     }
@@ -105,7 +111,7 @@ const App = () => {
     // -------------------------------------------------------
 
     const destY = mode === "DOWN" ? "-100vh" : 0;
-    const destYGround = mode === "DOWN" ? height : height;
+    const destYGround = mode === "DOWN" ? heightGround : heightGround;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
     const destYForms = mode === "DOWN" ? heightForms : heightForms;
     const destYDescription = mode === "DOWN" ? 0 : "100vh";

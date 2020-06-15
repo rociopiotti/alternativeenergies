@@ -26,12 +26,12 @@
   }
 }
 
-@media screen and (max-width: 1366px) and (orientation: landscape) {
+@media screen and (max-width: 1366px) {
   .groundImgBox {
     .groundImg {
       position: absolute;
       width: 120%;
-      top: -5vh;
+      top: -31vh;
       left: 0;
     }
   }
@@ -43,7 +43,7 @@
 @media screen and (max-width: 823px) and (orientation: landscape) {
   .groundImgBox {
     height: 120vh;
-    width: 100%;  
+    width: 100%;
     overflow-x: hidden;
     .groundImg {
       position: relative;
