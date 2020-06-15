@@ -81,7 +81,6 @@
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   .descriptionBox {
-    // background-color: hotpink;
     .description {
       .descriptionText {
         position: relative;
@@ -94,6 +93,9 @@
         top: 100vh;
       }
       .appsListBox {
+        width: 90vw;
+
+        background-color: hotpink;
       }
     }
   }

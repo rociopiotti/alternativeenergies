@@ -62,7 +62,30 @@
     }
   }
 }
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .cardBox {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
 
+    .card {
+      width: 75%;
+      height: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: #002129;
+      border-radius: 20px 20px 0 0;
+      padding: 5% 10% 10% 10%;
+      margin-top: 0;
+      margin: 0;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .cardBox {
     width: 50%;
@@ -137,7 +160,7 @@
     flex-grow: 1;
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 
     .card {
