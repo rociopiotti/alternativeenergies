@@ -41,14 +41,14 @@ const Card = (props) => {
 
   const addBackgroundColor = (event) => {
     const element = event.currentTarget;
-    element.classList.remove("blue");
+    element.classList.remove("transparent");
     element.classList.add("green");
   };
 
   const removeBackgroundColor = (event) => {
     const element = event.currentTarget;
     element.classList.remove("green");
-    element.classList.add("blue");
+    element.classList.add("transparent");
   };
 
   useEffect(() => {
