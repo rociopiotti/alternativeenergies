@@ -46,16 +46,15 @@ const App = () => {
       card,
       cardDetails,
     } = refs;
-    // console.log(refs);
 
     // ------------------------------------------------------- //
-    //                   MOBILE ANIMATIONS                     //
+    //                   MEDIAQUERIES ANIMATIONS               //
     // ------------------------------------------------------- //
 
-    let heightGround;
-    let heightForms;
-    let heightBtnPage;
-    let heightcardWrapper;
+    let destYGround;
+    let destYForms;
+    let destYBtnPage;
+    let destYCards;
 
     const widthScreen = window.innerWidth;
     const heightScreen = window.innerHeight;
@@ -63,55 +62,51 @@ const App = () => {
     if (isTablet) {
       if (widthScreen > heightScreen) {
         // LANDSCAPE //
-        heightGround = mode === "DOWN" ? " -150vh" : "0vh";
-        heightForms = mode === "DOWN" ? "3vh" : "100vh";
-        heightBtnPage = mode === "DOWN" ? "5vh" : "100vh";
-        // heightcardWrapper = mode === "DOWN" ? "0" : "100vh"
+        destYGround = mode === "DOWN" ? " -150vh" : "0vh";
+        destYForms = mode === "DOWN" ? "3vh" : "100vh";
+        destYBtnPage = mode === "DOWN" ? "5vh" : "100vh";
+        destYCards = mode === "DOWN" ? "7vh" : "100vh";
       } else {
         // PORTRAIT //
-        heightGround = mode === "DOWN" ? " -150vh" : "0vh";
-        heightForms = mode === "DOWN" ? 0 : "100vh";
-        heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+        destYGround = mode === "DOWN" ? " -150vh" : "0vh";
+        destYForms = mode === "DOWN" ? 0 : "100vh";
+        destYBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+        destYCards = mode === "DOWN" ? "7vh" : "100vh";
       }
     }
 
     if (isMobileOnly) {
       // LANDSCAPE //
       if (widthScreen > heightScreen) {
-        heightGround = mode === "DOWN" ? "-140vh" : "-35vh";
+        destYGround = mode === "DOWN" ? "-140vh" : "-35vh";
+        destYCards = mode === "DOWN" ? "7vh" : "100vh";
       } else {
         // PORTRAIT //
-        heightGround = mode === "DOWN" ? "-140vh" : "0";
+        destYGround = mode === "DOWN" ? "-140vh" : "0";
+        destYCards = mode === "DOWN" ? "-10vh" : "100vh";
       }
-      heightForms = mode === "DOWN" ? "10vh" : "100vh";
-      heightBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+      destYForms = mode === "DOWN" ? "10vh" : "100vh";
+      destYBtnPage = mode === "DOWN" ? "15vh" : "100vh";
     }
     if (isBrowser) {
       if (widthScreen === 1366) {
-        heightGround = mode === "DOWN" ? " -150vh" : "-31vh";
-        heightForms = mode === "DOWN" ? 0 : "100vh";
-        heightBtnPage = mode === "DOWN" ? 0 : "100vh";
+        destYGround = mode === "DOWN" ? " -150vh" : "-31vh";
+        destYForms = mode === "DOWN" ? 0 : "100vh";
+        destYBtnPage = mode === "DOWN" ? 0 : "100vh";
+        destYCards = mode === "DOWN" ? "7vh" : "100vh";
       } else {
-        heightGround = mode === "DOWN" ? " -150vh" : "-35vh";
-        heightForms = mode === "DOWN" ? 0 : "100vh";
-        heightBtnPage = mode === "DOWN" ? 0 : "100vh";
+        destYGround = mode === "DOWN" ? " -150vh" : "-35vh";
+        destYForms = mode === "DOWN" ? 0 : "100vh";
+        destYBtnPage = mode === "DOWN" ? 0 : "100vh";
+        destYCards = mode === "DOWN" ? "7vh" : "100vh";
       }
-
-      // console.log("Desktop", isMobile, heightMobile);
     }
 
-    // -------------------------------------------------------
-
     const destY = mode === "DOWN" ? "-100vh" : 0;
-    const destYGround = mode === "DOWN" ? heightGround : heightGround;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
-    const destYForms = mode === "DOWN" ? heightForms : heightForms;
     const destYDescription = mode === "DOWN" ? 0 : "100vh";
-    const destYBtn = mode === "DOWN" ? heightBtnPage : heightBtnPage;
 
-    const destYCards = mode === "DOWN" ? "7vh" : "100vh";
     const destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
-
 
     const duration = 2;
     const durationGround = mode === "DOWN" ? 0.9 : 2.2;
@@ -147,7 +142,7 @@ const App = () => {
     tl.to(
       description.btnPage.current,
       duration,
-      { top: destYBtn },
+      { top: destYBtnPage },
       delay * 0.5
     );
     tl.to(
