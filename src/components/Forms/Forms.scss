@@ -112,20 +112,24 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 414px) {
   .formsBox {
-   
     .form1 {
-     
-
       .form1Img {
         position: relative;
         width: 100%;
         height: auto;
-        top: 10vh;
+        top: -2vh;
       }
     }
-  
-   
+
+    .form2 {
+      display: none;
+    }
+    .form3 {
+      .form3Img {
+        top: -15vh;
+      }
+    }
   }
 }

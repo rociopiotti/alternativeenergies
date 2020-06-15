@@ -159,7 +159,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 414px) {
   .descriptionBox {
     .description {
       .descriptionText {
@@ -170,14 +170,14 @@
       .appsListBox {
         position: relative;
         width: 100%;
-        margin-top: 0vh;
+        margin-top: 10vh;
         flex-direction: row;
         align-items: flex-start;
-        flex-wrap: wrap;
         justify-content: flex-start;
+        flex-wrap: wrap;
         margin-left: 0;
+        margin-right: 0;
         top: 100vh;
-
         &:last-child{
           flex-grow: 1;
         }

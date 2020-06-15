@@ -113,7 +113,7 @@ const App = () => {
     const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
 
     const duration = 2;
-    const durationGround = mode === "DOWN" ? 0.9 : 1.8;
+    const durationGround = mode === "DOWN" ? 0.9 : 2.2;
     const delay = mode === "DOWN" ? 0.1 : 0.2;
 
     const tl = new Timeline({
