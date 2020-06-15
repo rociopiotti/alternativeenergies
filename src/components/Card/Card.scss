@@ -1,10 +1,11 @@
 .cardBox {
   width: 40%;
+  height: 55vh;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-right: 2vw;
+  margin-left: 2vw;
 
   .green {
     background-color: #002129;
@@ -63,7 +64,7 @@
     }
     .cardBody {
       width: 100%;
-      height: 15vh;
+      height: 20vh;
       font-size: 0.8em;
 
       a {

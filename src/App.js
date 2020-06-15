@@ -46,7 +46,7 @@ const App = () => {
       card,
       cardDetails,
     } = refs;
-    console.log(refs);
+    // console.log(refs);
 
     // ------------------------------------------------------- //
     //                   MOBILE ANIMATIONS                     //
@@ -109,8 +109,9 @@ const App = () => {
     const destYDescription = mode === "DOWN" ? 0 : "100vh";
     const destYBtn = mode === "DOWN" ? heightBtnPage : heightBtnPage;
 
-    const destYCards = mode === "DOWN" ? "0vh" : "100vh";
-    const destYCardDetails = mode === "DOWN" ? "-10vh" : "100vh";
+    const destYCards = mode === "DOWN" ? "7vh" : "100vh";
+    const destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
+
 
     const duration = 2;
     const durationGround = mode === "DOWN" ? 0.9 : 2.2;

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext, useState } from "react";
+import React, { useRef, useEffect, useContext, useMemo } from "react";
 import "./Card.scss";
 import iconBackground1 from "../../img/IconBackground1.svg";
 import iconRed from "../../img/red.png";
@@ -7,7 +7,7 @@ import Icon from "../Icon/Icon";
 // CONTEXT
 import Context from "../../context/context";
 
-const dababase = [
+const database = [
   {
     id: "0",
     title: "Energy Decentralization",
@@ -51,41 +51,43 @@ const Card = (props) => {
     element.classList.add("transparent");
   };
 
+  const createList = useMemo(() => {
+    console.log("createlist");
+    return database.map(({ id, title, text, link, icon }, index) => (
+      <div key={index} className='cardBox' ref={wrapperRef}>
+        <div
+          className='card'
+          onMouseEnter={addBackgroundColor}
+          onMouseLeave={removeBackgroundColor}>
+          <div className='cardImg'>
+            <img
+              src={iconBackground1}
+              alt='icon background'
+              className='iconBackground'
+            />
+            <img src={icon} alt='icon app' className='iconImgApp' />
+          </div>
+          <div className='cardHeader'>
+            <h4>{title}</h4>
+          </div>
+          <div className='cardBody'>
+            <p>{text}</p>
+            <a href={link}>
+              Learn more <Icon type='arrowRight' />
+            </a>
+          </div>
+        </div>
+      </div>
+    ));
+  }, [database]);
+
   useEffect(() => {
     addRef("card", {
       wrapper: wrapperRef,
     });
   }, []);
 
-  return (
-    <div className='cardBox' ref={wrapperRef}>
-      <div
-        className='card'
-        onMouseEnter={addBackgroundColor}
-        onMouseLeave={removeBackgroundColor}>
-        <div className='cardImg'>
-          <img
-            src={iconBackground1}
-            alt='icon background'
-            className='iconBackground'
-          />
-          <img src={iconRed} alt='icon app' className='iconImgApp' />
-        </div>
-        <div className='cardHeader'>
-          <h4>Energy Decentralization</h4>
-        </div>
-        <div className='cardBody'>
-          <p>
-            An innovative approach to energy production, storage, and
-            distribution adapted for each community needs.
-          </p>
-          <a href='#'>
-            Learn more <Icon type='arrowRight' />
-          </a>
-        </div>
-      </div>
-    </div>
-  );
+  return createList;
 };
 
 export default Card;

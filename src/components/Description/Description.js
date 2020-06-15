@@ -56,8 +56,7 @@ const Description = () => {
         </p>
         <div className='appsListBox' ref={cardWrapperRef}>
           <Card  />
-          <Card  />
-          <Card  />
+          
           <CardDetails/>
         </div>
       </div>
