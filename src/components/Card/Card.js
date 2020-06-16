@@ -7,96 +7,48 @@ import Icon from "../Icon/Icon";
 // CONTEXT
 import Context from "../../context/context";
 
-const database = [
-  {
-    id: "0",
-    title: "Energy Decentralization",
-    text:
-      "An innovative approach to energy production, storage, and distribution adapted for each community needs",
-    link: "url",
-    icon: "/img/red.png",
-  },
-  {
-    id: "1",
-    title: "Eco-Friendly Sustainability",
-    text:
-      " Maximized efficiency of fossil fuels and renewable energy sources for the minimal impact on the enviroment.",
-    link: "url",
-    icon: "/img/bulb.png",
-  },
-  {
-    id: "2",
-    title: "Power Exchange",
-    text:
-      "Balanced schemes connecting energy producers and consumers to reach effective power exchange and make smart contracts.",
-    link: "url",
-    icon: "/img/ray.png",
-  },
-];
-
-const Card = (props) => {
+const Card = ({ onHover, data }) => {
   const wrapperRef = useRef(null);
   const { references } = useContext(Context);
   const addRef = references;
 
+  useEffect(() => {
+    addRef("card", {
+      wrapper: wrapperRef,
+    });
+  }, []);
+
   const addBackgroundColor = (event) => {
     const element = event.currentTarget;
-    const elementId = event.target.id;
-
     element.classList.remove("transparent");
     element.classList.add("green");
-    props.onHover(elementId);
   };
 
   const removeBackgroundColor = (event) => {
     const element = event.currentTarget;
     element.classList.remove("green");
     element.classList.add("transparent");
-    props.onHover(null);
   };
 
-  // const createList = useMemo(() => {
-  //   return database.map(({ id, title, text, link, icon }, index) => (
-  //     <div key={index} className='cardBox' ref={wrapperRef}>
-  //       <div
-  //         className='card'
-  //         onMouseEnter={addBackgroundColor}
-  //         onMouseLeave={removeBackgroundColor}
-  //         onTouchStart={addBackgroundColor}
-  //         onTouchEnd={removeBackgroundColor}>
-  //         <div className='cardImg'>
-  //           <img
-  //             src={iconBackground1}
-  //             alt='icon background'
-  //             className='iconBackground'
-  //           />
-  //           <img src={icon} alt='icon app' className='iconImgApp' />
-  //         </div>
-  //         <div className='cardHeader'>
-  //           <h4>{title}</h4>
-  //         </div>
-  //         <div className='cardBody'>
-  //           <p>{text}</p>
-  //           <a href={link}>
-  //             Learn more <Icon type='arrowRight' />
-  //           </a>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   ));
-  // }, [database]);
+  const handleEnter = (index, event) => {
+    addBackgroundColor(event);
+    onHover(index);
+  };
 
+  const handleOut = (index, event) => {
+    removeBackgroundColor(event);
+  };
 
   const createList = useMemo(() => {
-    return database.map(({ id, title, text, link, icon }, index) => (
+    return data.map(({ id, title, text, link, icon }, index) => (
       <div key={index} className='cardBox' ref={wrapperRef}>
         <div
           className='card'
           id={index}
-          onMouseEnter={addBackgroundColor}
-          onMouseLeave={removeBackgroundColor}
-          onTouchStart={addBackgroundColor}
-          onTouchEnd={removeBackgroundColor}>
+          onMouseEnter={(event) => handleEnter(index, event)}
+          onMouseLeave={(event) => handleOut(index, event)}
+          onTouchStart={(event) => handleEnter(index, event)}
+          onTouchEnd={(event) => handleOut(index, event)}>
           <div className='cardImg'>
             <img
               src={iconBackground1}
@@ -117,12 +69,7 @@ const Card = (props) => {
         </div>
       </div>
     ));
-  }, [database]);
-  useEffect(() => {
-    addRef("card", {
-      wrapper: wrapperRef,
-    });
-  }, []);
+  }, [data]);
 
   return createList;
 };

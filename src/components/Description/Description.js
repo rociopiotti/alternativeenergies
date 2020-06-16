@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useState } from "react";
 import "./Description.scss";
 import Card from "../Card/Card";
 import CardDetails from "../CardDetails/CardDetails";
@@ -7,8 +7,69 @@ import Icon from "../Icon/Icon";
 // CONTEXT
 import Context from "../../context/context";
 
-const childIsHover = null;
+const CARDS = [
+  {
+    id: "0",
+    title: "Energy Decentralization",
+    text:
+      "An innovative approach to energy production, storage, and distribution adapted for each community needs",
+    link: "url",
+    icon: "/img/red.png",
+  },
+  {
+    id: "1",
+    title: "Eco-Friendly Sustainability",
+    text:
+      " Maximized efficiency of fossil fuels and renewable energy sources for the minimal impact on the enviroment.",
+    link: "url",
+    icon: "/img/bulb.png",
+  },
+  {
+    id: "2",
+    title: "Power Exchange",
+    text:
+      "Balanced schemes connecting energy producers and consumers to reach effective power exchange and make smart contracts.",
+    link: "url",
+    icon: "/img/ray.png",
+  },
+];
+
+const DETAILS = [
+  {
+    id: "0",
+    title: "Energy Decentralization",
+    list: [
+      "Independent and digitized",
+      "New economic model",
+      "Build local ecosystems",
+    ],
+    link: "url",
+  },
+  {
+    id: "1",
+    title: "Eco-Friendly Sustainability",
+    list: [
+      "Reduce and preserving fossil fuels",
+      "Renewable energy sources",
+      "Acelerationd decartonization",
+    ],
+    link: "url",
+  },
+  {
+    id: "2",
+    title: "Power Exchange",
+    list: [
+      "P2P energy exchange",
+      "Balance the system",
+      "Storage & transmissions",
+    ],
+    link: "url",
+  },
+];
+
 const Description = () => {
+  const [currentId, setCurrentId] = useState(0);
+
   const wrapperRef = useRef(null);
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -19,7 +80,6 @@ const Description = () => {
   const cardRef3 = useRef(null);
 
   const { references } = useContext(Context);
-
   const addRef = references;
 
   useEffect(() => {
@@ -36,14 +96,8 @@ const Description = () => {
     });
   }, []);
 
-  const hoverHandler = (isHover) => {
-    const elementId = isHover;
-    if (!elementId) {
-      console.log("Fuera de element");
-    } else {
-      const childIsHover = elementId;
-      console.log("Element hover:", childIsHover);
-    }
+  const hoverHandler = (selectedId) => {
+    setCurrentId(selectedId);
   };
 
   return (
@@ -69,8 +123,8 @@ const Description = () => {
           and accelerate new models of energy management.
         </p>
         <div className='appsListBox' ref={cardWrapperRef}>
-          <Card onHover={hoverHandler} />
-          <CardDetails elementId={childIsHover} />
+          <Card data={CARDS} onHover={hoverHandler} />
+          <CardDetails data={DETAILS[currentId]} />
         </div>
       </div>
     </div>
