@@ -6,6 +6,8 @@ import Icon from "../Icon/Icon";
 
 // CONTEXT
 import Context from "../../context/context";
+
+const childIsHover = null;
 const Description = () => {
   const wrapperRef = useRef(null);
   const titleRef = useRef(null);
@@ -21,7 +23,6 @@ const Description = () => {
   const addRef = references;
 
   useEffect(() => {
-    
     document.body.style.overflow = "hidden";
     addRef("description", {
       wrapper: wrapperRef,
@@ -34,6 +35,11 @@ const Description = () => {
       card3: cardRef3,
     });
   }, []);
+
+  const hoverHandler = (isHover) => {
+    const childIsHover = isHover;
+    console.log(isHover)
+  };
   return (
     <div className='descriptionBox' ref={wrapperRef}>
       <div className='description'>
@@ -57,9 +63,8 @@ const Description = () => {
           and accelerate new models of energy management.
         </p>
         <div className='appsListBox' ref={cardWrapperRef}>
-          <Card  />
-          
-          <CardDetails/>
+          <Card onHover={hoverHandler} />
+          <CardDetails overlay={childIsHover} />
         </div>
       </div>
     </div>

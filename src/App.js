@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Intro from "./components/Intro/Intro";
@@ -30,19 +30,13 @@ const App = () => {
   const [mode, setMode] = useState("DOWN");
   const [isAnimating, setisAnimating] = useState(false);
 
-  const [targetElement, setTargetElement] = useState({});
+  const targetElement = useRef();
 
   const addRef = useCallback((id, value) => {
     refs[id] = value;
 
     setRefs({ ...refs });
   });
-
-  const detectResize = (body) => {
-    const windowsHeight = window.innerHeight;
-
-    alert(windowsHeight);
-  };
 
   const startsAnimation = (event) => {
     // detectResize();

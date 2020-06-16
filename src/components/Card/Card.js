@@ -43,12 +43,14 @@ const Card = (props) => {
     const element = event.currentTarget;
     element.classList.remove("transparent");
     element.classList.add("green");
+    props.onHover(element);
   };
 
   const removeBackgroundColor = (event) => {
     const element = event.currentTarget;
     element.classList.remove("green");
     element.classList.add("transparent");
+    props.onHover(element);
   };
 
   const createList = useMemo(() => {
