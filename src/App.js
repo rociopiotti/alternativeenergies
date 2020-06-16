@@ -71,7 +71,7 @@ const App = () => {
         destYGround = mode === "DOWN" ? " -100vh" : "35vh";
         destYForms = mode === "DOWN" ? "3vh" : "100vh";
         destYBtnPage = mode === "DOWN" ? "5vh" : "100vh";
-        destYCards = mode === "DOWN" ? "7vh" : "100vh";
+        destYCards = mode === "DOWN" ? "15vh" : "100vh";
         destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
         destYDescription = mode === "DOWN" ? 0 : "100vh";
       } else {
@@ -204,7 +204,7 @@ const App = () => {
           ANIMATE
         </button> */}
         <Header />
-        <div onWheel={startsAnimation} onTouchMove={startsAnimation}>
+        <div onWheel={startsAnimation} onTouchEnd={startsAnimation}>
           <Sky />
           <Buildings />
           <Mountain />
