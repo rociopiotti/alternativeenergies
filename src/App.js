@@ -57,6 +57,7 @@ const App = () => {
     let destYBtnPage;
     let destYCards;
     let destYCardDetails;
+    let destYDescription;
 
     const widthScreen = window.innerWidth;
     const heightScreen = window.innerHeight;
@@ -69,29 +70,32 @@ const App = () => {
         destYBtnPage = mode === "DOWN" ? "5vh" : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
         destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
+        destYDescription = mode === "DOWN" ? 0 : "100vh";
       } else {
         // PORTRAIT //
         destYGround = mode === "DOWN" ? " -100vh" : "20vh";
         destYForms = mode === "DOWN" ? 0 : "100vh";
-        destYBtnPage = mode === "DOWN" ? "15vh" : "100vh";
+        destYBtnPage = mode === "DOWN" ? "20vh" : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
         destYCardDetails = mode === "DOWN" ? "7vh" : "100vh";
+        destYDescription = mode === "DOWN" ? "-3vh" : "100vh";
       }
     }
 
     if (isMobileOnly) {
       // LANDSCAPE //
       if (widthScreen > heightScreen) {
-        destYGround = mode === "DOWN" ? "-140vh" : "-35vh";
+        destYGround = mode === "DOWN" ? "-100vh" : "-35vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
       } else {
         // PORTRAIT //
-        destYGround = mode === "DOWN" ? "-140vh" : "0";
+        destYGround = mode === "DOWN" ? "-100vh" : "17vh";
         destYCards = mode === "DOWN" ? "-10vh" : "100vh";
       }
       destYForms = mode === "DOWN" ? "10vh" : "100vh";
       destYBtnPage = mode === "DOWN" ? "15vh" : "100vh";
       destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
+      destYDescription = mode === "DOWN" ? 0 : "100vh";
     }
     if (isBrowser) {
       if (widthScreen === 1366) {
@@ -106,11 +110,12 @@ const App = () => {
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
       }
       destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
+      destYDescription = mode === "DOWN" ? 0 : "100vh";
     }
 
     const destY = mode === "DOWN" ? "-100vh" : 0;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
-    const destYDescription = mode === "DOWN" ? 0 : "100vh";
+    
 
     const duration = 2;
     // const durationGround = mode === "DOWN" ? 0.9 : 2.2;
