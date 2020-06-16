@@ -23,7 +23,7 @@ import { Timeline } from "gsap/gsap-core";
 import { isMobileOnly, isTablet, isBrowser } from "react-device-detect";
 
 //NO SCROLL
-import { disableBodyScroll } from 'body-scroll-lock';
+import { disableBodyScroll } from "body-scroll-lock";
 
 const App = () => {
   const [refs, setRefs] = useState({});
@@ -31,7 +31,6 @@ const App = () => {
   const [isAnimating, setisAnimating] = useState(false);
 
   const [targetElement, setTargetElement] = useState({});
-
 
   const addRef = useCallback((id, value) => {
     refs[id] = value;
@@ -77,7 +76,6 @@ const App = () => {
     const heightScreen = window.innerHeight;
 
     if (isTablet) {
-      disableBodyScroll(targetElement.current);
       if (widthScreen > heightScreen) {
         // LANDSCAPE //
         destYGround = mode === "DOWN" ? " -100vh" : "35vh";
@@ -203,7 +201,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    disableBodyScroll(targetElement.current);
   }, []);
 
   return (
@@ -211,7 +209,7 @@ const App = () => {
       value={{
         references: addRef,
       }}>
-      <div className='App' ref= {targetElement}>
+      <div className='App' ref={targetElement}>
         {/* <button onClick={startsAnimation} className='animationBTN'>
           ANIMATE
         </button> */}
