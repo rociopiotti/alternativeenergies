@@ -11,7 +11,6 @@ const Header = () => {
       </a>
       <span className='separationHeader'></span>
       <button className='burger' alt='burger'>
-        {" "}
         <Icon type='burger' />
       </button>
       <ul className='navbar'>
