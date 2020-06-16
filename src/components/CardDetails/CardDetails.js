@@ -70,6 +70,7 @@ const CardDetails = (props) => {
     ));
     return List;
   }, [database]);
+  
   return <>{createCardDetails}</>;
 };
 

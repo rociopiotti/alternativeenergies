@@ -17,7 +17,7 @@ const Sky = (props) => {
       wrapper: wrapperRef,
     });
     
-  }, []);
+  }, [wrapperRef]);
 
   return (
     <img
