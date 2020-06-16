@@ -39,7 +39,6 @@ const App = () => {
   });
 
   const startsAnimation = (event) => {
-    // detectResize();
     const {
       introBox,
       sky,
@@ -129,6 +128,7 @@ const App = () => {
     if (isAnimating) {
       return;
     } else {
+      console.log(isAnimating);
       const tl = new Timeline({
         onComplete: () => toggle(),
       });
@@ -187,11 +187,8 @@ const App = () => {
 
   const toggle = () => {
     let newMode = mode === "DOWN" ? "UP" : "DOWN";
-    // let newIsAnimating = isAnimating === false ? true : false;
-
     setMode(newMode);
     setisAnimating(false);
-    console.log(isAnimating);
   };
 
   useEffect(() => {
