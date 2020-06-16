@@ -64,14 +64,14 @@ const App = () => {
     if (isTablet) {
       if (widthScreen > heightScreen) {
         // LANDSCAPE //
-        destYGround = mode === "DOWN" ? " -150vh" : "0vh";
+        destYGround = mode === "DOWN" ? " -100vh" : "35vh";
         destYForms = mode === "DOWN" ? "3vh" : "100vh";
         destYBtnPage = mode === "DOWN" ? "5vh" : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
         destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
       } else {
         // PORTRAIT //
-        destYGround = mode === "DOWN" ? " -150vh" : "0vh";
+        destYGround = mode === "DOWN" ? " -100vh" : "20vh";
         destYForms = mode === "DOWN" ? 0 : "100vh";
         destYBtnPage = mode === "DOWN" ? "15vh" : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
@@ -95,12 +95,12 @@ const App = () => {
     }
     if (isBrowser) {
       if (widthScreen === 1366) {
-        destYGround = mode === "DOWN" ? " -150vh" : "-31vh";
+        destYGround = mode === "DOWN" ? " -100vh" : "15vh";
         destYForms = mode === "DOWN" ? 0 : "100vh";
         destYBtnPage = mode === "DOWN" ? 0 : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
       } else {
-        destYGround = mode === "DOWN" ? " -150vh" : "-35vh";
+        destYGround = mode === "DOWN" ? " -100vh" : "20vh";
         destYForms = mode === "DOWN" ? 0 : "100vh";
         destYBtnPage = mode === "DOWN" ? 0 : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
@@ -113,7 +113,7 @@ const App = () => {
     const destYDescription = mode === "DOWN" ? 0 : "100vh";
 
     const duration = 2;
-    const durationGround = mode === "DOWN" ? 0.9 : 2.2;
+    // const durationGround = mode === "DOWN" ? 0.9 : 2.2;
     const delay = mode === "DOWN" ? 0.1 : 0.2;
 
     const tl = new Timeline({
@@ -126,7 +126,7 @@ const App = () => {
     tl.to(rock.wrapper.current, duration, { y: destY }, delay);
     tl.to(
       ground.wrapper.current,
-      durationGround,
+      duration,
       { top: destYGround, x: destXGround },
       delay
     );
@@ -187,6 +187,7 @@ const App = () => {
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
+    
   }, []);
 
   return (
