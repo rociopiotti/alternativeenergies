@@ -128,7 +128,6 @@ const App = () => {
     if (isAnimating) {
       return;
     } else {
-      console.log(isAnimating);
       const tl = new Timeline({
         onComplete: () => toggle(),
       });

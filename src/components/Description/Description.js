@@ -37,9 +37,15 @@ const Description = () => {
   }, []);
 
   const hoverHandler = (isHover) => {
-    const childIsHover = isHover;
-    console.log(isHover)
+    const elementId = isHover;
+    if (!elementId) {
+      console.log("Fuera de element");
+    } else {
+      const childIsHover = elementId;
+      console.log("Element hover:", childIsHover);
+    }
   };
+
   return (
     <div className='descriptionBox' ref={wrapperRef}>
       <div className='description'>
@@ -64,7 +70,7 @@ const Description = () => {
         </p>
         <div className='appsListBox' ref={cardWrapperRef}>
           <Card onHover={hoverHandler} />
-          <CardDetails overlay={childIsHover} />
+          <CardDetails elementId={childIsHover} />
         </div>
       </div>
     </div>

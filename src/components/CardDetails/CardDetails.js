@@ -50,6 +50,10 @@ const CardDetails = (props) => {
     });
   }, []);
 
+  useEffect(() => {
+    console.log(props.elementId)
+  }, [props.elementId]);
+
   const createCardDetails = useMemo(() => {
     const List = database.map(({ id, title, list, link }, index) => (
       <div key={index} className='cardDetails' ref={wrapperRef}>

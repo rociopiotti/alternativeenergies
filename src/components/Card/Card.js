@@ -41,23 +41,58 @@ const Card = (props) => {
 
   const addBackgroundColor = (event) => {
     const element = event.currentTarget;
+    const elementId = event.target.id;
+
     element.classList.remove("transparent");
     element.classList.add("green");
-    props.onHover(element);
+    props.onHover(elementId);
   };
 
   const removeBackgroundColor = (event) => {
     const element = event.currentTarget;
     element.classList.remove("green");
     element.classList.add("transparent");
-    props.onHover(element);
+    props.onHover(null);
   };
+
+  // const createList = useMemo(() => {
+  //   return database.map(({ id, title, text, link, icon }, index) => (
+  //     <div key={index} className='cardBox' ref={wrapperRef}>
+  //       <div
+  //         className='card'
+  //         onMouseEnter={addBackgroundColor}
+  //         onMouseLeave={removeBackgroundColor}
+  //         onTouchStart={addBackgroundColor}
+  //         onTouchEnd={removeBackgroundColor}>
+  //         <div className='cardImg'>
+  //           <img
+  //             src={iconBackground1}
+  //             alt='icon background'
+  //             className='iconBackground'
+  //           />
+  //           <img src={icon} alt='icon app' className='iconImgApp' />
+  //         </div>
+  //         <div className='cardHeader'>
+  //           <h4>{title}</h4>
+  //         </div>
+  //         <div className='cardBody'>
+  //           <p>{text}</p>
+  //           <a href={link}>
+  //             Learn more <Icon type='arrowRight' />
+  //           </a>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   ));
+  // }, [database]);
+
 
   const createList = useMemo(() => {
     return database.map(({ id, title, text, link, icon }, index) => (
       <div key={index} className='cardBox' ref={wrapperRef}>
         <div
           className='card'
+          id={index}
           onMouseEnter={addBackgroundColor}
           onMouseLeave={removeBackgroundColor}
           onTouchStart={addBackgroundColor}
@@ -83,7 +118,6 @@ const Card = (props) => {
       </div>
     ));
   }, [database]);
-
   useEffect(() => {
     addRef("card", {
       wrapper: wrapperRef,
