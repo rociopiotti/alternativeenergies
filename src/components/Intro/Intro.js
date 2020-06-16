@@ -17,7 +17,7 @@ const Intro = (props) => {
       wrapper: wrapperRef,
     });
     
-  }, []);
+  }, [wrapperRef]);
 
   return (
     <div className='introBox' ref={wrapperRef}>
