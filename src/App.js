@@ -32,7 +32,7 @@ const App = () => {
   });
 
   const startsAnimation = (event) => {
-    console.log( event)
+    console.log(event);
     const {
       introBox,
       sky,
@@ -115,11 +115,9 @@ const App = () => {
 
     const destY = mode === "DOWN" ? "-100vh" : 0;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
-    
 
-    const duration = 2;
-    // const durationGround = mode === "DOWN" ? 0.9 : 2.2;
-    const delay = mode === "DOWN" ? 0.1 : 0.2;
+    const duration = mode === "DOWN" ? 1 : 2;
+    const delay = mode === "DOWN" ? 0.5 : 0.1;
 
     const tl = new Timeline({
       onComplete: () => toggle(),
@@ -135,49 +133,39 @@ const App = () => {
       { top: destYGround, x: destXGround },
       delay
     );
-    tl.to(mountain.wrapper.current, duration, { y: destY }, delay + 0.1);
-    tl.to(buildings.wrapper.current, duration, { y: destY }, delay + 0.1);
-    tl.to(sky.wrapper.current, duration, { y: destY }, delay * 0.5);
-    tl.to(forms.wrapper.current, duration, { top: destYForms }, delay * 0.5);
-    tl.to(forms.form1.current, duration, { top: destYForms }, delay * 0.5);
-    tl.to(forms.form2.current, duration, { top: destYForms }, delay * 0.5);
-    tl.to(forms.form3.current, duration, { top: destYForms }, delay * 0.5);
-    tl.to(
-      description.wrapper.current,
-      1,
-      { top: destYDescription },
-      delay * 0.5
-    );
-    tl.to(
-      description.btnPage.current,
-      duration,
-      { top: destYBtnPage },
-      delay * 0.5
-    );
+    tl.to(mountain.wrapper.current, duration, { y: destY }, delay);
+    tl.to(buildings.wrapper.current, duration, { y: destY }, delay);
+    tl.to(sky.wrapper.current, duration, { y: destY }, delay);
+    tl.to(forms.wrapper.current, duration, { top: destYForms }, delay);
+    tl.to(forms.form1.current, duration, { top: destYForms }, delay);
+    tl.to(forms.form2.current, duration, { top: destYForms }, delay);
+    tl.to(forms.form3.current, duration, { top: destYForms }, delay);
+    tl.to(description.wrapper.current, 1, { top: destYDescription }, delay);
+    tl.to(description.btnPage.current, duration, { top: destYBtnPage }, delay);
     tl.to(
       description.title.current,
       duration,
       { top: destYDescription },
-      delay * 0.5
+      delay
     );
     tl.to(
       description.description.current,
       duration,
       { top: destYDescription },
-      delay * 0.5
+      delay
     );
     tl.to(
       description.cardWrapper.current,
       duration,
       { top: destYCards },
-      delay * 2
+      delay
     );
-    tl.to(card.wrapper.current, duration, { top: destYCards }, delay * 2);
+    tl.to(card.wrapper.current, duration, { top: destYCards }, delay);
     tl.to(
       cardDetails.wrapper.current,
       duration,
       { top: destYCardDetails },
-      delay * 2
+      delay
     );
   };
 
@@ -192,7 +180,6 @@ const App = () => {
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    
   }, []);
 
   return (
@@ -217,7 +204,6 @@ const App = () => {
           <Forms />
           <Description />
         </div>
-       
       </div>
     </PageManagerContext.Provider>
   );
