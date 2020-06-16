@@ -57,7 +57,9 @@ const Card = (props) => {
         <div
           className='card'
           onMouseEnter={addBackgroundColor}
-          onMouseLeave={removeBackgroundColor}>
+          onMouseLeave={removeBackgroundColor}
+          onTouchStart={addBackgroundColor}
+          onTouchEnd={removeBackgroundColor}>
           <div className='cardImg'>
             <img
               src={iconBackground1}

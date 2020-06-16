@@ -73,6 +73,11 @@
         .Icon {
           margin-left: 0.5vw;
         }
+
+        &:hover {
+          color: rgb(247, 231, 11);
+          transform: color 0.2s;
+        }
       }
     }
   }
@@ -167,7 +172,7 @@
 
 @media screen and (max-width: 414px) {
   .cardBox {
-    width: 45%;    
+    width: 45%;
     height: auto;
     flex-grow: 1;
     display: flex;
@@ -220,8 +225,7 @@
         }
       }
       .cardBody {
-        display: none
-
+        display: none;
       }
     }
   }

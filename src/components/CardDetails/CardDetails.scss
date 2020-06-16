@@ -52,6 +52,12 @@
       .Icon {
         margin-left: 0.5vw;
       }
+      &:hover {
+        background-color: #002120;
+        border: #002120 3px solid;
+
+        transform: background-color border 0.2s;
+      }
     }
   }
 }

@@ -204,7 +204,7 @@ const App = () => {
           ANIMATE
         </button> */}
         <Header />
-        <div onWheel={startsAnimation} onTouchEnd={startsAnimation}>
+        <div onWheel={startsAnimation} onTouchMove={startsAnimation}>
           <Sky />
           <Buildings />
           <Mountain />
