@@ -52,7 +52,6 @@ const Card = (props) => {
   };
 
   const createList = useMemo(() => {
-    console.log("createlist");
     return database.map(({ id, title, text, link, icon }, index) => (
       <div key={index} className='cardBox' ref={wrapperRef}>
         <div

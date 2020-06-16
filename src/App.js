@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Intro from "./components/Intro/Intro";
@@ -174,10 +174,7 @@ const App = () => {
     setMode(newMode);
   };
 
-  const handleScroll = () => {
-    console.log("SCROLL");
-  };
-
+ 
   useEffect(() => {
     document.body.style.overflow = "hidden";
   }, []);

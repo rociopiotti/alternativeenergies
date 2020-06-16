@@ -19,7 +19,7 @@
     height: 7vh;
     background-color: transparent;
     margin-left: 2vw;
-   
+
     .logoImg {
       position: relative;
       height: 100%;
@@ -27,6 +27,9 @@
   }
   .separationHeader {
     flex-grow: 1;
+  }
+  .navbarBox {
+    display: none;
   }
   .navbar {
     width: 50%;
@@ -48,48 +51,62 @@
 }
 @media screen and (max-width: 768px) {
   .header {
-   
     .logoBtn {
       height: 5vh;
+      z-index: 10;
+    }
+    .navbarBox {
+      display: none;
     }
   }
 }
 
-// @media screen and (max-width: 754px) {
-//   .header {
-//     .burger {
-//       display: flex;
-//       width: 6vh;
-//       height: 6vh;
-//       background-color: transparent;
-//       border: none;
-//       right: 5vw;
-//       position: absolute;
-//       padding: 0;
-//       font-size: 1.3em;
-//       color: #ffffff;
-//       align-items: center;
-//       justify-content: center;
-//     }
-//     .navbar {
-//       visibility: hidden; //////////////////////////////////////////////////////TEMPORAL
-//       background-color: rgba(0, 193, 247, 0.1);
-//       position: absolute;
-//       width: 100vw;
-//       height: 90vh;
-//       display: flex;
-//       top: 10vh;
-//       flex-direction: column;
-//       align-content: space-around;
-//       justify-content: flex-start;
+@media screen and (max-width: 823px) {
+  .header {
+    .logoBtn {
+      margin-left: 5vw;
+    }
+    .burger {
+      display: flex;
+      width: 6vh;
+      height: 6vh;
+      background-color: transparent;
+      border: none;
+      right: 5vw;
+      position: absolute;
+      padding: 0;
+      font-size: 1.3em;
+      color: #ffffff;
+      align-items: center;
+      justify-content: center;
+      z-index: 9;
+    }
 
-//       li {
-//         display: flex;
-//         flex-direction: row;
-//         align-items: center;
-//         justify-content: flex-start;
-//         margin: 5vh 10vw;
-//       }
-//     }
-//   }
-// }
+    .burger:focus {
+      outline: 0;
+    }
+
+    .navbar {
+      background-color: rgba(0, 193, 247, 1);
+      position: absolute;
+      width: 100vw;
+      height: 90vh;
+      top: -100vh;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content:center;
+      text-align: center;
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 5vh 15vw;
+        &:first-child {
+          margin-top: 20vh;
+        }
+      }
+    }
+  }
+}
