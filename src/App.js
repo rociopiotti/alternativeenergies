@@ -22,10 +22,16 @@ import { Timeline } from "gsap/gsap-core";
 // MEDIAQUERY IS MOBILE
 import { isMobileOnly, isTablet, isBrowser } from "react-device-detect";
 
+//NO SCROLL
+import { disableBodyScroll } from 'body-scroll-lock';
+
 const App = () => {
   const [refs, setRefs] = useState({});
   const [mode, setMode] = useState("DOWN");
   const [isAnimating, setisAnimating] = useState(false);
+
+  const [targetElement, setTargetElement] = useState({});
+
 
   const addRef = useCallback((id, value) => {
     refs[id] = value;
@@ -33,9 +39,14 @@ const App = () => {
     setRefs({ ...refs });
   });
 
-  const startsAnimation = (event) => {
-    
+  const detectResize = (body) => {
+    const windowsHeight = window.innerHeight;
 
+    alert(windowsHeight);
+  };
+
+  const startsAnimation = (event) => {
+    // detectResize();
     const {
       introBox,
       sky,
@@ -66,21 +77,22 @@ const App = () => {
     const heightScreen = window.innerHeight;
 
     if (isTablet) {
+      disableBodyScroll(targetElement.current);
       if (widthScreen > heightScreen) {
         // LANDSCAPE //
         destYGround = mode === "DOWN" ? " -100vh" : "35vh";
         destYForms = mode === "DOWN" ? "3vh" : "100vh";
+        destYDescription = mode === "DOWN" ? "-2vh" : "100vh";
         destYBtnPage = mode === "DOWN" ? "5vh" : "100vh";
-        destYCards = mode === "DOWN" ? "15vh" : "100vh";
+        destYCards = mode === "DOWN" ? "7vh" : "100vh";
         destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
-        destYDescription = mode === "DOWN" ? 0 : "100vh";
       } else {
         // PORTRAIT //
         destYGround = mode === "DOWN" ? " -100vh" : "20vh";
         destYForms = mode === "DOWN" ? 0 : "100vh";
+        destYCardDetails = mode === "DOWN" ? "7vh" : "100vh";
         destYBtnPage = mode === "DOWN" ? "20vh" : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
-        destYCardDetails = mode === "DOWN" ? "7vh" : "100vh";
         destYDescription = mode === "DOWN" ? "-3vh" : "100vh";
       }
     }
@@ -187,7 +199,7 @@ const App = () => {
 
     setMode(newMode);
     setisAnimating(false);
-    console.log( isAnimating)
+    console.log(isAnimating);
   };
 
   useEffect(() => {
@@ -199,7 +211,7 @@ const App = () => {
       value={{
         references: addRef,
       }}>
-      <div className='App'>
+      <div className='App' ref= {targetElement}>
         {/* <button onClick={startsAnimation} className='animationBTN'>
           ANIMATE
         </button> */}
