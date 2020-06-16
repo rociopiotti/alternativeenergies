@@ -25,6 +25,8 @@ import { isMobileOnly, isTablet, isBrowser } from "react-device-detect";
 const App = () => {
   const [refs, setRefs] = useState({});
   const [mode, setMode] = useState("DOWN");
+  const [isAnimating, setisAnimating] = useState(false);
+
   const addRef = useCallback((id, value) => {
     refs[id] = value;
 
@@ -32,7 +34,8 @@ const App = () => {
   });
 
   const startsAnimation = (event) => {
-    console.log(event);
+    
+
     const {
       introBox,
       sky,
@@ -119,62 +122,74 @@ const App = () => {
     const duration = mode === "DOWN" ? 1 : 2;
     const delay = mode === "DOWN" ? 0.5 : 0.1;
 
-    const tl = new Timeline({
-      onComplete: () => toggle(),
-    });
+    if (isAnimating) {
+      return;
+    } else {
+      const tl = new Timeline({
+        onComplete: () => toggle(),
+      });
 
-    tl.to(introBox.wrapper.current, duration, { y: destY }, delay);
-    tl.to(bushes.wrapper.current, duration, { y: destY }, delay);
-    tl.to(city.wrapper.current, duration, { y: destY }, delay);
-    tl.to(rock.wrapper.current, duration, { y: destY }, delay);
-    tl.to(
-      ground.wrapper.current,
-      duration,
-      { top: destYGround, x: destXGround },
-      delay
-    );
-    tl.to(mountain.wrapper.current, duration, { y: destY }, delay);
-    tl.to(buildings.wrapper.current, duration, { y: destY }, delay);
-    tl.to(sky.wrapper.current, duration, { y: destY }, delay);
-    tl.to(forms.wrapper.current, duration, { top: destYForms }, delay);
-    tl.to(forms.form1.current, duration, { top: destYForms }, delay);
-    tl.to(forms.form2.current, duration, { top: destYForms }, delay);
-    tl.to(forms.form3.current, duration, { top: destYForms }, delay);
-    tl.to(description.wrapper.current, 1, { top: destYDescription }, delay);
-    tl.to(description.btnPage.current, duration, { top: destYBtnPage }, delay);
-    tl.to(
-      description.title.current,
-      duration,
-      { top: destYDescription },
-      delay
-    );
-    tl.to(
-      description.description.current,
-      duration,
-      { top: destYDescription },
-      delay
-    );
-    tl.to(
-      description.cardWrapper.current,
-      duration,
-      { top: destYCards },
-      delay
-    );
-    tl.to(card.wrapper.current, duration, { top: destYCards }, delay);
-    tl.to(
-      cardDetails.wrapper.current,
-      duration,
-      { top: destYCardDetails },
-      delay
-    );
+      tl.to(introBox.wrapper.current, duration, { y: destY }, delay);
+      tl.to(bushes.wrapper.current, duration, { y: destY }, delay);
+      tl.to(city.wrapper.current, duration, { y: destY }, delay);
+      tl.to(rock.wrapper.current, duration, { y: destY }, delay);
+      tl.to(
+        ground.wrapper.current,
+        duration,
+        { top: destYGround, x: destXGround },
+        delay
+      );
+      tl.to(mountain.wrapper.current, duration, { y: destY }, delay);
+      tl.to(buildings.wrapper.current, duration, { y: destY }, delay);
+      tl.to(sky.wrapper.current, duration, { y: destY }, delay);
+      tl.to(forms.wrapper.current, duration, { top: destYForms }, delay);
+      tl.to(forms.form1.current, duration, { top: destYForms }, delay);
+      tl.to(forms.form2.current, duration, { top: destYForms }, delay);
+      tl.to(forms.form3.current, duration, { top: destYForms }, delay);
+      tl.to(description.wrapper.current, 1, { top: destYDescription }, delay);
+      tl.to(
+        description.btnPage.current,
+        duration,
+        { top: destYBtnPage },
+        delay
+      );
+      tl.to(
+        description.title.current,
+        duration,
+        { top: destYDescription },
+        delay
+      );
+      tl.to(
+        description.description.current,
+        duration,
+        { top: destYDescription },
+        delay
+      );
+      tl.to(
+        description.cardWrapper.current,
+        duration,
+        { top: destYCards },
+        delay
+      );
+      tl.to(card.wrapper.current, duration, { top: destYCards }, delay);
+      tl.to(
+        cardDetails.wrapper.current,
+        duration,
+        { top: destYCardDetails },
+        delay
+      );
+    }
   };
 
   const toggle = () => {
     let newMode = mode === "DOWN" ? "UP" : "DOWN";
+    // let newIsAnimating = isAnimating === false ? true : false;
+
     setMode(newMode);
+    setisAnimating(false);
+    console.log( isAnimating)
   };
 
- 
   useEffect(() => {
     document.body.style.overflow = "hidden";
   }, []);
@@ -189,7 +204,7 @@ const App = () => {
           ANIMATE
         </button> */}
         <Header />
-        <div onWheel={startsAnimation} onTouchStart={startsAnimation}>
+        <div onWheel={startsAnimation} onTouchEnd={startsAnimation}>
           <Sky />
           <Buildings />
           <Mountain />
