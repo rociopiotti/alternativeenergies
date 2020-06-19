@@ -149,9 +149,9 @@ const App = () => {
       tl.to(buildings.wrapper.current, duration, { y: destY }, delay);
       tl.to(sky.wrapper.current, duration, { y: destY }, delay);
       tl.to(forms.wrapper.current, duration, { top: destYForms }, delay);
-      tl.to(forms.form1.current, duration, { top: destYForms }, delay);
-      tl.to(forms.form2.current, duration, { top: destYForms }, delay);
-      tl.to(forms.form3.current, duration, { top: destYForms }, delay);
+      tl.to(forms.form1.current, duration + 0.1, { top: destYForms }, delay);
+      tl.to(forms.form2.current, duration + 0.2, { top: destYForms }, delay);
+      tl.to(forms.form3.current, duration + 0.3, { top: destYForms }, delay);
       tl.to(description.wrapper.current, 1, { top: destYDescription }, delay);
       tl.to(
         description.btnPage.current,
@@ -173,7 +173,7 @@ const App = () => {
       );
       tl.to(
         description.cardWrapper.current,
-        duration,
+        duration + 0.1,
         { top: destYCards },
         delay
       );
