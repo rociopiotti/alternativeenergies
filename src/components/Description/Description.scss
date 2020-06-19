@@ -97,6 +97,15 @@
     }
   }
 }
+@media screen and (width: 1536px) and (orientation: landscape) {
+  .descriptionBox {
+    .description {
+      .appsListBox {
+        margin-top: 18vh;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   .descriptionBox {
     .description {
@@ -115,7 +124,7 @@
       }
       .appsListBox {
         width: 90vw;
-        margin-top: 10vh;
+        margin-top: 7vh;
       }
     }
   }

@@ -8,7 +8,7 @@
     position: absolute;
     width: 100%;
     background-color: transparent;
-    top:-30vh;
+    top: -30vh;
     .bases {
       width: 100%;
       background-color: transparent;
@@ -90,15 +90,36 @@
     width: 100%;
     position: absolute;
     z-index: 1;
-    top:-30vh;
+    top: -30vh;
   }
 }
-@media screen and (width: 1536px) and(max-width: 1536px) {
+@media screen and (width: 1535px) and (orientation: landscape) {
   .cityBox {
     top: -25vh;
   }
 }
-
+@media screen and (width: 1024px) and (orientation: landscape) {
+  .cityBox {
+    top: 0;
+    .molinos {
+      top: 0vh;
+    }
+    .cityImg {
+      top: 0vh;
+    }
+  }
+}
+@media screen and (width: 768px) and (orientation: portrait) {
+  .cityBox {
+    top: 0;
+    .molinos {
+      top: 0vh;
+    }
+    .cityImg {
+      top: 0vh;
+    }
+  }
+}
 @media screen and (max-width: 754px) and (orientation: landscape) {
   .cityBox {
     top: -25vh;
