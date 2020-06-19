@@ -102,7 +102,7 @@ const Description = () => {
 
   return (
     <div className='descriptionBox' ref={wrapperRef}>
-      <div className='description'>
+      <div className='description' ref={wrapperRef}>
         <div ref={btnPageRef} className='pageChanger'>
           <button className='btnLeftPage'>
             <Icon type='arrowLeft' />

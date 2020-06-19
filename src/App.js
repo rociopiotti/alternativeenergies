@@ -109,20 +109,23 @@ const App = () => {
         destYForms = mode === "DOWN" ? 0 : "100vh";
         destYBtnPage = mode === "DOWN" ? 0 : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
+        destYDescription = mode === "DOWN" ? 0 : "100vh";
+        destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
       } else {
         destYGround = mode === "DOWN" ? " -100vh" : "20vh";
         destYForms = mode === "DOWN" ? 0 : "100vh";
         destYBtnPage = mode === "DOWN" ? 0 : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
+        destYDescription = mode === "DOWN" ? 0 : "100vh";
+
+        destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
       }
-      destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
-      destYDescription = mode === "DOWN" ? 0 : "100vh";
     }
 
     const destY = mode === "DOWN" ? "-100vh" : 0;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
 
-    const duration = mode === "DOWN" ? 1 : 2;
+    const duration = mode === "DOWN" ? 1 : 1.5;
     const delay = mode === "DOWN" ? 0.5 : 0.1;
 
     if (isAnimating) {

@@ -8,8 +8,8 @@
   align-items: flex-end;
   justify-content: center;
   color: #fff;
-
   .description {
+    position: relative;
     width: 90vw;
     height: 85vh;
     display: flex;
@@ -32,7 +32,7 @@
       letter-spacing: 0.1em;
       line-height: 1.5em;
       position: relative;
-      margin-top:0;
+      margin-top: 0;
       top: 100vh;
     }
     .pageChanger {
@@ -81,9 +81,28 @@
     }
   }
 }
+
+@media screen and (width: 1920px) and (orientation: landscape) {
+  .descriptionBox {
+    .description {
+      .descriptionTitle {
+        margin-left: 5vw;
+      }
+      .descriptionText {
+        margin-left: 5vw;
+      }
+      .appsListBox {
+        margin-top: 30vh;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   .descriptionBox {
     .description {
+      .descriptionTitle {
+        margin-left: 0;
+      }
       .descriptionText {
         position: relative;
         width: 45vw;
@@ -180,7 +199,7 @@
         margin-left: 0;
         margin-right: 0;
         top: 100vh;
-        &:last-child{
+        &:last-child {
           flex-grow: 1;
         }
       }

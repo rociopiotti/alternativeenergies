@@ -50,7 +50,19 @@
   }
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (max-width: 1920px) and (orientation: landscape) {
+  .formsBox {
+    .form1 {
+      .form1Img {
+        position: relative;
+        width: 45%;
+        height: auto;
+        top: 4vh;
+      }
+    }
+  }
+}
+@media screen and (width: 1024px) and (orientation: landscape) {
   .formsBox {
     .form1 {
       .form1Img {
