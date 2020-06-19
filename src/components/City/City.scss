@@ -8,6 +8,7 @@
     position: absolute;
     width: 100%;
     background-color: transparent;
+    top:-30vh;
     .bases {
       width: 100%;
       background-color: transparent;
@@ -89,6 +90,7 @@
     width: 100%;
     position: absolute;
     z-index: 1;
+    top:-30vh;
   }
 }
 @media screen and (width: 1536px) and(max-width: 1536px) {

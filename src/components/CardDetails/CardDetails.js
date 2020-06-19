@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext, useMemo } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import "./CardDetails.scss";
 import Icon from "../Icon/Icon";
 

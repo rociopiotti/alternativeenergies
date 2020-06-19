@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useContext, useMemo } from "react";
 import "./Card.scss";
 import iconBackground1 from "../../img/IconBackground1.svg";
-import iconRed from "../../img/red.png";
+
 import Icon from "../Icon/Icon";
 
 // CONTEXT

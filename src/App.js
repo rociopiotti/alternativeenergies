@@ -105,7 +105,7 @@ const App = () => {
     }
     if (isBrowser) {
       if (widthScreen === 1366) {
-        destYGround = mode === "DOWN" ? " -100vh" : "15vh";
+        destYGround = mode === "DOWN" ? " -100vh" : "25vh";
         destYForms = mode === "DOWN" ? 0 : "100vh";
         destYBtnPage = mode === "DOWN" ? 0 : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
