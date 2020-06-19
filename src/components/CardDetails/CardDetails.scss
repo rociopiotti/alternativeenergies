@@ -1,5 +1,5 @@
 .cardDetails {
-  width: 30%;
+  width: 37%;
   height: 50vh;
   position: relative;
   display: flex;
@@ -15,9 +15,8 @@
   .cardHeader {
     width: 100%;
     height: 10vh;
-    // background-color: dimgray;
     h4 {
-      font-size: 1.8em;
+      font-size: 1.3em;
       margin: 0;
       letter-spacing: 0.1em;
     }
@@ -25,7 +24,6 @@
   .cardBody {
     width: 100%;
     height: 20vh;
-    // background-color: darkslategray;
     font-size: 0.8em;
     line-height: 1.5em;
     ul {
@@ -79,7 +77,6 @@
     .cardHeader {
       width: 100%;
       height: auto;
-      // background-color: dimgray;
       h4 {
         font-size: 1em;
         margin: 0;
@@ -89,7 +86,6 @@
     .cardBody {
       width: 100%;
       height: auto;
-      // background-color: darkslategray;
       font-size: 0.8em;
       line-height: 1em;
       ul {
