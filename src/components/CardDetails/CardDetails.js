@@ -18,7 +18,7 @@ const CardDetails = ({ data }) => {
   }, []);
 
   useEffect(() => {
-    // Animar
+   
   }, [data]);
 
   const { title, list, link } = data;

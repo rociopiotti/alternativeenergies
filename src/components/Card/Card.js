@@ -39,7 +39,7 @@ const Card = ({ onHover, data }) => {
   };
 
   const createList = useMemo(() => {
-    return data.map(({ id, title, text, link, icon }, index) => (
+    return data.map(({ title, text, link, icon }, index) => (
       <div key={index} className='cardBox' ref={wrapperRef}>
         <div
           className='card'

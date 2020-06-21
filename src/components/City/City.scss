@@ -120,8 +120,15 @@
     }
   }
 }
-@media screen and (max-width: 754px) and (orientation: landscape) {
+
+@media screen and (max-width: 823px) and (orientation: landscape) {
   .cityBox {
-    top: -25vh;
+    top: 15vh;
+  }
+}
+
+@media screen and (max-width: 414px) and (orientation: portrait) {
+  .cityBox {
+    top: 30vh;
   }
 }

@@ -57,7 +57,7 @@ const App = () => {
     // ------------------------------------------------------- //
     //                   MEDIAQUERIES ANIMATIONS               //
     // ------------------------------------------------------- //
-
+    let destY;
     let destYGround;
     let destYForms;
     let destYBtnPage;
@@ -86,6 +86,7 @@ const App = () => {
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
         destYDescription = mode === "DOWN" ? "-3vh" : "100vh";
       }
+      destY = mode === "DOWN" ? "-100vh" : 0;
     }
 
     if (isMobileOnly) {
@@ -93,10 +94,12 @@ const App = () => {
       if (widthScreen > heightScreen) {
         destYGround = mode === "DOWN" ? "-100vh" : "-35vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
+        destY = mode === "DOWN" ? "-100vh" : 0;
       } else {
         // PORTRAIT //
         destYGround = mode === "DOWN" ? "-100vh" : "17vh";
         destYCards = mode === "DOWN" ? "-10vh" : "100vh";
+        destY = mode === "DOWN" ? "-100vh" : 0;
       }
       destYForms = mode === "DOWN" ? "10vh" : "100vh";
       destYBtnPage = mode === "DOWN" ? "15vh" : "100vh";
@@ -119,9 +122,9 @@ const App = () => {
         destYDescription = mode === "DOWN" ? 0 : "100vh";
         destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
       }
+      destY = mode === "DOWN" ? "-100vh" : 0;
     }
 
-    const destY = mode === "DOWN" ? "-100vh" : 0;
     const destXGround = mode === "DOWN" ? "-10vw" : 0;
 
     const duration = mode === "DOWN" ? 1 : 1.5;
