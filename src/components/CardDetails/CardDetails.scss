@@ -122,3 +122,9 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 823px) and (orientation: landscape)  {
+  .cardDetails {
+    display: none;
+  }
+}

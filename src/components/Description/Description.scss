@@ -228,13 +228,31 @@
           height: 25px;
         }
       }
+      .descriptionTitle {
+        width: 80vw;
+
+        font-size: 1.2em;
+        margin-top: 15vh;
+      }
       .descriptionText {
         margin-top: 1vh;
         font-size: 0.7em;
+        line-height: 1.2em;
       }
       .appsListBox {
-        width: 80vw;
-        margin-top: 35vh;
+        position: relative;
+        width: 100%;
+        margin-top: 0vh;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-right: 0;
+        top: 100vh;
+        &:last-child {
+          flex-grow: 1;
+        }
       }
     }
   }
