@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import "./Header.scss";
 import logo from "../../img/Logo.svg";
 import Icon from "../Icon/Icon";
@@ -24,7 +24,9 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <a className='logoBtn'>
+      <a
+        className='logoBtn'
+        href='https://www.rociopiotti.com/public/webdesign/alternativeenergies/'>
         <img src={logo} alt='logo' className='logoImg' />
       </a>
       <span className='separationHeader'></span>
@@ -34,27 +36,37 @@ const Header = () => {
 
       <ul className='navbar' id='navbar' ref={myElement}>
         <li>
-          <a title='About' href='#ABOUT'>
+          <a
+            title='About'
+            href='https://www.rociopiotti.com/public/webdesign/alternativeenergies/'>
             About
           </a>
         </li>
         <li>
-          <a title='Apps' href='#APPS'>
+          <a
+            title='Apps'
+            href='https://www.rociopiotti.com/public/webdesign/alternativeenergies/'>
             Apps
           </a>
         </li>
         <li>
-          <a title='Plans' href='#PLANS'>
+          <a
+            title='Plans'
+            href='https://www.rociopiotti.com/public/webdesign/alternativeenergies/'>
             Plans
           </a>
         </li>
         <li>
-          <a title='Faqs' href='#FAQ'>
+          <a
+            title='Faqs'
+            href='https://www.rociopiotti.com/public/webdesign/alternativeenergies/'>
             FAQ
           </a>
         </li>
         <li>
-          <a title='Contact' href='#CONTACT'>
+          <a
+            title='Contact'
+            href='https://www.rociopiotti.com/public/webdesign/alternativeenergies/'>
             Contact
           </a>
         </li>
