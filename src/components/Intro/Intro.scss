@@ -143,7 +143,25 @@
     .intro {
       opacity: 100%;
       width: 60vw;
-      margin-left: 5vw;
+      margin-left: 10vw;
+      margin-top: 15vh;
+
+      h1 {
+        width: 100%;
+        font-size: 1.2em;
+      }
+      h3 {
+        width: 100%;
+        margin: 2.5vh 0;
+        font-size: 0.8em;
+        line-height: 1.2em;
+      }
+      .contactBtn {
+        width: 105px;
+        height: 30px;
+        padding: 15px 0 15px 0;
+        font-size: 0.7em;
+      }
     }
   }
 }
