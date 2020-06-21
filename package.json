@@ -2,6 +2,7 @@
   "name": "alternativeenergies",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rociopiotti.com/public/webdesign/alternativeenergies",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
@@ -20,6 +21,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

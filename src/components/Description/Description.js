@@ -14,7 +14,7 @@ const CARDS = [
     text:
       "An innovative approach to energy production, storage, and distribution adapted for each community needs",
     link: "url",
-    icon: "/img/red.png",
+    icon: "https://rociopiotti.com/public/webdesign/alternativeenergies/img/red.png",
   },
   {
     id: "1",
@@ -22,7 +22,7 @@ const CARDS = [
     text:
       " Maximized efficiency of fossil fuels and renewable energy sources for the minimal impact on the enviroment.",
     link: "url",
-    icon: "/img/bulb.png",
+    icon: "https://rociopiotti.com/public/webdesign/alternativeenergies/img/bulb.png",
   },
   {
     id: "2",
@@ -30,7 +30,7 @@ const CARDS = [
     text:
       "Balanced schemes connecting energy producers and consumers to reach effective power exchange and make smart contracts.",
     link: "url",
-    icon: "/img/ray.png",
+    icon: "https://rociopiotti.com/public/webdesign/alternativeenergies/img/ray.png",
   },
 ];
 
