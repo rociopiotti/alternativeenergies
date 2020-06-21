@@ -19,8 +19,7 @@ Desarrollado por
 : [rociopiotti.com](https://www.rociopiotti.com/)    
 : ropiotti@gmail.com 
 
-## Trabajos realizados  
-    
+## Trabajos realizados    
   
 
 Programación con ReactJs.  
@@ -55,6 +54,6 @@ Basado en el concepto de tubik ["Innovative Energy Service Website"](https://dri
   
 
   <hr>  
-#ReactJs #JSX #Sass #Node #Gsap #mobileFirst  #layout #webdesign #responsivedesign #git #Github  
+#ReactJs #JSX #Sass #Node #Gsap #mobileFirst #layout #webdesign #responsivedesign #git #Github  
 
 

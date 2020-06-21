@@ -117,7 +117,6 @@ const App = () => {
         destYBtnPage = mode === "DOWN" ? 0 : "100vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
         destYDescription = mode === "DOWN" ? 0 : "100vh";
-
         destYCardDetails = mode === "DOWN" ? "-3vh" : "100vh";
       }
     }
@@ -203,9 +202,6 @@ const App = () => {
         references: addRef,
       }}>
       <div className='App' ref={targetElement}>
-        {/* <button onClick={startsAnimation} className='animationBTN'>
-          ANIMATE
-        </button> */}
         <Header />
         <div onWheel={startsAnimation} onTouchMove={startsAnimation}>
           <Sky />
