@@ -153,3 +153,24 @@
     }
   }
 }
+@media screen and (max-width: 823px) and (orientation: landscape) {
+  .formsBox {
+    .form1 {
+      .form1Img {
+        position: relative;
+        width: 70%;
+        height: auto;
+        top: -10vh;
+      }
+    }
+
+    .form2 {
+      display: none;
+    }
+    .form3 {
+      .form3Img {
+        top: -20vh;
+      }
+    }
+  }
+}
