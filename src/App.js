@@ -92,7 +92,7 @@ const App = () => {
     if (isMobileOnly) {
       // LANDSCAPE //
       if (widthScreen > heightScreen) {
-        destYGround = mode === "DOWN" ? "-100vh" : "-35vh";
+        destYGround = mode === "DOWN" ? "-100vh" : "10vh";
         destYCards = mode === "DOWN" ? "7vh" : "100vh";
         destY = mode === "DOWN" ? "-100vh" : 0;
       } else {
